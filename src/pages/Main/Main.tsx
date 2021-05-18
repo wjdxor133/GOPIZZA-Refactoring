@@ -25,6 +25,7 @@ const Main = ({ history }: any) => {
   };
   return (
     <MainComponent>
+      <Navbar />
       <MainHeaders>
         <Container>
           <MainText>

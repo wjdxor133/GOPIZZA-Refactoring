@@ -13,7 +13,7 @@ import HeaderImg from "../../assets/img/HeaderImg.png";
 import woowa from "../../assets/img/woowa.png";
 import yogiyo from "../../assets/img/yogiyo.png";
 
-import { Navbar } from "components";
+import { Hero } from "components";
 
 type MainPropsType = {
   img: string;
@@ -25,7 +25,7 @@ const Main = ({ history }: any) => {
   };
   return (
     <MainComponent>
-      <Navbar />
+      <Hero />
       <MainHeaders>
         <Container>
           <MainText>

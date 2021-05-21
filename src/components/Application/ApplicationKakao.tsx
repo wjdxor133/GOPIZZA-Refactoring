@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 // import KakaoPlusBtn from "./KakaoPlusBtn/KakaoPlusBtn";
 import styled from "styled-components";
-import kakaoPlus from "../../assets/img/kakaoPlus.png";
+import kakaoPlus from "assets/images/kakaoPlus.png";
 // import Fade from "react-reveal/Fade";
 
-import { kakaoApiKey } from "../../core/api/api";
+import { kakaoApiKey } from "core/api/api";
 
 declare global {
   interface Window {

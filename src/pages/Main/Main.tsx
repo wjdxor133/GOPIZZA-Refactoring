@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 // import Fade from "react-reveal/Fade";
-import Brand from "../../components/Brand/Brand";
-import HowToGopizza from "../../components/HowToGopizza/HowToGopizza";
-import ApplicationKakao from "../../components/Application/ApplicationKakao";
-import ApplicationInsta from "../../components/Application/ApplicationInsta";
-import Footer from "../../components/Footer/Footer";
-import naverBrandLocation from "../../assets/img/naver_brand_location.jpg";
+import Brand from "components/Brand/Brand";
+import HowToGopizza from "components/HowToGopizza/HowToGopizza";
+import ApplicationKakao from "components/Application/ApplicationKakao";
+import ApplicationInsta from "components/Application/ApplicationInsta";
+import Footer from "components/Footer/Footer";
+import naverBrandLocation from "assets/images/naver_brand_location.jpg";
 import { BsSearch } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import HeaderImg from "../../assets/img/HeaderImg.png";
-import woowa from "../../assets/img/woowa.png";
-import yogiyo from "../../assets/img/yogiyo.png";
+import HeaderImg from "assets/images/HeaderImg.png";
+import woowa from "assets/images/woowa.png";
+import yogiyo from "assets/images/yogiyo.png";
 
 import { Hero } from "components";
 

@@ -1,12 +1,16 @@
 import React from "react";
 import { Nav, NavLink, NavIcon, Bars } from "./Navbar.styles";
 
-function Navbar() {
+interface NavbarProps {
+  toggle: () => void;
+}
+
+function Navbar({ toggle }: NavbarProps) {
   return (
     <>
       <Nav>
         <NavLink to="/">GOPIZZA</NavLink>
-        <NavIcon>
+        <NavIcon onClick={toggle}>
           <p>Menu</p>
           <Bars />
         </NavIcon>

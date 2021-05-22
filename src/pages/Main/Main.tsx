@@ -13,7 +13,8 @@ import HeaderImg from "assets/images/HeaderImg.png";
 import woowa from "assets/images/woowa.png";
 import yogiyo from "assets/images/yogiyo.png";
 
-import { Hero } from "components";
+import { Hero, Products } from "components";
+import { productData } from "components/Products/data";
 
 type MainPropsType = {
   img: string;
@@ -26,6 +27,7 @@ const Main = ({ history }: any) => {
   return (
     <MainComponent>
       <Hero />
+      <Products heading="Choose your favorite" data={productData} />
       <MainHeaders>
         <Container>
           <MainText>

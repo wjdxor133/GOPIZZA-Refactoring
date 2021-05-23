@@ -51,7 +51,6 @@ const Main = ({ history }: any) => {
           {/* </Fade> */}
         </Container>
       </MainHeaders>
-      {/* <MainHeader /> */}
       <Brand />
       <HowToGopizza history={history} />
       <ApplicationKakao />

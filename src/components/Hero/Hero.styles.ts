@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import ImgBg from "assets/images/pizza-3.jpg";
+// import ImgBg from "assets/images/pizza-3.jpg";
+import ImgBg from "assets/images/video_1.gif";
 
 export const HeroContainer = styled.div`
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
@@ -25,7 +26,7 @@ export const HeroItems = styled.div`
   max-height: 100%;
   padding: 0 2rem;
   width: 650px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
   line-height: 1;
   font-weight: bold;
@@ -38,7 +39,7 @@ export const HeroItems = styled.div`
 export const HeroH1 = styled.h1`
   font-size: clamp(2.5rem, 10vw, 5rem);
   margin-bottom: 1rem;
-  box-shadow: 3px 5px #e9ba23;
+  box-shadow: 3px 5px ${({ theme }) => theme.colors.primary_lighter};
   letter-spacing: 3px;
 `;
 
@@ -49,16 +50,16 @@ export const HeroP = styled.p`
 
 export const HeroBtn = styled.button`
   font-size: 1.4rem;
+  font-weight: bold;
   padding: 1rem 4rem;
   border: none;
-  background: #e31837;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.primary_regular};
+  color: ${({ theme }) => theme.colors.white};
   transition: 0.2s ease-out;
 
   &:hover {
-    background: #ffc500;
+    background: ${({ theme }) => theme.colors.primary_light};
     transition: 0.2s ease-out;
     cursor: pointer;
-    color: #000;
   }
 `;

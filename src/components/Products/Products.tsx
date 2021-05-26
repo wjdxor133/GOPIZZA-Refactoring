@@ -1,15 +1,14 @@
 import React from "react";
 import {
   ProductsContainer,
-  ProductsHeading,
+  ProductsH1,
+  ProductsH3,
   ProductWrapper,
   ProductCard,
   ProductImg,
   ProductInfo,
   ProductTitle,
   ProductDesc,
-  ProductPrice,
-  ProductButton,
 } from "./Products.styles";
 
 interface ProductsProps {
@@ -20,7 +19,8 @@ interface ProductsProps {
 function Products({ heading, data }: ProductsProps) {
   return (
     <ProductsContainer>
-      <ProductsHeading>{heading}</ProductsHeading>
+      <ProductsH1>{heading}</ProductsH1>
+      <ProductsH3>SO FAST, SO HOT, SO FRESH!</ProductsH3>
       <ProductWrapper>
         {data.map((product: any, idx: number) => {
           return (
@@ -29,8 +29,6 @@ function Products({ heading, data }: ProductsProps) {
               <ProductInfo>
                 <ProductTitle>{product.name}</ProductTitle>
                 <ProductDesc>{product.desc}</ProductDesc>
-                <ProductPrice>{product.price}</ProductPrice>
-                <ProductButton>{product.button}</ProductButton>
               </ProductInfo>
             </ProductCard>
           );

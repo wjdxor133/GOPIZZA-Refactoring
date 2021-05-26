@@ -1,35 +1,28 @@
-import product1 from "assets/images/product-1.jpg";
-import product2 from "assets/images/product-2.jpg";
-import product3 from "assets/images/product-3.jpg";
-import sweet1 from "assets/images/sweet3.jpg";
-import sweet2 from "assets/images/sweet-2.jpg";
-import sweet3 from "assets/images/sweet-3.jpg";
-
 export const productData = [
   {
-    img: product1,
+    img: "https://gopizza.kr/wp-content/uploads/2020/08/goven-1.gif",
     alt: "Pizza",
-    name: "Supreme Pizza",
-    desc:
-      "Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto",
+    name: "STEP1",
+    desc: "섭씨 500도가 넘는 직화로 구워내서 더 건강한 맛!",
     price: "$19.99",
     button: "Add to Cart",
   },
   {
-    img: product2,
+    img:
+      "https://gopizza.kr/wp-content/uploads/2020/08/par-baked-dough-탄게아니라효모스팟_포스터-1024x764.jpg",
     alt: "Pizza",
-    name: "Hawaiian Paradise",
-    desc:
-      " Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto",
+    name: "STEP2",
+    desc: "24시간 저온 발효 후 손으로 직접 펴낸 숨쉬는 겉바속촉 도우!",
     price: "$16.99",
     button: "Add to Cart",
   },
   {
-    img: product3,
+    img:
+      "https://gopizza.kr/wp-content/uploads/2020/08/gopizza-cheese-1024x763.jpg",
     alt: "Pizza",
-    name: "Veggie Overload",
+    name: "STEP3",
     desc:
-      " Marinara sauce, basil, italian sausage, roma tomatoes, olives, and pesto",
+      "신선한 소스와 토핑을 얹어 고피자의 특허 화덕 ‘고븐’에 구우면 맛있는 1인용 피자가 완성됩니다.",
     price: "$14.99",
     button: "Add to Cart",
   },
@@ -37,29 +30,29 @@ export const productData = [
 
 export const productDataTwo = [
   {
-    img: sweet2,
+    img:
+      "https://gopizza.kr/wp-content/uploads/2020/08/par-baked-dough-goven-1024x764.jpg",
     alt: "Donuts",
-    name: "Doughlicious",
-    desc:
-      "Belgian chocolate glazed donuts covered in icing with sprinkles on top",
+    name: "특허받은 화덕 GOVEN",
+    desc: "섭씨 500도가 넘는 직화로 구워내서 더 건강한 맛!",
     price: "$9.99",
     button: "Add to Cart",
   },
   {
-    img: sweet3,
+    img:
+      "https://gopizza.kr/wp-content/uploads/2020/08/par-baked-dough-탄게아니라효모스팟_포스터-1024x764.jpg",
     alt: "Ice Cream",
-    name: "Caramel Wonder",
-    desc:
-      "Vanilla ice cream covered with caramel and chocolate glaze topped with a coco stick",
+    name: "저온숙성 수제도우",
+    desc: "24시간 저온 발효 후 손으로 직접 펴낸 숨쉬는 겉바속촉 도우!",
     price: "$12.99",
     button: "Add to Cart",
   },
   {
-    img: sweet1,
+    img:
+      "https://gopizza.kr/wp-content/uploads/2021/05/%EC%88%98%EC%A0%95%EB%90%A8_mission.jpg",
     alt: "Brownie",
-    name: "Brownie Bunch",
-    desc:
-      "Double fudge brownie squares topped with white chocolate pieces and macadamia nuts",
+    name: "고피자 완성",
+    desc: "고객을 위한 최고의 제품을 혁신에 기반하여 편리하고 가성비있게 제공!",
     price: "$9.99",
     button: "Add to Cart",
   },

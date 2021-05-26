@@ -23,8 +23,8 @@ function Hero() {
       <HeroContent>
         <HeroItems>
           <HeroH1>Greatest Pizza Ever</HeroH1>
-          <HeroP>Ready in 60 seconds</HeroP>
-          <HeroBtn>Place Order</HeroBtn>
+          <HeroP>1인 피자로 GO! GO!</HeroP>
+          <HeroBtn>주문하기</HeroBtn>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import FeaturePic from "assets/images/featured3.jpg";
+import FeaturePic from "assets/images/naver_brand_location.jpg";
 
 export const FeatureContainer = styled.div`
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url(${FeaturePic});
+    url("http://gopizza.kr/wp-content/uploads/2021/05/pizza.png");
   height: 100vh;
   max-height: 500px;
   background-position: center;
@@ -25,14 +25,14 @@ export const FeatureContainer = styled.div`
 `;
 export const FeatureButton = styled.button`
   font-size: 1.4rem;
+  font-weight: 500;
   padding: 0.6rem 3rem;
   border: none;
-  background: #ffc500;
-  color: #000;
+  background: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary_regular};
   transition: 0.2s ease-out;
   &:hover {
-    color: #fff;
-    background: #e31837;
+    color: ${({ theme }) => theme.colors.primary_light};
     transition: 0.2s ease-out;
     cursor: pointer;
   }

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Routes from "routes/Routes";
-import GlobalStyle from "styles/Global-styles";
-import theme from "styles/theme";
-import { ThemeProvider } from "styles/theme-components";
+import GlobalStyle from "styles/GlobalStyle";
+import { theme } from "styles/theme";
+import { ThemeProvider } from "styled-components";
 
 ReactDOM.render(
   <>

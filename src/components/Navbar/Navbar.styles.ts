@@ -11,12 +11,17 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 2rem;
   display: flex;
   align-items: center;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary_regular};
+    transition: 0.2s ease-in-out;
+  }
 
   @media screen and (max-width: 480px) {
     position: absolute;
@@ -31,7 +36,12 @@ export const NavIcon = styled.div`
   top: 0;
   right: 0;
   cursor: pointer;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary_regular};
+    transition: 0.2s ease-in-out;
+  }
 
   p {
     transform: translate() (-175%, 100%);

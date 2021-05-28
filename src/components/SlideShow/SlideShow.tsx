@@ -12,6 +12,7 @@ import { ImageSlide } from "components";
 import { menuData } from "./data";
 
 const SlideShow = () => {
+  const Fade = require("react-reveal/Fade");
   const settings = {
     // dots: true,
     infinite: true,
@@ -43,12 +44,15 @@ const SlideShow = () => {
 
   return (
     <SlideContainer>
-      <TitleWrapper>
-        <TitleH1>느리고, 비싸고, 큰 피자, NO!</TitleH1>
-        <TitleH3>
-          고퀄1인피자 <p> 고피자</p>가 딱!
-        </TitleH3>
-      </TitleWrapper>
+      <Fade left>
+        <TitleWrapper>
+          <TitleH1>느리고, 비싸고, 큰 피자, NO!</TitleH1>
+          <TitleH3>
+            고퀄1인피자 <p> 고피자</p>가 딱!
+          </TitleH3>
+        </TitleWrapper>
+      </Fade>
+
       <Slider {...settings}>
         {menuData.map((menu) => {
           return <ImageSlide menu={menu} />;

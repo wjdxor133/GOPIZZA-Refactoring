@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const SlideContainer = styled.div`
   height: 100%;
   padding: 5rem calc((100vw - 1300px) / 2);
-  /* background-color: ${({ theme }) => theme.colors.primary_lighter}; */
 
   .slick-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px;
   }
 
   /* 화살표 버튼 제거 */
@@ -26,14 +26,14 @@ export const TitleWrapper = styled.div`
 `;
 
 export const TitleH1 = styled.h1`
-  color: #4c2003;
+  color: ${({ theme }) => theme.colors.brown};
   font-size: clamp(2rem, 2.5vw, 3rem);
 `;
 
 export const TitleH3 = styled.h3`
   display: flex;
   justify-content: center;
-  color: #4c2003;
+  color: ${({ theme }) => theme.colors.brown};
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 700;
   padding-top: 10px;

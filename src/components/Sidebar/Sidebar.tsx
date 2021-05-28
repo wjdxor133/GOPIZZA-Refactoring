@@ -23,7 +23,7 @@ function Sidebar({ isOpen, toggle }: SidebarProps) {
       <SidebarMenu>
         <SidebarLink to="/">Pizza</SidebarLink>
         <SidebarLink to="/">Desserts</SidebarLink>
-        <SidebarLink to="/">Full Menu</SidebarLink>
+        <SidebarLink to="/menu">메뉴 소개</SidebarLink>
       </SidebarMenu>
       <SideBtnWrap>
         <SidebarRoute to="/">Order Now</SidebarRoute>

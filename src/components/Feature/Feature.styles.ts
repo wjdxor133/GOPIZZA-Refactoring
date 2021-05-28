@@ -30,10 +30,12 @@ export const FeatureButton = styled.button`
   border: none;
   background: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.primary_regular};
-  transition: 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+
   &:hover {
     color: ${({ theme }) => theme.colors.primary_light};
     transition: 0.2s ease-out;
+    transform: translateY(-10px);
     cursor: pointer;
   }
 `;

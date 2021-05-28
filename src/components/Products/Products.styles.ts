@@ -32,6 +32,12 @@ export const ProductsH1 = styled.h1`
   color: ${({ theme }) => theme.colors.brown};
 `;
 
+export const ProductsH2 = styled.p`
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  text-align: center;
+`;
+
 export const ProductsH3 = styled.h3`
   display: flex;
   justify-content: center;

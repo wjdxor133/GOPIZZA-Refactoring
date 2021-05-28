@@ -40,7 +40,7 @@ function ImageSlide({ menu }: ImageSlideProp) {
           </RouteBtn>
         </HoverDiv>
       ) : (
-        <CenterDiv onMouseEnter={handleViewMenuInfo}>
+        <CenterDiv onClick={handleViewMenuInfo}>
           <MenuImg src={menu.img} alt=" " />
           <MenuName>{menu.name}</MenuName>
           <SubMenuName>{menu.en_name}</SubMenuName>

@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 const Menu = ({ history }: any) => {
   const [menuNum, setMenuNum] = useState<number>(0);
-  const munuBar: string[] = [
+  const menuBar: string[] = [
     "피자",
     "파스타",
     "사이드 & 디저트",
@@ -38,7 +38,7 @@ const Menu = ({ history }: any) => {
       </ImgBox>
       <NavBar>
         <NavTextBox>
-          {munuBar.map((menu: string, idx: number) => {
+          {menuBar.map((menu: string, idx: number) => {
             return (
               <NavText
                 key={idx}

@@ -8,6 +8,15 @@ export const CenterDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 250ms;
+  border-radius: 4px;
+  padding: 12px;
+
+  &:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export const HoverDiv = styled(CenterDiv)`
@@ -15,9 +24,8 @@ export const HoverDiv = styled(CenterDiv)`
   height: 200px;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.navy};
-  transition: 1s ease-in-out;
   padding: 24px;
-  border-radius: 4px;
+  transition: 1s ease-in-out;
 
   &:hover {
     transform: rotateY(360deg);

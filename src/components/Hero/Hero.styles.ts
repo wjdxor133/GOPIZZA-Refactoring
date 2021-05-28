@@ -1,11 +1,13 @@
 import styled from "styled-components";
-// import ImgBg from "assets/images/pizza-3.jpg";
-import ImgBg from "assets/images/video_1.gif";
 
-export const HeroContainer = styled.div`
+interface StyledHeroProps {
+  imgBg: string;
+}
+export const HeroContainer = styled.div<StyledHeroProps>`
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url(${ImgBg});
+    ${({ imgBg }) => `url(${imgBg})`};
   height: 100vh;
+  max-height: 500px;
   background-position: center;
   background-size: cover;
 `;
@@ -22,7 +24,7 @@ export const HeroItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 70vh;
   max-height: 100%;
   padding: 0 2rem;
   width: 650px;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "../../components/Header/Header";
 import MenuList from "../../containers/MenuList/MenuList";
-import Footer from "../../components/Footer/Footer";
+import { Hero, Footer } from "components";
 
 const Menu = ({ history }: any) => {
   const [menuNum, setMenuNum] = useState<number>(0);
@@ -21,12 +21,12 @@ const Menu = ({ history }: any) => {
 
   return (
     <MenuComponent>
-      <Header history={history} />
-      <ImgBox>
-        <Img
-          src="https://www.gopizza.kr/wp-content/uploads/2019/04/메뉴-카테고리-메인-이미지화질-개선.png"
-          alt="메뉴-카테고리-메인-이미지화질-개선.png"
-        ></Img>
+      <Hero
+        title="MENU"
+        subTitle="가성비 최고의 고피자 메뉴를 만나보세요."
+        imgBg="http://gopizza.kr/wp-content/uploads/2021/05/menu-1.png"
+      />
+      {/* <ImgBox>
         <ImgText>
           신선한 재료를
           <br /> 화덕으로 뜨겁게
@@ -35,7 +35,7 @@ const Menu = ({ history }: any) => {
             가성비 최고의 고피자 메뉴를 만나보세요.
           </span>
         </ImgText>
-      </ImgBox>
+      </ImgBox> */}
       <NavBar>
         <NavTextBox>
           {menuBar.map((menu: string, idx: number) => {
@@ -66,9 +66,19 @@ const MenuComponent = styled.div`
 `;
 
 const ImgBox = styled.div`
-  width: 100%;
-  height: 300px;
-  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url("http://gopizza.kr/wp-content/uploads/2021/05/menu-1.png");
+  height: 100vh;
+  max-height: 500px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 1rem;
 `;
 
 const Img = styled.img`

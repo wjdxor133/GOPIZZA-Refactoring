@@ -1,23 +1,16 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-
-import SlideShow from "components/SlideShow/SlideShow";
-
-import { Hero, Products, Feature, Footer } from "components";
+import ImgBg from "assets/images/video_1.gif";
+import { Hero, SlideShow, Products, Feature, Footer } from "components";
 import { productData } from "components/Products/data";
 
 const Main = () => {
-  const history = useHistory();
-  const gotoMap = () => {
-    history.push("/Map");
-  };
   return (
     <>
-      <Hero />
-      {/* <ImgContainer>
-        <img src={HeaderImg} alt="HeaderImg.png" />
-      </ImgContainer> */}
-      {/* <Products heading="고퀄1인피자 고피자" data={productData} /> */}
+      <Hero
+        title="Greatest Pizza Ever"
+        subTitle="1인 피자로 GO! GO!"
+        imgBg={ImgBg}
+      />
       <SlideShow />
       <Feature />
       <Products heading="고피자의 맛있는 비법!" data={productData} />
@@ -25,14 +18,5 @@ const Main = () => {
     </>
   );
 };
-
-// const ImgContainer = styled.div`
-//   width: 100%;
-//   padding: 50px 0 50px 0;
-//   img {
-//     width: 40%;
-//     margin: 0 auto;
-//   }
-// `;
 
 export default Main;

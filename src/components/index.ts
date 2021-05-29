@@ -1,6 +1,8 @@
 import Navbar from "./Navbar/Navbar";
 import Hero from "./Hero/Hero";
 import ImageSlide from "./ImageSlide/ImageSlide";
+import Menubar from "./Menu/Menubar/Menubar";
+import MenuCard from "./Menu/MenuCard/MenuCard";
 import Sidebar from "./Sidebar/Sidebar";
 import SlideShow from "./SlideShow/SlideShow";
 import Products from "./Products/Products";
@@ -11,6 +13,8 @@ export {
   Navbar,
   Hero,
   ImageSlide,
+  Menubar,
+  MenuCard,
   Sidebar,
   SlideShow,
   Products,

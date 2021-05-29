@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "../../components/Header/Header";
 import MenuList from "../../containers/MenuList/MenuList";
-import { Hero, Footer } from "components";
+import { Hero, Menubar, Footer } from "components";
 
 const Menu = ({ history }: any) => {
   const [menuNum, setMenuNum] = useState<number>(0);
@@ -36,7 +36,7 @@ const Menu = ({ history }: any) => {
           </span>
         </ImgText>
       </ImgBox> */}
-      <NavBar>
+      {/* <NavBar>
         <NavTextBox>
           {menuBar.map((menu: string, idx: number) => {
             return (
@@ -51,7 +51,8 @@ const Menu = ({ history }: any) => {
             );
           })}
         </NavTextBox>
-      </NavBar>
+      </NavBar> */}
+      <Menubar />
       <MenuList menuNum={menuNum} />
       <Footer />
     </MenuComponent>

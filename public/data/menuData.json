@@ -1,336 +1,341 @@
 {
-  "data": [
-    [
+  "data": {
+    "pizza": [
       {
         "id": 1,
-        "name": "아시안 시푸드 피자",
-        "en_name": "Asian Seafood Pizza",
-        "tag_text": "바다와 육지의 환상적인 만남",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-아시안시푸드피자-1024x576.jpg",
+        "name": "치즈 버거 피자",
+        "en_name": "Cheese Burger Pizza",
+        "kcal": 593,
+        "tag_text": "육즙 가득 함바그, 고소한 체다 치즈, 신선한 토마토와 베이컨, 그리고 피클의 아삭함까지!",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/05/New_Cheese-Burger-Pizza_02-1024x577.png",
         "price": 7000
       },
       {
         "id": 2,
-        "name": "클래식 치즈 피자",
-        "en_name": "Classic Cheese Pizza",
-        "tag_text": "토마토 소스와 풍부한 모차렐라",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-클래식치즈-1024x576.jpg",
+        "name": "나폴리 슈림프 피자",
+        "en_name": "Napoli Shrimp Pizza",
+        "tag_text": "통통한 새우에 마늘과 바질이 생생한 감동을 부르는 맛",
+        "kcal": 593,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Napoli-Shrimp-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 3,
-        "name": "햄앤체다 피자",
-        "en_name": "Ham & Cheddar Pizza",
-        "tag_text": "햄 & 체다치즈 매니아들의 원 픽",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-햄앤체다-1024x576.jpg",
+        "name": "부라타 치즈 피자",
+        "en_name": "Burrata Cheese Pizza",
+        "tag_text": "부드러운 부라타 치즈가 하몽과 루꼴라에 사르르 녹아드는 맛",
+        "kcal": 619,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Burrata-Cheese-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 4,
-        "name": "고르곤졸라 피자",
-        "en_name": "Blue Cheese Pizza",
+        "name": "리치 치즈 피자",
+        "en_name": "Rich Cheese Pizza",
         "tag_text": "블루 치즈와 꿀의 환상 조합!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-고르곤졸라-1024x576.jpg",
+        "kcal": 619,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Rich-Cheese-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 5,
-        "name": "페퍼로니 피자",
-        "en_name": "Pepperoni Pizza",
-        "tag_text": "짭짤한 풍미가 일품",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-페퍼로니-1024x576.jpg",
+        "name": "슈퍼 콤비네이션 피자",
+        "en_name": "Super Combination Pizza",
+        "tag_text": "남녀노소가 좋아하는 피자의 대명사! 다양하고 풍부한 토핑의 조합! ",
+        "kcal": 626,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Super-Combination-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 6,
-        "name": "페퍼로니 매니아 피자",
-        "en_name": "Pepperoni Mania Pizza",
-        "tag_text": "고급 페퍼로니를 듬뿍 올려 풍성한 맛",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-페퍼로니매니아-1024x576.jpg",
+        "name": "불고기 피자",
+        "en_name": "Bulgogi Pizza",
+        "tag_text": "짭잘 고소 한국의 맛 불고기, 이제는 세계의 맛으로!",
+        "kcal": 670,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Bulgogi-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 7,
-        "name": "하와이안 피자",
-        "en_name": "Hawaiian Pizza",
-        "tag_text": "단짠단짠 매니아들의 원픽!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-하와이안-1024x576.jpg",
+        "name": "베이컨 포테이토 피자",
+        "en_name": "Bacon Potato Pizza",
+        "tag_text": "담백한 감자와 바삭한 베이컨, 슬라이스 햄이 입안 가득!",
+        "kcal": 747,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Bacon-Potato-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 8,
-        "name": "슈퍼 콤비네이션 피자",
-        "en_name": "Super Combination Pizza",
+        "name": "고구마 피자",
+        "en_name": "Sweet Potato Pizza",
         "tag_text": "남녀노소 좋아하는 피자 정통의 바로 그 맛!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-슈퍼콤비네이션-1024x576.jpg",
+        "kcal": 721,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Sweet-Potato-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 9,
-        "name": "고구마 피자",
-        "en_name": "Sweet Potato Pizza",
-        "tag_text": "고구마 큐브&무스가 듬뿍!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-고구마-1024x576.jpg",
+        "name": "크런치 포테이토 피자",
+        "en_name": "Crunch Potato Pizza",
+        "tag_text": "바삭한 감자튀김, 풍미가 좋은 베이컨, 고소한 랜치 소스에 살짝 매콤한 카이엔 페퍼 시즈닝을 더해 풍성한 맛!",
+        "kcal": 721,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Crunch-Potato-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 10,
-        "name": "베이컨 포테이토 피자",
-        "en_name": "Bacon Potato Pizza",
-        "tag_text": "베이컨 매니아들의 원 픽",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-베이컨포테이토피자-1024x576.jpg",
+        "name": "하와이안 피자",
+        "en_name": "Hawaiian Pizza",
+        "tag_text": "상큼 달콤 파인애플과 고소한 햄이 만나 기분 좋은 단짠 단짠! 파마산 치즈까지 사르르!",
+        "kcal": 672,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Hawaiian-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 11,
-        "name": "나폴리 슈림프 피자",
-        "en_name": "Premium Steak Pizza",
-        "tag_text": "통통한 새우가 한 접시!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-부라타치즈-new2-0901-1024x576.jpg",
+        "name": "페퍼로니 피자",
+        "en_name": "Pepperoni Pizza",
+        "tag_text": "고소한 페퍼로니가 100 퍼센트 자연 치즈 위에 듬뿍!",
+        "kcal": 746,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-Pepperoni-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 12,
-        "name": "부라타 치즈 피자",
-        "en_name": "Spicy Chicken Pizza",
-        "tag_text": "치즈맛 매니아 취향저격 피자",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-부라타치즈-new2-09012-1024x576.jpg",
+        "name": "고르곤졸라 피자",
+        "en_name": "Blue Cheese Pizza",
+        "tag_text": "블루 치즈 향이 듬뿍, 정통 이태리 스타일 고르곤졸라 피자를 꿀에 찍어 한 입!",
+        "kcal": 695,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Blue-Cheese-Pizza2-1024x577.png",
         "price": 7000
       },
       {
         "id": 13,
-        "name": "불고기 피자",
-        "en_name": "Bulgogi Pizza",
-        "tag_text": "프리미엄 불고기 토핑이 듬뿍",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-pizza-불고기-1024x576.jpg",
+        "name": "콘치즈 피자",
+        "en_name": "Corn Cheese Pizza",
+        "tag_text": "크리미한 갈릭 소스와 달콤한 옥수수, 고소한 체다 치즈까지!",
+        "kcal": 703,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Corn-Cheese-Pizza2-1024x577.png",
+        "price": 7000
+      },
+      {
+        "id": 14,
+        "name": "클래식 치즈 피자",
+        "en_name": "Classic Cheese Pizza",
+        "tag_text": "피자의 클래식! 신선한 토마토 소스와 고피자만의 비법으로 탄생한 모짜렐라, 체다, 고다 최적의 3종 치즈 조합!",
+        "kcal": 685,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/gopizza-kr-menu-Classic-Cheese-Pizza2-1024x577.png",
         "price": 7000
       }
     ],
-    [
+
+    "pasta_pilaf": [
       {
-        "id": 15,
-        "name": "토마토 파스타",
-        "en_name": "Tomato Pasta",
-        "tag_text": "새콤달콤하고 프레쉬한 토마토 파스타!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-tomato-pasta-1024x576.jpg",
+        "id": 1,
+        "name": "감바스 파스타",
+        "en_name": "Gambas Pasta",
+        "tag_text": "새우와 마늘의 감칠맛으로 감바스의 느낌을 재현한, 깔끔한 맛의 오일 베이스 파스타",
+        "kcal": 523,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/Gambas-Pasta_02-1024x577.png",
         "price": 5000
       },
       {
-        "id": 16,
+        "id": 2,
         "name": "까르보나라 파스타",
         "en_name": "Carbonara Pasta",
-        "tag_text": "생크림소스로 더 진하고 고소하게!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu까르보나라-1024x576.jpg",
+        "tag_text": "진하고 고소한 생크림 소스에 베이컨, 양송이, 파스타의 스테디 셀러 까르보나라!",
+        "kcal": 565,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/Carbonara-Pasta_02-1024x577.png",
         "price": 5000
       },
       {
-        "id": 17,
-        "name": "알리오 올리오 파스타",
-        "en_name": "Aglio e Olio Pasta",
-        "tag_text": "매콤한 갈릭 오일 베이스의 고피자 시그니처 오일 파스타",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-men-알리오올리오-1024x576.jpg",
+        "id": 3,
+        "name": "토마토 치즈 파스타",
+        "en_name": "Tomato Cheese Pasta",
+        "tag_text": "신선한 토마토 소스 파스타에 100 퍼센트 자연 치즈가 듬뿍! 풍미 깊은 토마토 소스와 치즈의 맛을 즐겨 보세요! ",
+        "kcal": 515,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/Tomato-Cheese-Pasta_02-1024x577.png",
         "price": 5000
       },
       {
-        "id": 18,
-        "name": "불닭 치즈 파스타",
-        "en_name": "Spicy Chicken Cheese Pasta",
-        "tag_text": "매콤한 치킨과 부드러운 크림 소스 매니아들 자동 생성하는 맛!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/Spicy-Chicken-Cheese-Pasta-400x300.jpg",
+        "id": 4,
+        "name": "하와이안 갈릭 슈림프 필라프",
+        "en_name": "Hawaiian Garlic Shrimp Pilaf",
+        "tag_text": "고소한 갈릭오일소스와 체다치즈, 달콤한 파인애플 그리고 큼직한 새우를 더해 풍성한 맛",
+        "kcal": 515,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/Hawaiian-Garlic-Shrimp-Pilaf_02-1024x577.png",
         "price": 5000
       },
       {
-        "id": 19,
-        "name": "치즈 오븐 파스타",
-        "en_name": "Cheese Oven Pasta",
-        "tag_text": "쭉~ 모짜렐라 치즈가 듬뿍 올라간 피자집 필수코스~",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/08/gopizza-kr-menu-cheese-oven-1024x576.jpg",
-        "price": 5000
-      },
-      {
-        "id": 20,
-        "name": "스테이크 로제 파스타",
-        "en_name": "Steak Rose Pasta",
-        "tag_text": "로제 소스에 호주산 청정우 스테이크로 여성들 취항저격! 프리미엄 파스타",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/02/steak-rose-pasta-400x300.jpg",
+        "id": 5,
+        "name": "미트 칠리 치즈 필라프",
+        "en_name": "Meat Chili Cheese Pilaf",
+        "tag_text": "풍미가 진한 고피자 미트소스와 체다치즈, 상큼한 사워크림까지!",
+        "kcal": 515,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/02/Meat-Chili-Cheese-Pilaf_02-1024x577.png",
         "price": 5000
       }
     ],
-    [
+
+    "flexbox": [
       {
-        "id": 21,
-        "name": "미니 브라우니",
-        "en_name": "Chocolate Brownie",
-        "tag_text": "화덕에서 구운 리.얼 브라우니",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/mini-brownie-400x300.jpg",
+        "id": 1,
+        "name": "크런치 포테이토 플렉스박스",
+        "en_name": "Cruch Potato Flexbox",
+        "tag_text": "통으로 썰어낸 감자를 튀겨 더욱 바삭하고 고소한 크런치 포테이토",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cruch-Potato-Flexbox_02-1024x577.png",
         "price": 3000
       },
       {
-        "id": 23,
-        "name": "애플망고 스틱",
-        "en_name": "Applemango Stick",
-        "tag_text": "진짜 애플망고가 그대로 콕!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/06/applemango-stick-web-400x300.jpg",
+        "id": 2,
+        "name": "치즈볼 플렉스박스",
+        "en_name": "Cheese Ball Flex Box",
+        "tag_text": "고소한 모짜렐라와 크리미한 크림치즈로 속이 꽉 찬 황금빛 바삭함!",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Ball-Flexbox_02-1024x577.png",
         "price": 1500
       },
       {
-        "id": 24,
-        "name": "버팔로윙 - 오리지널",
-        "en_name": "Buffalo Wing - Original",
-        "tag_text": "오리지널 버팔로윙의 짭짤한 맛",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/buffalowings-original-400x300.jpg",
+        "id": 3,
+        "name": "새우 플렉스박스",
+        "en_name": "Shrimp Flexbox",
+        "tag_text": "탱~글한 통새우살 가득~한 바삭한 새우링",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Shrimp-Flexbox_02-1024x577.png",
         "price": 3000
       },
       {
-        "id": 25,
-        "name": "통 큰 텐더",
-        "en_name": "Chicken Tender",
-        "tag_text": "누구나 좋아하는 부드럽고 촉촉한 닭 안심 부위",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/chickentender_02-400x300.jpg",
+        "id": 4,
+        "name": "윙 플렉스박스",
+        "en_name": "Wing Flexbox",
+        "tag_text": "고피자의 시그니처 사이드 메뉴인 바삭하고 촉촉한 버팔로윙",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Wing-Flexbox_02-1024x577.png",
         "price": 3000
-      },
-      {
-        "id": 26,
-        "name": "프렌치 프라이",
-        "en_name": "French Fries",
-        "tag_text": "고소하고 담백한 프렌치 프라이",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/frenchfries-400x300.jpg",
-        "price": 3000
-      },
-      {
-        "id": 27,
-        "name": "치즈 스틱",
-        "en_name": "Cheese Sticks",
-        "tag_text": "쭉쭉 늘어나는 스트링 치즈의 즐거움",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/cheesestick-400x300.jpg",
-        "price": 1500
-      },
-      {
-        "id": 28,
-        "name": "콘샐러드",
-        "en_name": "Corn Salad",
-        "tag_text": "달달함과 상큼함이 어우러진 차가운 사이드",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/cornsalad-400x300.jpg",
-        "price": 1000
       }
     ],
-    [
+
+    "side_dessert": [
       {
-        "id": 29,
-        "name": "콜드브루",
-        "en_name": "Cold Brew",
-        "tag_text": "시원~하게 롸잇나우!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/06/coldbrew-web-400x300.jpg",
+        "id": 1,
+        "name": "리얼 어니언 링",
+        "en_name": "Real Onion Ring",
+        "tag_text": "바삭한 튀김옷 속 달달한 양파의 깊은 맛과 풍부한 향에 자꾸만 손이가는 어니언 링",
+        "kcal": 432,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2021/05/New-Real-Onion-Ring_02-1024x577.png",
         "price": 4000
       },
       {
-        "id": 30,
-        "name": "탄산음료",
-        "en_name": "Soft Drink",
-        "tag_text": "콜라, 사이다, 마운틴듀, 미린다 오렌지",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/콜라-400x300.png",
+        "id": 2,
+        "name": "치즈 브레드스틱",
+        "en_name": "Cheese Breadsticks",
+        "tag_text": "부드럽고 바삭한 고피자 도우에  갈릭오일 소스와 체다치즈를 뿌려 구워 부드럽고 고소한 맛!",
+        "kcal": 432,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Breadsticks_02-1024x577.png",
         "price": 2000
       },
       {
-        "id": 31,
-        "name": "청포도 에이드",
-        "en_name": "Green Grape Ade",
-        "tag_text": "새콤달콤한 과일과 톡 쏘는 탄산으로 상큼하게!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/청포도에이드-400x300.png",
+        "id": 3,
+        "name": "치킨 텐더",
+        "en_name": "Chicken Tender",
+        "tag_text": "부드러운 닭 안심살을 맛있게 튀겨낸 대표 사이드 아이템!",
+        "kcal": 432,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Chicken-Tender_02-1024x577.png",
         "price": 3500
       },
       {
-        "id": 32,
-        "name": "자몽 에이드",
-        "en_name": "Grapefruit Ade",
-        "tag_text": "새콤달콤한 과일과 톡 쏘는 탄산으로 상큼하게!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/자몽에이드-400x300.png",
+        "id": 4,
+        "name": "순살 치킨 앤 프라이",
+        "en_name": "Boneless Chicken & Fries",
+        "tag_text": "순살 치킨과 프렌치 프라이를 한 번에!",
+        "kcal": 432,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Boneless-Chicken-Fries_02-1024x577.png",
         "price": 3500
       },
       {
-        "id": 33,
-        "name": "블루베리 레몬에이드",
-        "en_name": "Blueberry Lemon Ade",
-        "tag_text": "새콤달콤한 과일과 톡 쏘는 탄산으로 상큼하게!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/블루베리레몬에이드-400x300.png",
+        "id": 5,
+        "name": "오리지널 버팔로윙",
+        "en_name": "Original Buffalo Wing",
+        "tag_text": "오리지널 버팔로윙의 짭짤한 맛",
+        "kcal": 171,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Original-Buffalo-Wing_02-1024x577.png",
         "price": 3500
       },
       {
-        "id": 34,
-        "name": "라임 에이드",
-        "en_name": "Lime Ade",
-        "tag_text": "새콤달콤한 과일과 톡 쏘는 탄산으로 상큼하게!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2019/03/라임에이드-400x300.png",
+        "id": 6,
+        "name": "치즈 스틱",
+        "en_name": "Cheese Stick",
+        "tag_text": "쭉쭉 늘어나는 스트링 치즈의 고소한 맛!",
+        "kcal": 135,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Sticks_02-1024x577.png",
+        "price": 3500
+      },
+      {
+        "id": 7,
+        "name": "치즈볼",
+        "en_name": "Cheese Balls",
+        "tag_text": "고소한 모짜렐라와 크리미한 크림치즈로 속이 꽉 찬 황금빛 바삭함!",
+        "kcal": 135,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Balls_02-1024x577.png",
+        "price": 3500
+      },
+      {
+        "id": 8,
+        "name": "새우링",
+        "en_name": "Fried Shrimp Rings",
+        "tag_text": "탱~글한 통새우살 가득~한 바삭한 새우링",
+        "kcal": 135,
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Shrimp-Rings_02-1024x577.png",
         "price": 3500
       }
     ],
-    [
+
+    "drinks": [
       {
-        "id": 35,
-        "name": "고고 패키지",
+        "id": 1,
+        "name": "코카콜라",
         "en_name": "GOGO Package",
-        "tag_text": "세트로 즐겨봐~",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/package-gogo-400x300.jpg",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/Coca-Cola_02-1024x577.png",
         "price": 10000
       },
       {
-        "id": 36,
-        "name": "치킨 패키지",
-        "en_name": "Chicken Package",
-        "tag_text": "치킨을 좋아하는 당신에게..",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/package-chicken-400x300.jpg",
+        "id": 2,
+        "name": "스프라이트",
+        "en_name": "Sprite",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/sprite_02-1024x577.png",
         "price": 10000
-      }
-    ],
-    [
+      },
       {
-        "id": 37,
-        "name": "치즈 추가",
-        "en_name": "Add Cheese",
-        "tag_text": "치즈 덕후들은 알지?",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/topping-cheese-400x300.jpg",
+        "id": 3,
+        "name": "환타 오렌지",
+        "en_name": "Fanta Orange",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/fanta_orange_02-1024x577.png",
+        "price": 10000
+      },
+      {
+        "id": 4,
+        "name": "환타 포도",
+        "en_name": "Fanta Grape",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/fanta_Grape_02-1024x577.png",
+        "price": 10000
+      },
+      {
+        "id": 5,
+        "name": "코카콜라",
+        "en_name": "GOGO Package",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/Coca-Cola_02-1024x577.png",
+        "price": 10000
+      },
+      {
+        "id": 6,
+        "name": "콜드브루",
+        "en_name": "Cold Brew",
+        "tag_text": "",
+        "img_url": "https://gopizza.kr/wp-content/uploads/2020/08/Cold-Brew_02-1024x577.png",
         "price": 100
-      },
-      {
-        "id": 38,
-        "name": "고구마무스 추가",
-        "en_name": "Add Sweet Potato Mousse",
-        "tag_text": "고구마 덕후들은 알지?!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/topping-sweet-potato-400x300.jpg",
-        "price": 1500
-      },
-      {
-        "id": 39,
-        "name": "갈릭디핑소스",
-        "en_name": "Garlic Dipping Sauce",
-        "tag_text": "갈릭 없이 어떻게 먹어?!",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/sauce-garlic-dipping-400x300.jpg",
-        "price": 1500
-      },
-      {
-        "id": 40,
-        "name": "랜치소스",
-        "en_name": "Ranch",
-        "tag_text": "나 좀 주문해줘~",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/sauce-ranch-400x300.jpg",
-        "price": 1500
-      },
-      {
-        "id": 41,
-        "name": "파이어소스",
-        "en_name": "Fire Sauce",
-        "tag_text": "매운거 좋아해?",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/sauce-fire-400x300.jpg",
-        "price": 1500
-      },
-      {
-        "id": 42,
-        "name": "핫소스",
-        "en_name": "Hot Sauce",
-        "tag_text": "핫(Hot)해~ 핫(Hot)해~",
-        "img_url": "https://www.gopizza.kr/wp-content/uploads/2020/03/sauce-hot-400x300.jpg",
-        "price": 1500
       }
     ]
-  ]
+  }
 }

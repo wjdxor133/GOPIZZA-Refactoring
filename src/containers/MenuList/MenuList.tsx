@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { MenuCard } from "components";
 import { connect } from "react-redux";
 import axios from "axios";
 
@@ -26,7 +27,7 @@ type MenuLisptProps = {
 };
 
 const MenuList = ({ menuNum, currentUser, addItem }: MenuLisptProps) => {
-  const [menuData, setMenuData] = useState<Array<MenuListType[]>>([]);
+  const [menuData, setMenuData] = useState([]);
   const [loginModal, setLoginModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -50,7 +51,7 @@ const MenuList = ({ menuNum, currentUser, addItem }: MenuLisptProps) => {
       setLoginModal(false);
     }
   };
-
+  console.log("menuData", Object.values(menuData).flat());
   return (
     <MenuListComponent>
       {loginModal ? (
@@ -62,31 +63,34 @@ const MenuList = ({ menuNum, currentUser, addItem }: MenuLisptProps) => {
         </LoadingBox>
       ) : (
         <MenuListBox>
-          {menuData.length > 0 &&
-            menuData[menuNum].map((menu) => {
-              return (
-                <MenuItem key={menu.id}>
-                  <img src={`${menu.img_url}`} alt=" "></img>
-                  <p>{menu.name}</p>
-                  <p>{menu.en_name}</p>
-                  <p>{menu.price}원</p>
-                  <p>#{menu.tag_text}</p>
-                  <button
-                    onClick={() => {
-                      showLoginModal();
-                      addItem(menu);
-                      if (currentUser !== null)
-                        toast(`${menu.name} 추가!`, {
-                          position: "bottom-center",
-                          autoClose: 1500,
-                        });
-                    }}
-                  >
-                    장바구니 추가
-                  </button>
-                </MenuItem>
-              );
-            })}
+          {menuData &&
+            Object.values(menuData)
+              .flat()
+              .map((menu, idx) => {
+                return <MenuCard menu={menu} key={idx} />;
+                // return (
+                //   <MenuItem key={menu.id}>
+                //     <img src={`${menu.img_url}`} alt=" "></img>
+                //     <p>{menu.name}</p>
+                //     <p>{menu.en_name}</p>
+                //     <p>{menu.price}원</p>
+                //     <p>#{menu.tag_text}</p>
+                //     <button
+                //       onClick={() => {
+                //         showLoginModal();
+                //         addItem(menu);
+                //         if (currentUser !== null)
+                //           toast(`${menu.name} 추가!`, {
+                //             position: "bottom-center",
+                //             autoClose: 1500,
+                //           });
+                //       }}
+                //     >
+                //       장바구니 추가
+                //     </button>
+                //   </MenuItem>
+                // );
+              })}
         </MenuListBox>
       )}
       <ToastContainer />
@@ -111,9 +115,14 @@ const MenuListComponent = styled.div`
 
 const MenuListBox = styled.ul`
   width: 80%;
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex;
+  flex-flow: row wrap; */
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  grid-gap: 30px;
+  padding: 30px 0;
 `;
 
 const LoadingBox = styled.div`
@@ -130,7 +139,7 @@ const LoadingText = styled.p`
 `;
 
 const MenuItem = styled.li`
-  width: 20%;
+  /* width: 20%; */
   display: flex;
   justify-content: center;
   flex-direction: column;

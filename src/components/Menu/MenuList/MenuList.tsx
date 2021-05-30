@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { MenuCard } from "components";
+
 import { connect } from "react-redux";
-import axios from "axios";
 
 import styled from "styled-components";
-import Login from "../../components/Modal/Login/Login";
+import Login from "components/Modal/Login/Login";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { addItem } from "../../redux/cart/cartActions";
+import { addItem } from "redux/cart/cartActions";
 
-interface MenuListType {
+interface MenuListProps {
+  menuData: MenuListTypes[];
+  loading: boolean;
+  currentUser: firebase.User | null;
+  addItem: (item: MenuListTypes) => void;
+}
+
+interface MenuListTypes {
   id: number;
   name: string;
   en_name: string;
@@ -20,29 +27,14 @@ interface MenuListType {
   price: number;
 }
 
-type MenuLisptProps = {
-  menuNum: number;
-  currentUser: firebase.User | null;
-  addItem: (item: MenuListType) => void;
-};
-
-const MenuList = ({ menuNum, currentUser, addItem }: MenuLisptProps) => {
-  const [menuData, setMenuData] = useState([]);
+const MenuList = ({
+  menuData,
+  loading,
+  currentUser,
+  addItem,
+}: MenuListProps) => {
   const [loginModal, setLoginModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    const apiData = () => {
-      setTimeout(async () => {
-        await axios.get("/data/menuData.json").then((res) => {
-          setMenuData(res.data.data);
-          setIsLoading(false);
-        });
-      }, 500);
-      setIsLoading(true);
-    };
-    apiData();
-  }, [menuNum]);
 
   const showLoginModal = () => {
     if (currentUser === null) {
@@ -57,7 +49,7 @@ const MenuList = ({ menuNum, currentUser, addItem }: MenuLisptProps) => {
       {loginModal ? (
         <Login showLoginModal={showLoginModal} setLoginModal={setLoginModal} />
       ) : null}
-      {isLoading === true ? (
+      {loading === true ? (
         <LoadingBox>
           <LoadingText>Loading...</LoadingText>
         </LoadingBox>

@@ -35,7 +35,6 @@ export const KcalText = styled.p`
 
 export const HoverContents = styled(CardContents)`
   background-color: ${({ theme }) => theme.colors.navy};
-  /* position: relative; */
 `;
 
 export const HoverWrapper = styled.div`
@@ -43,20 +42,15 @@ export const HoverWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  left: 0;
-  top: 0; */
   width: 100%;
   height: 100%;
   opacity: 0;
-  /* z-index: 5; */
   transform: scale(0.5);
   color: ${({ theme }) => theme.colors.white};
 
   &:hover {
     opacity: 1;
     transform: scale(1);
-    /* bottom: 12px; */
     transition-duration: 0.3s;
     transition-delay: 0.3s;
   }
@@ -69,6 +63,7 @@ export const HoverName = styled(MenuName)`
 
 export const HoverSubName = styled(MenuSubName)`
   text-align: center;
+  line-height: 1rem;
   padding: 8px 0;
 `;
 

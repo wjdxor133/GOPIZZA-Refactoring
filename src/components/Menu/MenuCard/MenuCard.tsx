@@ -17,7 +17,7 @@ import {
 import { useHover } from "hooks";
 
 interface MenuCardProps {
-  menu: MenuData;
+  menu: any;
 }
 
 interface MenuData {
@@ -40,8 +40,11 @@ function MenuCard({ menu }: MenuCardProps) {
       {isHover ? (
         <HoverContents>
           <HoverWrapper>
-            <HoverName>{menu.name}</HoverName>
-            <HoverSubName>{menu.tag_text}</HoverSubName>
+            <Bounce>
+              <HoverName>{menu.name}</HoverName>
+              <HoverSubName>{menu.tag_text}</HoverSubName>
+            </Bounce>
+
             <PriceText>{`${menu.price}원`}</PriceText>
             <Bounce bottom>
               <CartBtn>

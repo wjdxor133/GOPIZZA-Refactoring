@@ -1,3 +1,4 @@
 import useHover from "./useHover";
+import useRequest from "./useRequest";
 
-export { useHover };
+export { useHover, useRequest };

@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import CheckOutItem from "../../containers/CheckOutItem/CheckOutItem";
-import Payment from "../../containers/Payment/Payment";
+import Header from "components/Common/Header/Header";
+import Footer from "components/Common/Footer/Footer";
+import CheckOutItem from "containers/CheckOutItem/CheckOutItem";
+import Payment from "containers/Payment/Payment";
 
 import {
   selectCartItems,

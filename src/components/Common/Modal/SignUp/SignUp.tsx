@@ -4,11 +4,8 @@ import styled from "styled-components";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import {
-  auth,
-  createUserProfileDocument,
-} from "../../../core/utils/firebase/firebase";
-import { signInWithGoogle } from "../../../core/utils/firebase/firebase";
+import { auth, createUserProfileDocument } from "core/utils/firebase/firebase";
+import { signInWithGoogle } from "core/utils/firebase/firebase";
 
 type SignUpInputType = {
   displayName: string;

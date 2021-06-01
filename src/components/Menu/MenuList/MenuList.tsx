@@ -9,7 +9,7 @@ import { MenuCard } from "components";
 
 import { connect } from "react-redux";
 
-import Login from "components/Modal/Login/Login";
+import Login from "components/Common/Modal/Login/Login";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

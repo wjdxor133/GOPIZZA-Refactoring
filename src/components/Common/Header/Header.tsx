@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { auth } from "../../core/utils/firebase/firebase";
-import { createUserProfileDocument } from "../../core/utils/firebase/firebase";
-import { setCurrentUser } from "../../redux/user/userActions";
-import CartIcon from "../../containers/Cart/CartIcon/CartIcon";
-import { selectCurrentUser } from "../../redux/user/userSelectors";
+import { auth } from "core/utils/firebase/firebase";
+import { createUserProfileDocument } from "core/utils/firebase/firebase";
+import { setCurrentUser } from "redux/user/userActions";
+import CartIcon from "containers/Cart/CartIcon/CartIcon";
+import { selectCurrentUser } from "redux/user/userSelectors";
 
 type HeaderPropsTypes = {
   history: any;

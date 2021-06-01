@@ -1,12 +1,12 @@
 /* global kakao*/
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import Header from "components/Common/Header/Header";
+import Footer from "components/Common/Footer/Footer";
 import axios from "axios";
-import { StoreAPI, kakaoApiKey } from "../../core/api/api";
-import MapList from "../../components/MapList/MapList";
-import ModalPortal from "../../components/Modal/ModalPortal";
-import StoreModal from "../../components/Modal/StoreModal/StoreModal";
+import { StoreAPI, kakaoApiKey } from "core/api/api";
+import MapList from "components/MapList/MapList";
+import ModalPortal from "components/Common/Modal/ModalPortal";
+import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
 import styled from "styled-components";
 declare global {
   interface Window {

@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import SignUp from "../SignUp/SignUp";
 import ScrollLock from "../ScrollLock";
 
-import { auth } from "../../../core/utils/firebase/firebase";
+import { auth } from "core/utils/firebase/firebase";
 
 type LoginType = {
   email: string;

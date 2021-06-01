@@ -182,6 +182,7 @@
       "name": "크런치 포테이토 플렉스박스",
       "en_name": "Cruch Potato Flexbox",
       "tag_text": "통으로 썰어낸 감자를 튀겨 더욱 바삭하고 고소한 크런치 포테이토",
+      "kcal": 312,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cruch-Potato-Flexbox_02-1024x577.png",
       "price": 3000
     },
@@ -190,6 +191,7 @@
       "name": "치즈볼 플렉스박스",
       "en_name": "Cheese Ball Flex Box",
       "tag_text": "고소한 모짜렐라와 크리미한 크림치즈로 속이 꽉 찬 황금빛 바삭함!",
+      "kcal": 562,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Ball-Flexbox_02-1024x577.png",
       "price": 1500
     },
@@ -198,6 +200,7 @@
       "name": "새우 플렉스박스",
       "en_name": "Shrimp Flexbox",
       "tag_text": "탱~글한 통새우살 가득~한 바삭한 새우링",
+      "kcal": 276,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Shrimp-Flexbox_02-1024x577.png",
       "price": 3000
     },
@@ -206,6 +209,7 @@
       "name": "윙 플렉스박스",
       "en_name": "Wing Flexbox",
       "tag_text": "고피자의 시그니처 사이드 메뉴인 바삭하고 촉촉한 버팔로윙",
+      "kcal": 370,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Wing-Flexbox_02-1024x577.png",
       "price": 3000
     }

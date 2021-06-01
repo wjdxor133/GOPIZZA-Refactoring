@@ -1,7 +1,7 @@
 import React from "react";
 import ImgBg from "assets/images/video_1.gif";
 import { Hero, SlideShow, Products, Feature, Footer } from "components";
-import { productData } from "components/Products/data";
+import { productData } from "components/Main/Products/data";
 
 const Main = () => {
   return (

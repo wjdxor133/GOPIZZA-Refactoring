@@ -176,7 +176,7 @@
     }
   ],
 
-  "flexbox": [
+  "flexBox": [
     {
       "id": 1,
       "name": "크런치 포테이토 플렉스박스",
@@ -226,7 +226,7 @@
       "name": "치즈 브레드스틱",
       "en_name": "Cheese Breadsticks",
       "tag_text": "부드럽고 바삭한 고피자 도우에  갈릭오일 소스와 체다치즈를 뿌려 구워 부드럽고 고소한 맛!",
-      "kcal": 432,
+      "kcal": 450,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Breadsticks_02-1024x577.png",
       "price": 2000
     },
@@ -235,7 +235,7 @@
       "name": "치킨 텐더",
       "en_name": "Chicken Tender",
       "tag_text": "부드러운 닭 안심살을 맛있게 튀겨낸 대표 사이드 아이템!",
-      "kcal": 432,
+      "kcal": 486,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Chicken-Tender_02-1024x577.png",
       "price": 3500
     },
@@ -244,7 +244,7 @@
       "name": "순살 치킨 앤 프라이",
       "en_name": "Boneless Chicken & Fries",
       "tag_text": "순살 치킨과 프렌치 프라이를 한 번에!",
-      "kcal": 432,
+      "kcal": 467,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Boneless-Chicken-Fries_02-1024x577.png",
       "price": 3500
     },
@@ -271,7 +271,7 @@
       "name": "치즈볼",
       "en_name": "Cheese Balls",
       "tag_text": "고소한 모짜렐라와 크리미한 크림치즈로 속이 꽉 찬 황금빛 바삭함!",
-      "kcal": 135,
+      "kcal": 185,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Cheese-Balls_02-1024x577.png",
       "price": 3500
     },
@@ -280,7 +280,7 @@
       "name": "새우링",
       "en_name": "Fried Shrimp Rings",
       "tag_text": "탱~글한 통새우살 가득~한 바삭한 새우링",
-      "kcal": 135,
+      "kcal": 155,
       "img_url": "https://gopizza.kr/wp-content/uploads/2020/12/Shrimp-Rings_02-1024x577.png",
       "price": 3500
     }

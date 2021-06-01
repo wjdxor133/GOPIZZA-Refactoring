@@ -5,7 +5,7 @@ export const MenuCardWrapper = styled.div``;
 
 export const CardContents = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  height: 330px;
+  min-height: 330px;
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -44,16 +44,16 @@ export const HoverWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transform: scale(0.5);
+  /* opacity: 0;
+  transform: scale(0.5); */
   color: ${({ theme }) => theme.colors.white};
 
-  &:hover {
+  /* &:hover {
     opacity: 1;
     transform: scale(1);
     transition-duration: 0.3s;
     transition-delay: 0.3s;
-  }
+  } */
 `;
 
 export const HoverName = styled(MenuName)`

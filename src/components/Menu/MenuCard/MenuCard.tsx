@@ -17,11 +17,11 @@ import {
 import { useHover } from "hooks";
 
 interface MenuCardProps {
-  menu: any;
+  menu: Menu;
 }
 
-interface MenuData {
-  id: string;
+interface Menu {
+  id: number;
   name: string;
   en_name: string;
   kcal: number;
@@ -34,6 +34,7 @@ function MenuCard({ menu }: MenuCardProps) {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
   const Bounce = require("react-reveal/Bounce");
+  const Slide = require("react-reveal/Slide");
 
   return (
     <MenuCardWrapper ref={hoverRef}>
@@ -42,10 +43,12 @@ function MenuCard({ menu }: MenuCardProps) {
           <HoverWrapper>
             <Bounce>
               <HoverName>{menu.name}</HoverName>
+            </Bounce>
+            <Bounce>
               <HoverSubName>{menu.tag_text}</HoverSubName>
+              <PriceText>{`${menu.price}원`}</PriceText>
             </Bounce>
 
-            <PriceText>{`${menu.price}원`}</PriceText>
             <Bounce bottom>
               <CartBtn>
                 <CartIcon />

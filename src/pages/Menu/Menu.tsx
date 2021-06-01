@@ -18,16 +18,16 @@ interface Menu {
 }
 
 const Menu = ({ history }: any) => {
-  const [menuType, setMenuType] = useState<string>("");
+  const [menuType, setMenuType] = useState<string>("all");
   const [menuData, setMenuData] = useState([]);
   const { data, loading } = useRequest("/data/menuData.json");
 
   useEffect(() => {
-    menuType.length === 0 ? setMenuData(data) : setMenuData(data[menuType]);
+    menuType === "all" ? setMenuData(data) : setMenuData(data[menuType]);
   }, [data, menuType]);
 
   const handleChangeMenuList = (type: string) => {
-    type === "all" ? setMenuType("") : setMenuType(type);
+    type === "all" ? setMenuType("all") : setMenuType(type);
   };
 
   return (
@@ -53,7 +53,7 @@ const Menu = ({ history }: any) => {
           })}
         </NavTextBox>
       </NavBar> */}
-      <Menubar onChangeMenuList={handleChangeMenuList} />
+      <Menubar onChangeMenuList={handleChangeMenuList} menuType={menuType} />
       <MenuList menuData={menuData} loading={loading} />
       <Footer />
     </MenuComponent>
@@ -67,23 +67,23 @@ const MenuComponent = styled.div`
   height: 100vh;
 `;
 
-const NavBar = styled.div`
-  width: 100%;
-  background-color: #f6f6f6;
-`;
+// const NavBar = styled.div`
+//   width: 100%;
+//   background-color: #f6f6f6;
+// `;
 
-const NavTextBox = styled.div`
-  margin: 0 auto;
-  padding: 2em 0;
-  display: flex;
-  justify-content: center;
-`;
+// const NavTextBox = styled.div`
+//   margin: 0 auto;
+//   padding: 2em 0;
+//   display: flex;
+//   justify-content: center;
+// `;
 
-const NavText = styled.p`
-  margin: 0 2em;
-  font-size: 1.2rem;
-  color: #666;
-  :hover {
-    cursor: pointer;
-  }
-`;
+// const NavText = styled.p`
+//   margin: 0 2em;
+//   font-size: 1.2rem;
+//   color: #666;
+//   :hover {
+//     cursor: pointer;
+//   }
+// `;

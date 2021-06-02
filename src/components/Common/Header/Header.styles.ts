@@ -1,12 +1,72 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
+import { FaPizzaSlice } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 
-interface StyledSidebarProps {
-  isOpen: boolean;
+interface StyledHeaderProps {
+  scrollNav?: boolean;
+  isOpen?: boolean;
 }
 
-export const SidebarContainer = styled.aside<StyledSidebarProps>`
+export const Nav = styled.nav<StyledHeaderProps>`
+  color: ${({ scrollNav, theme }) =>
+    scrollNav ? theme.colors.primary_regular : theme.colors.white};
+  background: ${({ scrollNav, theme }) =>
+    scrollNav ? theme.colors.white : "transparent"};
+  height: 80px;
+  margin-top: -80px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: 0.2s ease-in-out;
+`;
+
+export const NavLink = styled(Link)`
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary_regular};
+    transition: 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 480px) {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+  }
+`;
+
+export const NavIcon = styled.div`
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary_regular};
+    transition: 0.2s ease-in-out;
+  }
+
+  p {
+    transform: translate() (-175%, 100%);
+    font-weight: bold;
+  }
+`;
+
+export const Bars = styled(FaPizzaSlice)`
+  font-size: 2rem;
+  transform: translate(-50%, -15%);
+`;
+
+export const SidebarContainer = styled.aside<StyledHeaderProps>`
   position: fixed;
   z-index: 999;
   width: 350px;
@@ -83,7 +143,7 @@ export const SidebarRoute = styled(Link)`
 
   &:hover {
     transition: 0.2s ease-in-out;
-    background: #fff;
+    background: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.primary_light};
   }
 `;

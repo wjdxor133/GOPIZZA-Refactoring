@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Navbar, Sidebar } from "components";
+import React from "react";
 import {
   HeroContainer,
   HeroContent,
@@ -16,16 +15,8 @@ export interface HeroProps {
 }
 
 function Hero({ title, subTitle, imgBg }: HeroProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <HeroContainer imgBg={imgBg}>
-      <Navbar toggle={toggle} />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
       <HeroContent>
         <HeroItems>
           <HeroH1>{title}</HeroH1>

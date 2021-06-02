@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Hero, Menubar, MenuList, Footer } from "components";
+import { Header, Hero, Menubar, MenuList, Footer } from "components";
 import { useRequest } from "hooks";
 
 interface MenuDataTypes {
@@ -31,6 +31,7 @@ const Menu = () => {
 
   return (
     <>
+      <Header />
       <Hero
         title="MENU"
         subTitle="가성비 최고의 고피자 메뉴를 만나보세요."

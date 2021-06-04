@@ -8,7 +8,7 @@ import {
   TitleH1,
   TitleH3,
 } from "./SlideShow.styles";
-import { ImageSlide } from "components";
+import Slide from "./Slide/Slide";
 import { menuData } from "./data";
 
 const SlideShow = () => {
@@ -52,10 +52,9 @@ const SlideShow = () => {
           </TitleH3>
         </TitleWrapper>
       </Fade>
-
       <Slider {...settings}>
         {menuData.map((menu) => {
-          return <ImageSlide menu={menu} />;
+          return <Slide menu={menu} />;
         })}
       </Slider>
     </SlideContainer>

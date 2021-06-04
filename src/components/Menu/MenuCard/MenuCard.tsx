@@ -34,7 +34,6 @@ function MenuCard({ menu }: MenuCardProps) {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
   const Bounce = require("react-reveal/Bounce");
-  const Slide = require("react-reveal/Slide");
 
   return (
     <MenuCardWrapper ref={hoverRef}>

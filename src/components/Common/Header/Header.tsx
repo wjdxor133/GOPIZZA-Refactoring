@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
+  HeaderContainer,
   Nav,
   NavLink,
   NavIcon,
@@ -12,7 +13,6 @@ import {
   SideBtnWrap,
   SidebarRoute,
 } from "./Header.styles";
-
 import { animateScroll as scroll } from "react-scroll";
 
 // import styled from "styled-components";
@@ -90,8 +90,8 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
   };
 
   return (
-    <>
-      <Nav scrollNav={scrollNav}>
+    <HeaderContainer scrollNav={scrollNav}>
+      <Nav>
         <NavLink to="/" onClick={toggleHome}>
           GOPIZZA
         </NavLink>
@@ -105,15 +105,15 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
           <CloseIcon />
         </Icon>
         <SidebarMenu>
-          <SidebarLink to="/">Pizza</SidebarLink>
-          <SidebarLink to="/">Desserts</SidebarLink>
+          <SidebarLink to="/login">로그인</SidebarLink>
+          <SidebarLink to="/map">매장 찾기</SidebarLink>
           <SidebarLink to="/menu">메뉴 소개</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/">Order Now</SidebarRoute>
+          <SidebarRoute to="/">주문 하기</SidebarRoute>
         </SideBtnWrap>
       </SidebarContainer>
-    </>
+    </HeaderContainer>
     // <HeaderComponent>
     //   <HeaderTitleBox>
     //     <LogoText

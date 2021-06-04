@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  ImageSlideWrapper,
+  SlideWrapper,
   CenterDiv,
   HoverDiv,
   SearchIcon,
@@ -10,7 +10,7 @@ import {
   SubMenuName,
   HoverMenuName,
   HoverMenuSubName,
-} from "./ImageSlide.styles";
+} from "./Slide.styles";
 
 interface ImageSlideProp {
   menu: MenuDataTypes;
@@ -29,7 +29,7 @@ function ImageSlide({ menu }: ImageSlideProp) {
     setIsHover(!isHover);
   };
   return (
-    <ImageSlideWrapper>
+    <SlideWrapper>
       {isHover ? (
         <HoverDiv onMouseLeave={handleViewMenuInfo}>
           <HoverMenuName>{menu.name}</HoverMenuName>
@@ -46,7 +46,7 @@ function ImageSlide({ menu }: ImageSlideProp) {
           <SubMenuName>{menu.en_name}</SubMenuName>
         </CenterDiv>
       )}
-    </ImageSlideWrapper>
+    </SlideWrapper>
   );
 }
 

@@ -8,20 +8,24 @@ interface StyledHeaderProps {
   isOpen?: boolean;
 }
 
-export const Nav = styled.nav<StyledHeaderProps>`
+export const HeaderContainer = styled.header<StyledHeaderProps>`
   color: ${({ scrollNav, theme }) =>
     scrollNav ? theme.colors.primary_regular : theme.colors.white};
   background: ${({ scrollNav, theme }) =>
     scrollNav ? theme.colors.white : "transparent"};
   height: 80px;
   margin-top: -80px;
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
   position: sticky;
   top: 0;
   z-index: 10;
   transition: 0.2s ease-in-out;
+`;
+
+export const Nav = styled.nav`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
 `;
 
 export const NavLink = styled(Link)`

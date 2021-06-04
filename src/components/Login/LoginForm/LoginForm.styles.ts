@@ -1,0 +1,110 @@
+import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
+
+export const LoginFormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const LoginFormWrapper = styled.aside`
+  width: 650px;
+  height: 550px;
+  padding: 48px;
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+`;
+
+export const LogoTitle = styled(Link)`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.2s ease-out;
+    transform: translateY(-10px);
+  }
+`;
+
+export const LogoImg = styled.img`
+  width: 80px;
+  height: 80px;
+  margin-right: 8px;
+`;
+
+export const LoginFormH3 = styled.h3`
+  width: 40%;
+  font-size: 36px;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.primary_regular};
+  text-align: center;
+`;
+
+export const LoginFormH5 = styled.h5`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.dark_gray};
+  margin: 20px 0;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  padding: 24px 36px;
+  border: 1px solid ${({ theme }) => theme.colors.light_gray};
+  margin-bottom: 8px;
+`;
+
+export const Label = styled.p`
+  width: 30%;
+  font-weight: bold;
+`;
+
+export const Input = styled.input`
+  width: 70%;
+  font-size: 16px;
+
+  ::placeholder {
+    font-weight: 400;
+  }
+`;
+
+export const LoginBtn = styled.button`
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary_regular};
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.colors.primary_light};
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const SignUpRouteWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const SignUpRouteText = styled.p`
+  color: ${({ theme }) => theme.colors.dark_gray};
+  font-size: 14px;
+`;
+
+export const SignUpRouteLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.primary_light};
+  font-size: 14px;
+  margin-left: 8px;
+  cursor: pointer;
+`;

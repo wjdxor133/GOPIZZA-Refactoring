@@ -4,6 +4,8 @@ import Main from "../../src/pages/Main/Main";
 import Map from "../../src/pages/Map/Map";
 import Menu from "../../src/pages/Menu/Menu";
 import Checkout from "../../src/pages/Checkout/Checkout";
+import Login from "pages/Login/Login";
+import SignUp from "pages/SignUp/SignUp";
 
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -17,6 +19,8 @@ class Routes extends React.Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Main} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signUp" component={SignUp} />
               <Route path="/map" component={Map} />
               <Route path="/menu" component={Menu} />
               <Route path="/checkout" component={Checkout} />

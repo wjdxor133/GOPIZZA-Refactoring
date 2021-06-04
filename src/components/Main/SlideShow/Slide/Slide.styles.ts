@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
-export const ImageSlideWrapper = styled.div``;
+export const SlideWrapper = styled.div``;
 
 export const CenterDiv = styled.div`
   display: flex;

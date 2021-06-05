@@ -5,11 +5,11 @@ export const LoginFormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
-export const LoginFormWrapper = styled.aside`
-  width: 650px;
+export const LoginFormWrapper = styled.div`
+  max-width: 650px;
   height: 550px;
   padding: 48px;
 `;
@@ -50,8 +50,10 @@ export const LoginFormH3 = styled.h3`
 export const LoginFormH5 = styled.h5`
   text-align: center;
   color: ${({ theme }) => theme.colors.dark_gray};
-  margin: 20px 0;
+  padding: 20px;
 `;
+
+export const FormWrapper = styled.form``;
 
 export const InputWrapper = styled.div`
   display: flex;
@@ -74,7 +76,12 @@ export const Input = styled.input`
   }
 `;
 
-export const LoginBtn = styled.button`
+export const ErrorMessage = styled.span`
+  font-size: 14px;
+  color: ${({ theme }) => theme.colors.primary_light};
+`;
+
+export const LoginBtn = styled.input`
   width: 100%;
   height: 70px;
   margin-top: 30px;

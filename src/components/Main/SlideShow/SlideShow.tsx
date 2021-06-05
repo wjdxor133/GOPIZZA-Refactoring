@@ -53,8 +53,8 @@ const SlideShow = () => {
         </TitleWrapper>
       </Fade>
       <Slider {...settings}>
-        {menuData.map((menu) => {
-          return <Slide menu={menu} />;
+        {menuData.map((menu, idx) => {
+          return <Slide key={idx} menu={menu} />;
         })}
       </Slider>
     </SlideContainer>

@@ -14,6 +14,7 @@ import {
   SidebarRoute,
 } from "./Header.styles";
 import { animateScroll as scroll } from "react-scroll";
+import { auth } from "core/utils/firebase/firebase";
 
 // import styled from "styled-components";
 // import { Navbar, Sidebar } from "components";
@@ -68,6 +69,7 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrollNav, setScrollNav] = useState<boolean>(false);
+  const [user, setUser] = useState<firebase.User | null>();
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -84,6 +86,14 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
   useEffect(() => {
     window.addEventListener("scroll", handleChangeNav);
   }, []);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      // console.log("user", user);
+      setUser(user);
+    });
+  }, []);
+  console.log(user, user);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -105,7 +115,9 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
           <CloseIcon />
         </Icon>
         <SidebarMenu>
-          <SidebarLink to="/login">로그인</SidebarLink>
+          <SidebarLink to={user ? "/" : "/login"}>
+            {user ? "마이페이지" : "로그인"}
+          </SidebarLink>
           <SidebarLink to="/map">매장 찾기</SidebarLink>
           <SidebarLink to="/menu">메뉴 소개</SidebarLink>
         </SidebarMenu>

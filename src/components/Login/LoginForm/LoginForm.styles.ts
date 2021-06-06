@@ -50,7 +50,8 @@ export const LoginFormH3 = styled.h3`
 export const LoginFormH5 = styled.h5`
   text-align: center;
   color: ${({ theme }) => theme.colors.dark_gray};
-  padding: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
 `;
 
 export const FormWrapper = styled.form``;
@@ -58,13 +59,15 @@ export const FormWrapper = styled.form``;
 export const InputWrapper = styled.div`
   display: flex;
   padding: 24px 36px;
-  border: 1px solid ${({ theme }) => theme.colors.light_gray};
-  margin-bottom: 8px;
+  border: 1px solid #e5e5e5;
+
+  :nth-child(2) {
+    border-top-style: none;
+  }
 `;
 
-export const Label = styled.p`
+export const Label = styled.label`
   width: 30%;
-  font-weight: bold;
 `;
 
 export const Input = styled.input`
@@ -84,7 +87,7 @@ export const ErrorMessage = styled.span`
 export const LoginBtn = styled.input`
   width: 100%;
   height: 70px;
-  margin-top: 30px;
+  margin-top: 24px;
   font-size: 18px;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.white};
@@ -101,7 +104,7 @@ export const SignUpRouteWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 24px;
 `;
 
 export const SignUpRouteText = styled.p`
@@ -114,4 +117,8 @@ export const SignUpRouteLink = styled(Link)`
   font-size: 14px;
   margin-left: 8px;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;

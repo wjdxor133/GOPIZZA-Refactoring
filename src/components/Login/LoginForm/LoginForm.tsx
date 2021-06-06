@@ -23,7 +23,6 @@ import { useInput } from "hooks";
 import { auth } from "core/utils/firebase/firebase";
 
 // import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 
 function LoginForm() {
   const [emailId, setEmailId, onChangeEmailId] = useInput<string>("");
@@ -46,7 +45,6 @@ function LoginForm() {
     } catch (error) {
       console.log("error", error);
       setError(`가입하지 않은 이메일이거나, 잘못된 비밀번호 입니다.`);
-      // console.log(error);
     }
   };
 

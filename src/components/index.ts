@@ -4,6 +4,7 @@ import Footer from "./Common/Footer/Footer";
 
 // Login
 import LoginForm from "./Login/LoginForm/LoginForm";
+import SignUpForm from "./SignUp/SignupForm/SignUpForm";
 
 import Menubar from "./Menu/Menubar/Menubar";
 import MenuCard from "./Menu/MenuCard/MenuCard";
@@ -17,6 +18,7 @@ export {
   Hero,
   Footer,
   LoginForm,
+  SignUpForm,
   Menubar,
   MenuCard,
   MenuList,

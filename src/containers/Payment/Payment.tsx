@@ -52,8 +52,8 @@ const Payment = ({ total, userName, userEmail }: any) => {
 };
 
 const mapStateToProps = ({ user: { currentUser } }: any) => ({
-  userName: currentUser.displayName,
-  userEmail: currentUser.email,
+  // userName: currentUser.displayName,
+  // userEmail: currentUser.email,
 });
 
 export default connect(mapStateToProps)(Payment);

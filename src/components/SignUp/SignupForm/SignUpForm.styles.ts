@@ -49,7 +49,7 @@ export const SignUpFormH3 = styled.h3`
 export const FormWrapper = styled.form`
   display: grid;
   grid-template-rows: repeat(4, auto);
-  grid-gap: 12px;
+  grid-gap: 16px;
 `;
 
 export const InputWrapper = styled.div`

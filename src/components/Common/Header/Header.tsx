@@ -15,6 +15,7 @@ import {
 } from "./Header.styles";
 import { animateScroll as scroll } from "react-scroll";
 import { auth } from "core/utils/firebase/firebase";
+import { ToastContainer, toast } from "react-toastify";
 
 // import styled from "styled-components";
 // import { Navbar, Sidebar } from "components";
@@ -89,7 +90,6 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      // console.log("user", user);
       setUser(user);
     });
   }, []);
@@ -97,6 +97,14 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
 
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+
+  const handleLogOut = () => {
+    auth.signOut();
+    toast.success("로그아웃 되었습니다.", {
+      position: "bottom-center",
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -115,16 +123,21 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
           <CloseIcon />
         </Icon>
         <SidebarMenu>
-          <SidebarLink to={user ? "/" : "/login"}>
-            {user ? "마이페이지" : "로그인"}
-          </SidebarLink>
+          {user ? (
+            <SidebarLink to="/" onClick={handleLogOut}>
+              로그아웃
+            </SidebarLink>
+          ) : (
+            <SidebarLink to="/login">로그인</SidebarLink>
+          )}
           <SidebarLink to="/map">매장 찾기</SidebarLink>
           <SidebarLink to="/menu">메뉴 소개</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/">주문 하기</SidebarRoute>
+          <SidebarRoute to="/checkout">주문 하기</SidebarRoute>
         </SideBtnWrap>
       </SidebarContainer>
+      <ToastContainer />
     </HeaderContainer>
     // <HeaderComponent>
     //   <HeaderTitleBox>

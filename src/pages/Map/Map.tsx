@@ -1,12 +1,11 @@
 /* global kakao*/
 import React, { useState, useEffect } from "react";
-import Header from "components/Common/Header/Header";
-import Footer from "components/Common/Footer/Footer";
+import { Header, Hero, StoreMap, Footer } from "components";
 import axios from "axios";
-import { StoreAPI, kakaoApiKey } from "core/api/api";
-import MapList from "components/MapList/MapList";
-import ModalPortal from "components/Common/Modal/ModalPortal";
-import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
+import { StoreAPI, KakaoApiKey } from "core/api/api";
+// import MapList from "components/Map/MapList/MapList";
+// import ModalPortal from "components/Common/Modal/ModalPortal";
+// import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
 import styled from "styled-components";
 declare global {
   interface Window {
@@ -58,7 +57,7 @@ const Map = ({ history }: any) => {
   const KakaoMap = (result: any) => {
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoApiKey}&autoload=false`;
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KakaoApiKey}&autoload=false`;
     document.body.appendChild(script);
     script.onload = () => {
       window.kakao.maps.load(() => {
@@ -224,103 +223,113 @@ const Map = ({ history }: any) => {
   };
 
   return (
-    // 지도가 띄어질 부분
-    <MapComponent>
-      {showModal ? (
-        <ModalPortal elementId="modal">
-          <StoreModal
-            setShowModal={setShowModal}
-            showModal={showModal}
-            order={order}
-          />
-        </ModalPortal>
-      ) : null}
-      <Header history={history} />
-      <ImgBox>
-        <Img
-          src="https://www.gopizza.kr/wp-content/uploads/2019/03/홈페이지-매장1.jpg"
-          alt=""
-        ></Img>
-        <ImgText>
-          우리동네
-          <br /> 고피자
-          <br /> <span className="imgText">가까운 매장을 찾아보세요.</span>
-        </ImgText>
-      </ImgBox>
-      <BtnBox>
-        <StoreSearchBtn onClick={currentMark}>내 현재 위치</StoreSearchBtn>
-        <StoreSearchBtn onClick={NearestStoreMarks}>
-          가까운 매장으로 이동!
-        </StoreSearchBtn>
-      </BtnBox>
-      <KakaoMapBox>
-        <StoreMap id="Map-Mymap"></StoreMap>
-        <MapList storeList={storeList} />
-      </KakaoMapBox>
+    <>
+      <Header />
+      <Hero
+        title="Store"
+        subTitle="가까운 고피자 매장을 확인해보세요!"
+        imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
+      />
+      <StoreMap />
       <Footer />
-    </MapComponent>
+    </>
+    // 지도가 띄어질 부분
+    // <MapComponent>
+    //   {showModal ? (
+    //     <ModalPortal elementId="modal">
+    //       <StoreModal
+    //         setShowModal={setShowModal}
+    //         showModal={showModal}
+    //         order={order}
+    //       />
+    //     </ModalPortal>
+    //   ) : null}
+    //   <Header history={history} />
+    //   <ImgBox>
+    //     <Img
+    //       src="https://www.gopizza.kr/wp-content/uploads/2019/03/홈페이지-매장1.jpg"
+    //       alt=""
+    //     ></Img>
+    //     <ImgText>
+    //       우리동네
+    //       <br /> 고피자
+    //       <br /> <span className="imgText">가까운 매장을 찾아보세요.</span>
+    //     </ImgText>
+    //   </ImgBox>
+    //   <BtnBox>
+    //     <StoreSearchBtn onClick={currentMark}>내 현재 위치</StoreSearchBtn>
+    //     <StoreSearchBtn onClick={NearestStoreMarks}>
+    //       가까운 매장으로 이동!
+    //     </StoreSearchBtn>
+    //   </BtnBox>
+    //   <KakaoMapBox>
+    //     <StoreMap id="Map-Mymap"></StoreMap>
+    //     <MapList storeList={storeList} />
+    //   </KakaoMapBox>
+    //   <Footer />
+    // </MapComponent>
   );
 };
 
 export default Map;
 
-const MapComponent = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
+// const MapComponent = styled.div`
+//   width: 100%;
+//   height: 100vh;
+// `;
 
-const ImgBox = styled.div`
-  width: 100%;
-  height: 300px;
-  position: relative;
-`;
+// const ImgBox = styled.div`
+//   width: 100%;
+//   height: 300px;
+//   position: relative;
+// `;
 
-const Img = styled.img`
-  width: 100%;
-  height: 100%;
-`;
+// const Img = styled.img`
+//   width: 100%;
+//   height: 100%;
+// `;
 
-const ImgText = styled.p`
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
+// const ImgText = styled.p`
+//   position: absolute;
+//   top: 30%;
+//   left: 15%;
+//   color: white;
+//   font-size: 3rem;
+//   font-weight: bold;
 
-  .imgText {
-    font-size: 2rem;
-  }
-`;
+//   .imgText {
+//     font-size: 2rem;
+//   }
+// `;
 
-const KakaoMapBox = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1em 0;
-`;
+// const KakaoMapBox = styled.div`
+//   width: 80%;
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1em 0;
+// `;
 
-const StoreMap = styled.div`
-  width: 50%;
-  height: 500px;
-`;
+// const StoreMap = styled.div`
+//   width: 50%;
+//   height: 500px;
+// `;
 
-const BtnBox = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 1em 0;
-`;
-const StoreSearchBtn = styled.button`
-  background-color: #f86d0d;
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  padding: 0.5em;
-  margin-left: 1em;
+// const BtnBox = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin: 1em 0;
+// `;
+// const StoreSearchBtn = styled.button`
+//   background-color: #f86d0d;
+//   color: white;
+//   font-size: 1.5rem;
+//   border-radius: 5px;
+//   padding: 0.5em;
+//   margin-left: 1em;
 
-  &:hover {
-    cursor: pointer;
-  }
-`;
+//   &:hover {
+//     cursor: pointer;
+//   }
+// `;

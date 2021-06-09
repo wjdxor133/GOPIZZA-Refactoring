@@ -6,6 +6,9 @@ import Footer from "./Common/Footer/Footer";
 import LoginForm from "./Login/LoginForm/LoginForm";
 import SignUpForm from "./SignUp/SignupForm/SignUpForm";
 
+// Map
+import StoreMap from "./Map/StoreMap/StoreMap";
+
 import Menubar from "./Menu/Menubar/Menubar";
 import MenuCard from "./Menu/MenuCard/MenuCard";
 import MenuList from "./Menu/MenuList/MenuList";
@@ -19,6 +22,7 @@ export {
   Footer,
   LoginForm,
   SignUpForm,
+  StoreMap,
   Menubar,
   MenuCard,
   MenuList,

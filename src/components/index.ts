@@ -8,6 +8,8 @@ import SignUpForm from "./SignUp/SignupForm/SignUpForm";
 
 // Map
 import StoreMap from "./Map/StoreMap/StoreMap";
+import StoreList from "./Map/StoreList/StoreList";
+import Pagination from "./Map/Pagination/Pagination";
 
 import Menubar from "./Menu/Menubar/Menubar";
 import MenuCard from "./Menu/MenuCard/MenuCard";
@@ -23,6 +25,8 @@ export {
   LoginForm,
   SignUpForm,
   StoreMap,
+  StoreList,
+  Pagination,
   Menubar,
   MenuCard,
   MenuList,

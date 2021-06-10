@@ -1,12 +1,19 @@
 /* global kakao*/
 import React, { useState, useEffect } from "react";
-import { Header, Hero, StoreMap, Footer } from "components";
+import {
+  Header,
+  Hero,
+  StoreMap,
+  StoreList,
+  Pagination,
+  Footer,
+} from "components";
 import axios from "axios";
 import { StoreAPI, KakaoApiKey } from "core/api/api";
 // import MapList from "components/Map/MapList/MapList";
 // import ModalPortal from "components/Common/Modal/ModalPortal";
-// import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
-import styled from "styled-components";
+// // import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
+// import styled from "styled-components";
 declare global {
   interface Window {
     kakao: any;
@@ -33,6 +40,13 @@ const Map = ({ history }: any) => {
   });
   const [showModal, setShowModal] = useState<boolean>(false);
   const [storeList, setStoreList] = useState<any>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postsPerPage, setPostsPerPage] = useState<number>(10);
+
+  // 페이지네이션
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = storeList.slice(indexOfFirstPost, indexOfLastPost);
 
   const { currentLat, currentLon, storeMarkers, order } = data;
 
@@ -42,10 +56,12 @@ const Map = ({ history }: any) => {
   useEffect(() => {
     const storeInfoAPI = async () => {
       // 목데이터 /data/locationData.json
-      const result = await (await axios.get("/data/locationData.json")).data
-        .data;
+      const { data }: any = await axios.get("/data/locationData.json");
+
       // const result = (await axios.get(StoreAPI)).data.data;
-      KakaoMap(result);
+      console.log("???", data);
+      setStoreList(data);
+      KakaoMap(data);
     };
     storeInfoAPI();
   }, []);
@@ -57,7 +73,7 @@ const Map = ({ history }: any) => {
   const KakaoMap = (result: any) => {
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KakaoApiKey}&autoload=false`;
+    // script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KakaoApiKey}&autoload=false`;
     document.body.appendChild(script);
     script.onload = () => {
       window.kakao.maps.load(() => {
@@ -222,6 +238,10 @@ const Map = ({ history }: any) => {
     });
   };
 
+  const handlePaginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <Header />
@@ -231,6 +251,13 @@ const Map = ({ history }: any) => {
         imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
       />
       <StoreMap />
+      <StoreList totalPosts={storeList.length} currentPosts={currentPosts} />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={storeList.length}
+        onPaginate={handlePaginate}
+        currentPage={currentPage}
+      />
       <Footer />
     </>
     // 지도가 띄어질 부분

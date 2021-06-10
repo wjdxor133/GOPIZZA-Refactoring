@@ -1,6 +1,6 @@
 /* global kakao*/
 import React, { useEffect } from "react";
-import { StoreMapContainer } from "./StoreMap.styles";
+import { StoreMapContainer, KakaoMap } from "./StoreMap.styles";
 
 declare global {
   interface Window {
@@ -22,7 +22,10 @@ function StoreMap() {
 
   return (
     <>
-      <StoreMapContainer id="map"></StoreMapContainer>;
+      <StoreMapContainer>
+        <KakaoMap id="map" />
+      </StoreMapContainer>
+      ;
     </>
   );
 }

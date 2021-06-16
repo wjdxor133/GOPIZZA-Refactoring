@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Header, Hero, Menubar, MenuList, Footer } from "components";
-import { useRequest } from "hooks";
+import { useFetch } from "hooks";
 
 interface MenuDataTypes {
   [key: string]: Menu[];
@@ -19,7 +19,7 @@ interface Menu {
 const Menu = () => {
   const [menuType, setMenuType] = useState<string>("all");
   const [menuData, setMenuData] = useState([]);
-  const { data, loading } = useRequest("/data/menuData.json");
+  const { data } = useFetch<any>("/data/menuData.json");
 
   useEffect(() => {
     menuType === "all" ? setMenuData(data) : setMenuData(data[menuType]);
@@ -38,7 +38,7 @@ const Menu = () => {
         imgBg="http://gopizza.kr/wp-content/uploads/2021/05/menu-1.png"
       />
       <Menubar onChangeMenuList={handleChangeMenuList} menuType={menuType} />
-      <MenuList menuData={menuData} loading={loading} />
+      <MenuList menuData={menuData} />
       <Footer />
     </>
   );

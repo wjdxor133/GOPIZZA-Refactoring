@@ -1,5 +1,5 @@
 import useHover from "./useHover";
 import useInput from "./useInput";
-import useRequest from "./useRequest";
+import useFetch from "./useFetch";
 
-export { useHover, useInput, useRequest };
+export { useHover, useInput, useFetch };

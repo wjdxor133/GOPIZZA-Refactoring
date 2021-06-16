@@ -18,7 +18,7 @@ import { addItem } from "redux/cart/cartActions";
 
 interface MenuListProps {
   menuData: Menu[];
-  loading: boolean;
+  // loading: boolean;
   currentUser: firebase.User | null;
   addItem: (item: Menu) => void;
 }
@@ -35,7 +35,7 @@ export interface Menu {
 
 const MenuList = ({
   menuData,
-  loading,
+  // loading,
   currentUser,
   addItem,
 }: MenuListProps) => {
@@ -53,42 +53,42 @@ const MenuList = ({
       {loginModal ? (
         <Login showLoginModal={showLoginModal} setLoginModal={setLoginModal} />
       ) : null}
-      {loading === true ? (
+      {/* {loading === true ? (
         <LoadingBox>
           <LoadingText>Loading...</LoadingText>
         </LoadingBox>
-      ) : (
-        <MenuListBox>
-          {menuData &&
-            Object.values(menuData)
-              .flat()
-              .map((menu, idx) => {
-                return <MenuCard menu={menu} key={idx} />;
-                // return (
-                //   <MenuItem key={menu.id}>
-                //     <img src={`${menu.img_url}`} alt=" "></img>
-                //     <p>{menu.name}</p>
-                //     <p>{menu.en_name}</p>
-                //     <p>{menu.price}원</p>
-                //     <p>#{menu.tag_text}</p>
-                //     <button
-                //       onClick={() => {
-                //         showLoginModal();
-                //         addItem(menu);
-                //         if (currentUser !== null)
-                //           toast(`${menu.name} 추가!`, {
-                //             position: "bottom-center",
-                //             autoClose: 1500,
-                //           });
-                //       }}
-                //     >
-                //       장바구니 추가
-                //     </button>
-                //   </MenuItem>
-                // );
-              })}
-        </MenuListBox>
-      )}
+      ) : ( */}
+      <MenuListBox>
+        {menuData &&
+          Object.values(menuData)
+            .flat()
+            .map((menu, idx) => {
+              return <MenuCard menu={menu} key={idx} />;
+              // return (
+              //   <MenuItem key={menu.id}>
+              //     <img src={`${menu.img_url}`} alt=" "></img>
+              //     <p>{menu.name}</p>
+              //     <p>{menu.en_name}</p>
+              //     <p>{menu.price}원</p>
+              //     <p>#{menu.tag_text}</p>
+              //     <button
+              //       onClick={() => {
+              //         showLoginModal();
+              //         addItem(menu);
+              //         if (currentUser !== null)
+              //           toast(`${menu.name} 추가!`, {
+              //             position: "bottom-center",
+              //             autoClose: 1500,
+              //           });
+              //       }}
+              //     >
+              //       장바구니 추가
+              //     </button>
+              //   </MenuItem>
+              // );
+            })}
+      </MenuListBox>
+      {/* )} */}
       <ToastContainer />
     </MenuListWrapper>
   );

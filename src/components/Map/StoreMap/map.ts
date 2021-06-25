@@ -1,33 +1,20 @@
 /* global kakao*/
+
 const kakao = (window as any).kakao;
 
-export const getStoreMap = () => {
-  var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
-  var options = {
-    //지도를 생성할 때 필요한 기본 옵션
-    center: new kakao.maps.LatLng(37.548945, 126.924483), //지도의 중심좌표.
-    level: 3, //지도의 레벨(확대, 축소 정도)
-  };
-  var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-  return map;
-};
-
+// 현재 위치 가져오는 함수
 export const getCurrentLocation = async (map: any) => {
   if (navigator.geolocation) {
-    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
     navigator.geolocation.getCurrentPosition(function (position) {
-      var lat = position.coords.latitude, // 위도
-        lon = position.coords.longitude; // 경도
-      var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-        message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
-
-      const m = displayMarker(locPosition, message, map);
-      console.log("m", m);
-      return m;
+      const lat = position.coords.latitude,
+        lon = position.coords.longitude;
+      const locPosition = new kakao.maps.LatLng(lat, lon),
+        message = '<div style="padding:5px;">여기에 계신가요?!</div>';
+      displayMarker(locPosition, message, map);
+      return locPosition;
     });
   } else {
-    // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
-    var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),
+    const locPosition = new kakao.maps.LatLng(33.450701, 126.570667),
       message = "geolocation을 사용할수 없어요..";
 
     displayMarker(locPosition, message, map);
@@ -36,25 +23,60 @@ export const getCurrentLocation = async (map: any) => {
 
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition: object, message: string, map: any) {
-  // 마커를 생성합니다
-  var marker = new kakao.maps.Marker({
+  // console.log("locPosition", locPosition);
+  const marker = new kakao.maps.Marker({
     map: map,
     position: locPosition,
   });
+  console.log("확인");
 
-  var iwContent = message, // 인포윈도우에 표시할 내용
+  const iwContent = message,
     iwRemoveable = true;
 
-  // 인포윈도우를 생성합니다
-  var infowindow = new kakao.maps.InfoWindow({
+  const infowindow = new kakao.maps.InfoWindow({
     content: iwContent,
     removable: iwRemoveable,
   });
-
-  // 인포윈도우를 마커위에 표시합니다
   infowindow.open(map, marker);
-
-  // 지도 중심좌표를 접속위치로 변경합니다
   map.setCenter(locPosition);
-  return map;
 }
+
+// 5km 이내에 매장 마커 띄우는 함수 호출
+export const getNearStores = async (storeMarks: any, map: any) => {
+  // 가까운 매장 반경 범위(km)
+  // const loc = getCurrentLocation(map);
+  const radius = 3000;
+  // console.log("storeList", storeList);
+  // const storeMarks = await getStoreMarks(storeList, map);
+  console.log("storeMarks?", storeMarks);
+
+  const nearMarkers: any = await storeMarks.filter((mark: any) => {
+    const c1 = map.getCenter(); // 현재 좌표
+    const c2 = mark.getPosition(); // 매장 좌표
+    const poly = new kakao.maps.Polyline({
+      path: [c1, c2],
+    });
+
+    const dist = Math.floor(poly.getLength()); // 매장 거리
+    // console.log("dist", dist);
+
+    return dist < radius;
+  });
+
+  console.log("nearMarkers", nearMarkers);
+
+  if (nearMarkers.length > 0) {
+    // 매장 전체 마커 지우기
+    await storeMarks.map((mark: any) => {
+      return mark.setMap(null);
+    });
+
+    // 가까운 매장 마커만 그리기
+    await nearMarkers.map((mark: any) => {
+      return mark.setMap(map);
+    });
+  } else {
+    console.log("확인!");
+    // setShowModal(true);
+  }
+};

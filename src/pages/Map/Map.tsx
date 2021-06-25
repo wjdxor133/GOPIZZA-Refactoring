@@ -15,6 +15,7 @@ import {
 // // import StoreModal from "components/Common/Modal/StoreModal/StoreModal";
 // import styled from "styled-components";
 import { useFetch } from "hooks";
+import { StoreListTypes } from "types/map.types";
 declare global {
   interface Window {
     kakao: any;
@@ -29,15 +30,6 @@ declare global {
 //   order: boolean;
 // }
 
-interface StoreListTypes {
-  id: number;
-  name: string;
-  address: string;
-  tel: string;
-  hours: string;
-  latlng: number[];
-}
-
 const Map = () => {
   const imageSrc: string =
     "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png";
@@ -49,12 +41,13 @@ const Map = () => {
   //   order: false,
   // });
   const [showModal, setShowModal] = useState<boolean>(false);
-  const { data: storeList } = useFetch<StoreListTypes[] | undefined>(
+  const { data: storeList } = useFetch<StoreListTypes[]>(
     "/data/locationData.json"
   );
+  console.log("storeList", storeList);
+  // 페이지네이션
   const [currentPage, setCurrentPage] = useState<number>(1);
   const postsPerPage: number = 10;
-  // 페이지네이션
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = storeList?.slice(indexOfFirstPost, indexOfLastPost);
@@ -256,6 +249,10 @@ const Map = () => {
     setCurrentPage(pageNumber);
   };
 
+  if (!storeList) {
+    return null;
+  }
+
   return (
     <>
       <Header />
@@ -274,103 +271,7 @@ const Map = () => {
       />
       <Footer />
     </>
-    // 지도가 띄어질 부분
-    // <MapComponent>
-    //   {showModal ? (
-    //     <ModalPortal elementId="modal">
-    //       <StoreModal
-    //         setShowModal={setShowModal}
-    //         showModal={showModal}
-    //         order={order}
-    //       />
-    //     </ModalPortal>
-    //   ) : null}
-    //   <Header history={history} />
-    //   <ImgBox>
-    //     <Img
-    //       src="https://www.gopizza.kr/wp-content/uploads/2019/03/홈페이지-매장1.jpg"
-    //       alt=""
-    //     ></Img>
-    //     <ImgText>
-    //       우리동네
-    //       <br /> 고피자
-    //       <br /> <span className="imgText">가까운 매장을 찾아보세요.</span>
-    //     </ImgText>
-    //   </ImgBox>
-    //   <BtnBox>
-    // <StoreSearchBtn onClick={currentMark}>내 현재 위치</StoreSearchBtn>
-    //     <StoreSearchBtn onClick={NearestStoreMarks}>
-    //       가까운 매장으로 이동!
-    //     </StoreSearchBtn>
-    //   </BtnBox>
-    //   <KakaoMapBox>
-    //     <StoreMap id="Map-Mymap"></StoreMap>
-    //     <MapList storeList={storeList} />
-    //   </KakaoMapBox>
-    //   <Footer />
-    // </MapComponent>
   );
 };
 
 export default Map;
-
-// const MapComponent = styled.div`
-//   width: 100%;
-//   height: 100vh;
-// `;
-
-// const ImgBox = styled.div`
-//   width: 100%;
-//   height: 300px;
-//   position: relative;
-// `;
-
-// const Img = styled.img`
-//   width: 100%;
-//   height: 100%;
-// `;
-
-// const ImgText = styled.p`
-//   position: absolute;
-//   top: 30%;
-//   left: 15%;
-//   color: white;
-//   font-size: 3rem;
-//   font-weight: bold;
-
-//   .imgText {
-//     font-size: 2rem;
-//   }
-// `;
-
-// const KakaoMapBox = styled.div`
-//   width: 80%;
-//   margin: 0 auto;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 1em 0;
-// `;
-
-// const StoreMap = styled.div`
-//   width: 50%;
-//   height: 500px;
-// `;
-
-// const BtnBox = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   margin: 1em 0;
-// `;
-// const StoreSearchBtn = styled.button`
-//   background-color: #f86d0d;
-//   color: white;
-//   font-size: 1.5rem;
-//   border-radius: 5px;
-//   padding: 0.5em;
-//   margin-left: 1em;
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-// `;

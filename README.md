@@ -26,11 +26,12 @@
 - Import를 연동하여 장바구니에 담긴 항목 결제 하기 기능 구현
 - redux의 성능 향상을 위해 reselect, redux-persist, redux-logger 라이브러리 적용하여 구현
 
-  <br/><br/>
+<br/>
 
 ## 📹 Demo (click!)
 
 [![Video Label](https://dcamp.kr/api/sites/default/files/_1539233623.png)](https://youtu.be/ehIKADIH6eE)
+
 
 ## 📝 회고록
 

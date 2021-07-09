@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MenuListWrapper = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.light_gray};
+  /* background-color: ${({ theme }) => theme.colors.light_gray}; */
 `;
 
 export const MenuListBox = styled.ul`

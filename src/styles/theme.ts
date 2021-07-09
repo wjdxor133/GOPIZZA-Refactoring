@@ -15,6 +15,11 @@ const theme: DefaultTheme = {
     primary_light: "#ff852B",
     primary_regular: "#ff6d00",
   },
+
+  elevations: {
+    elevation_light: "0px 2px 2px rgba(0, 0, 0, 0.28)",
+    elevation_heavy: "0px 4px 10px rgba(0, 0, 0, 0.30)",
+  },
 };
 
 export { theme };

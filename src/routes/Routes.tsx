@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Main from "../../src/pages/Main/Main";
-import Map from "../../src/pages/Map/Map";
-import Menu from "../../src/pages/Menu/Menu";
-import Checkout from "../../src/pages/Checkout/Checkout";
+import Main from "pages/Main/Main";
+import Map from "pages/Map/Map";
+import Menu from "pages/Menu/Menu";
+import Cart from "pages/Cart/Cart";
 import Login from "pages/Login/Login";
 import SignUp from "pages/SignUp/SignUp";
 
@@ -19,11 +19,11 @@ class Routes extends React.Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Main} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signUp" component={SignUp} />
+              <Route path="/login" component={Login} />
+              <Route path="/signUp" component={SignUp} />
               <Route path="/map" component={Map} />
               <Route path="/menu" component={Menu} />
-              <Route path="/checkout" component={Checkout} />
+              <Route path="/cart" component={Cart} />
             </Switch>
           </Router>
         </PersistGate>

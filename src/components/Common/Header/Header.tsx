@@ -23,18 +23,18 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 // import { auth } from "core/utils/firebase/firebase";
-// import { createUserProfileDocument } from "core/utils/firebase/firebase";
+import { createUserProfileDocument } from "core/utils/firebase/firebase";
 import { setCurrentUser } from "redux/user/userActions";
 // import CartIcon from "containers/Cart/CartIcon/CartIcon";
 import { selectCurrentUser } from "redux/user/userSelectors";
 
 type HeaderPropsTypes = {
-  history?: any;
   setCurrentUser?: any;
 };
 
-const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
+const Header = ({ setCurrentUser }: HeaderPropsTypes) => {
   // const [curUserState, setCurUserState] = useState<firebase.User | null>(null);
+  const [user, setUser] = useState<firebase.User | null>();
   // const goToPage = (num: number) => {
   //   switch (num) {
   //     case 1:
@@ -46,31 +46,30 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
   //   }
   // };
 
-  // useEffect(() => {
-  //   const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
-  //     setCurUserState(userAuth);
-  //     if (userAuth) {
-  //       const userRef = await createUserProfileDocument(userAuth, undefined);
-  //       console.log("userRef", userRef);
-  //       userRef?.onSnapshot((snapShot) => {
-  //         console.log("snapShot", snapShot);
-  //         setCurrentUser({
-  //           id: snapShot.id,
-  //           ...snapShot.data(),
-  //         });
-  //       });
-  //     }
+  useEffect(() => {
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      setUser(userAuth);
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth, undefined);
+        console.log("userRef", userRef);
+        userRef?.onSnapshot((snapShot) => {
+          console.log("snapShot", snapShot);
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data(),
+          });
+        });
+      }
 
-  //     setCurrentUser(userAuth);
-  //     console.log("user", userAuth);
-  //   });
+      setCurrentUser(userAuth);
+      console.log("user", userAuth);
+    });
 
-  //   return () => unsubscribeFromAuth();
-  // }, [setCurrentUser]);
+    return () => unsubscribeFromAuth();
+  }, [setCurrentUser]);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrollNav, setScrollNav] = useState<boolean>(false);
-  const [user, setUser] = useState<firebase.User | null>();
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -88,12 +87,13 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
     window.addEventListener("scroll", handleChangeNav);
   }, []);
 
-  useEffect(() => {
-    auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
-  }, []);
-  console.log(user, user);
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((user) => {
+  //     setUser(user);
+  //   });
+  // }, []);
+
+  console.log("user", user);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -134,7 +134,7 @@ const Header = ({ history, setCurrentUser }: HeaderPropsTypes) => {
           <SidebarLink to="/menu">메뉴 소개</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/checkout">주문 하기</SidebarRoute>
+          <SidebarRoute to="/cart">주문 하기</SidebarRoute>
         </SideBtnWrap>
       </SidebarContainer>
       <ToastContainer />

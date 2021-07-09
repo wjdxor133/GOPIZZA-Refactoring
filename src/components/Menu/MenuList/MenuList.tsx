@@ -12,7 +12,6 @@ import { connect } from "react-redux";
 import Login from "components/Common/Modal/Login/Login";
 
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 import { addItem } from "redux/cart/cartActions";
 

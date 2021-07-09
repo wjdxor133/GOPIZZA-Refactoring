@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import Header from "components/Common/Header/Header";
+import { Header, Hero, PaymentInfo, CartList } from "components";
+import ImgBg from "assets/images/featured.jpg";
 import Footer from "components/Common/Footer/Footer";
 import CheckOutItem from "containers/CheckOutItem/CheckOutItem";
 import Payment from "containers/Payment/Payment";
@@ -18,36 +19,32 @@ const Checkout = ({ history, cartItems, total }: any) => {
   };
 
   return (
-    <CheckoutComponent>
-      <Header history={history} />
-      <CheckoutMain>
-        <CheckoutTitle>장바구니</CheckoutTitle>
-        <CheckoutContent>
-          <CheckoutContentNav>
-            <ContentNavText>메뉴</ContentNavText>
-            <ContentNavText>수량</ContentNavText>
-            <ContentNavText>가격</ContentNavText>
-            <ContentNavText>삭제</ContentNavText>
-          </CheckoutContentNav>
-          <CheckoutList>
-            {cartItems.map((cartItem: any) => {
-              return <CheckOutItem key={cartItem.id} cartItem={cartItem} />;
-            })}
-            <PriceTextBox>
+    <>
+      <Header />
+      <Hero title="장바구니" subTitle="1인 피자로 GO! GO!" imgBg={ImgBg} />
+      {/* <CheckoutTitle>주문 메뉴 정보</CheckoutTitle> */}
+
+      <Main>
+        {/* <CheckoutContent> */}
+        <CartList cartItems={cartItems} />
+        {/* <PriceTextBox>
               <PriceText>합계</PriceText>
               <PriceText>총 가격: {total}원</PriceText>
-            </PriceTextBox>
-          </CheckoutList>
-        </CheckoutContent>
-        <BtnBox>
+            </PriceTextBox> */}
+        {/* </CartList> */}
+        <PaymentInfo />
+
+        {/* </CheckoutContent> */}
+
+        {/* <BtnBox>
           <MenuAddBtn onClick={goBackMenuPage}>메뉴추가</MenuAddBtn>
           <CheckoutBtn>
             <Payment total={total} />
           </CheckoutBtn>
-        </BtnBox>
-      </CheckoutMain>
+        </BtnBox> */}
+      </Main>
       <Footer />
-    </CheckoutComponent>
+    </>
   );
 };
 
@@ -62,37 +59,19 @@ const CheckoutComponent = styled.div`
   width: 100%;
 `;
 
-const CheckoutMain = styled.div`
-  width: 70%;
+const Main = styled.main`
+  width: 80%;
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-gap: 60px;
   margin: 1em auto;
 `;
 
 const CheckoutTitle = styled.p`
-  font-size: 2.8rem;
-  font-weight: 300;
-  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  /* text-align: center; */
   margin: 1em auto;
-`;
-
-const CheckoutContent = styled.div`
-  width: 100%;
-`;
-
-const CheckoutContentNav = styled.div`
-  display: flex;
-  border: 1px solid #000;
-  border-left-style: none;
-  border-right-style: none;
-  padding: 1.5em 0;
-`;
-
-const ContentNavText = styled.p`
-  font-size: 1rem;
-  text-align: center;
-  width: 16.6%;
-  :nth-child(1) {
-    width: 50%;
-  }
 `;
 
 const CheckoutList = styled.ul`

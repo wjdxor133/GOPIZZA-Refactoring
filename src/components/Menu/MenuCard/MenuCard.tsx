@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   MenuCardWrapper,
   CardContents,
@@ -14,10 +14,15 @@ import {
   CartIcon,
   CartBtn,
 } from "./MenuCard.styles";
+import { ToastContainer, toast } from "react-toastify";
 import { useHover } from "hooks";
+
+import { connect } from "react-redux";
+import { addItem } from "redux/cart/cartActions";
 
 interface MenuCardProps {
   menu: Menu;
+  currentUser: firebase.User | null;
 }
 
 interface Menu {
@@ -30,10 +35,22 @@ interface Menu {
   price: number;
 }
 
-function MenuCard({ menu }: MenuCardProps) {
+function MenuCard({ menu, currentUser }: MenuCardProps) {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
   const Bounce = require("react-reveal/Bounce");
+  const [loginModal, setLoginModal] = useState<boolean>(false);
+
+  const showLoginModal = () => {
+    if (currentUser === null) {
+      alert("로그인 해주세요!");
+      setLoginModal(true);
+    } else if (currentUser !== null) {
+      setLoginModal(false);
+    }
+  };
+
+  console.log("currentUser", currentUser);
 
   return (
     <MenuCardWrapper ref={hoverRef}>
@@ -49,7 +66,17 @@ function MenuCard({ menu }: MenuCardProps) {
             </Bounce>
 
             <Bounce bottom>
-              <CartBtn>
+              <CartBtn
+                onClick={() => {
+                  showLoginModal();
+                  addItem(menu);
+                  if (currentUser !== null)
+                    toast(`${menu.name} 추가!`, {
+                      position: "bottom-center",
+                      autoClose: 1500,
+                    });
+                }}
+              >
                 <CartIcon />
                 장바구니 추가
               </CartBtn>
@@ -64,8 +91,17 @@ function MenuCard({ menu }: MenuCardProps) {
           <KcalText>{`${menu.kcal} kcal`}</KcalText>
         </CardContents>
       )}
+      <ToastContainer />
     </MenuCardWrapper>
   );
 }
 
-export default MenuCard;
+const mapStateToProps = (state: any) => ({
+  currentUser: state.user.currentUser,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  addItem: (item: any) => dispatch(addItem(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MenuCard);

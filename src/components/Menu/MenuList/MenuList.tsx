@@ -101,4 +101,6 @@ const mapDispatchToProps = (dispatch: any) => ({
   addItem: (item: any) => dispatch(addItem(item)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MenuList);
+export default React.memo(
+  connect(mapStateToProps, mapDispatchToProps)(MenuList)
+);

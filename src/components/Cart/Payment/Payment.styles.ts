@@ -7,4 +7,5 @@ export const PaymentButton = styled.button`
   font-weight: bold;
   width: 100%;
   padding: 24px;
+  cursor: pointer;
 `;

@@ -41,6 +41,7 @@ function LoginForm() {
       //   position: "bottom-center",
       //   autoClose: 1500,
       // });
+
       history.push("/");
     } catch (error) {
       console.log("error", error);

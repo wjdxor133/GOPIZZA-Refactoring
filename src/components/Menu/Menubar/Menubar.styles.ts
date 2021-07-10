@@ -8,7 +8,6 @@ export const MenuNavWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: ${({ theme }) => theme.colors.light_gray}; */
 `;
 
 export const MenuNav = styled.div`
@@ -16,10 +15,8 @@ export const MenuNav = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: space-between;
-  position: relative;
-  top: -30px;
+  margin-top: 30px;
   padding: 24px 48px;
-  box-shadow: ${({ theme }) => theme.elevations.elevation_heavy};
 `;
 
 export const MenuText = styled.p<StyledMenubarProps>`

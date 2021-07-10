@@ -70,11 +70,13 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
                 onClick={() => {
                   showLoginModal();
                   addItem(menu);
-                  if (currentUser !== null)
+                  if (currentUser !== null) {
+                    console.log("확인");
                     toast(`${menu.name} 추가!`, {
                       position: "bottom-center",
                       autoClose: 1500,
                     });
+                  }
                 }}
               >
                 <CartIcon />
@@ -91,7 +93,7 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
           <KcalText>{`${menu.kcal} kcal`}</KcalText>
         </CardContents>
       )}
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </MenuCardWrapper>
   );
 }

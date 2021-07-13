@@ -13,7 +13,7 @@ import Login from "components/Common/Modal/Login/Login";
 
 import { ToastContainer, toast } from "react-toastify";
 
-import { addItem } from "redux/cart/cartActions";
+import { addItem } from "redux/cart/cart";
 
 interface MenuListProps {
   menuData: Menu[];

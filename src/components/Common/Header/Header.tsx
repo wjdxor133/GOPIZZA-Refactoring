@@ -40,14 +40,14 @@ const Header = ({ setCurrentUser }: HeaderPropsTypes) => {
         const userRef = await createUserProfileDocument(userAuth, undefined);
         // console.log("userRef", userRef);
         userRef?.onSnapshot((snapShot) => {
-          // console.log("snapShot", snapShot);
+          console.log("snapShot", snapShot);
+          const userInfo = { ...snapShot.data() };
           setCurrentUser({
             id: snapShot.id,
-            ...snapShot.data(),
+            email: userInfo.email,
           });
         });
       }
-      console.log("userAuth", userAuth);
     });
 
     return () => unsubscribeFromAuth();

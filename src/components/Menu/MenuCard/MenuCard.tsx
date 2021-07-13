@@ -14,11 +14,11 @@ import {
   CartIcon,
   CartBtn,
 } from "./MenuCard.styles";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useHover } from "hooks";
 
-import { connect } from "react-redux";
-import { addItem } from "redux/cart/cartActions";
+import { connect, useDispatch } from "react-redux";
+import { addItem } from "redux/cart/cart";
 
 interface MenuCardProps {
   menu: Menu;
@@ -40,17 +40,14 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
   const isHover = useHover(hoverRef);
   const Bounce = require("react-reveal/Bounce");
   const [loginModal, setLoginModal] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
   const showLoginModal = () => {
     if (currentUser === null) {
       alert("로그인 해주세요!");
       setLoginModal(true);
-    } else if (currentUser !== null) {
-      setLoginModal(false);
     }
   };
-
-  console.log("currentUser", currentUser);
 
   return (
     <MenuCardWrapper ref={hoverRef}>
@@ -69,7 +66,7 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
               <CartBtn
                 onClick={() => {
                   showLoginModal();
-                  addItem(menu);
+                  dispatch(addItem(menu));
                   if (currentUser !== null) {
                     console.log("확인");
                     toast(`${menu.name} 추가!`, {
@@ -93,7 +90,6 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
           <KcalText>{`${menu.kcal} kcal`}</KcalText>
         </CardContents>
       )}
-      {/* <ToastContainer /> */}
     </MenuCardWrapper>
   );
 }

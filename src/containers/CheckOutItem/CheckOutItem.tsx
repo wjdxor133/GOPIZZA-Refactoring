@@ -3,11 +3,7 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import { MdDeleteForever } from "react-icons/md";
 
-import {
-  clearItemFromCart,
-  addItem,
-  removeItem,
-} from "../../redux/cart/cartActions";
+import { clearItemFromCart, addItem, removeItem } from "redux/cart/cart";
 
 const CheckOutItem = ({ cartItem, clearItem, addItem, removeItem }: any) => {
   const { name, img_url, price, quantity } = cartItem;

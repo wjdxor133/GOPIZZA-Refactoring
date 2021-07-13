@@ -1,17 +1,32 @@
-import { createAction, createReducer } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { createSelector } from "reselect";
 
-const INITIAL_STATE = {
+interface User {
+  id: string;
+  email: string;
+}
+
+interface UserState {
+  currentUser: User | null;
+}
+
+const INITIAL_STATE: UserState = {
   currentUser: null,
 };
 
-export const setCurrentUser = createAction<any>("SET_CURRENT_USER");
-
-export const userReducer = createReducer(INITIAL_STATE, {
-  [setCurrentUser.type]: (state, action) => {
-    state.currentUser = action.payload;
+const userSlice = createSlice({
+  name: "currentUser",
+  initialState: INITIAL_STATE,
+  reducers: {
+    setCurrentUser: (state, action) => {
+      state.currentUser = action.payload;
+    },
   },
 });
+
+export const { setCurrentUser } = userSlice.actions;
+
+export const userReducer = userSlice.reducer;
 
 const selectUser = (state: any) => state.user;
 

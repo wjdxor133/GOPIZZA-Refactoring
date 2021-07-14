@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
+import { useSelector } from "react-redux";
 import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
 import ImgBg from "assets/images/featured.jpg";
 
-import {
-  selectCartItems,
-  selectCartTotal,
-} from "../../redux/cart/cartSelectors";
+import { RootState } from "redux/rootReducer";
 
-const Checkout = ({ history, cartItems, total }: any) => {
-  const goBackMenuPage = () => {
-    history.push("/menu");
-  };
+const Checkout = () => {
+  const cartItems = useSelector<RootState>((state) => state.cart.cartItems);
 
   return (
     <>
@@ -31,12 +25,7 @@ const Checkout = ({ history, cartItems, total }: any) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  cartItems: selectCartItems,
-  total: selectCartTotal,
-});
-
-export default connect(mapStateToProps)(Checkout);
+export default Checkout;
 
 const Main = styled.main`
   width: 80%;

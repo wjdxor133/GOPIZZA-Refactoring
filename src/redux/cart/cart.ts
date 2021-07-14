@@ -1,19 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { CartTypes } from "types/cart";
 import { addItemToCart, removeItemFromCart } from "./cartUtils";
-
-interface CartItemType {
-  id: number;
-  name: string;
-  en_name: string;
-  tag_text: string;
-  img_url: string;
-  price: number;
-}
-
-interface CartTypes {
-  hidden: boolean;
-  cartItems: CartItemType[];
-}
 
 const INITIAL_STATE: CartTypes = {
   hidden: true,
@@ -29,7 +16,7 @@ const cartSlice = createSlice({
     },
     addItem: (state, action) => {
       const menu = action.payload;
-      state.cartItems.push(menu);
+      state.cartItems.push(addItemToCart(state.cartItems, menu));
     },
 
     clearItemFromCart: (state, action) => {

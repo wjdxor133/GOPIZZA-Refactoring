@@ -1,36 +1,40 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import {
-  CartItemBox,
   CartItemWrapper,
   MenuImg,
   CartItemText,
   CartItemTextBox,
+  DeleteIcon,
 } from "./CartItem.styles";
+import { CartItemType } from "types/cart";
+import { removeItem } from "redux/cart/cart";
 
 interface CartItemPropsType {
-  cartItem: CartItemPropsMemberType;
+  cartItem: RemoveCartItem;
 }
 
-interface CartItemPropsMemberType {
-  name: string;
-  img_url: string;
-  price: number;
+interface RemoveCartItem extends CartItemType {
   quantity: number;
 }
 
-const CartItem = ({
-  cartItem: { name, img_url, price, quantity },
-}: CartItemPropsType) => {
+const CartItem = ({ cartItem }: CartItemPropsType) => {
+  const { img_url, name, quantity, price } = cartItem;
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(removeItem(cartItem));
+  };
+
   return (
     <CartItemWrapper>
-      {/* <CartItemBox> */}
       <MenuImg src={img_url} alt={name}></MenuImg>
       <CartItemTextBox>
         <CartItemText>{name}</CartItemText>
         <CartItemText>수량: {quantity}</CartItemText>
         <CartItemText>{price * quantity}원</CartItemText>
+        <DeleteIcon onClick={handleDelete} />
       </CartItemTextBox>
-      {/* </CartItemBox> */}
     </CartItemWrapper>
   );
 };

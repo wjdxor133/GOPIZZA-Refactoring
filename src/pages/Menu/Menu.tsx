@@ -2,20 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Header, Hero, Menubar, MenuList, Footer } from "components";
 import { useFetch } from "hooks";
 
-interface MenuDataTypes {
-  [key: string]: Menu[];
-}
-
-interface Menu {
-  id: string;
-  name: string;
-  en_name: string;
-  kcal: number;
-  tag_text: string;
-  img_url: string;
-  price: number;
-}
-
 const Menu = () => {
   const [menuType, setMenuType] = useState<string>("all");
   const [menuData, setMenuData] = useState([]);

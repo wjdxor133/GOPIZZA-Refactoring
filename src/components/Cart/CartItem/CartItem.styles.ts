@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export const CartItemWrapper = styled.div`
-  /* width: 70%; */
   display: flex;
   align-items: center;
   height: 120px;
@@ -12,11 +12,9 @@ export const CartItemWrapper = styled.div`
 
 export const MenuImg = styled.img`
   width: 25%;
-  /* height: 200px; */
 `;
 
 export const CartItemBox = styled.div`
-  /* width: 80%; */
   margin: 0 auto;
   display: flex;
 `;
@@ -24,14 +22,11 @@ export const CartItemBox = styled.div`
 export const CartItemTextBox = styled.div`
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
-  /* justify-content: space-around; */
-  /* margin-left: 1em; */
 `;
 
 export const CartItemText = styled.p`
-  width: 33.3%;
+  width: 25%;
   text-align: center;
   margin: 0.3em;
 
@@ -39,4 +34,11 @@ export const CartItemText = styled.p`
     font-size: 20px;
     font-weight: 500;
   }
+`;
+
+export const DeleteIcon = styled(RiDeleteBin6Line)`
+  width: 25%;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
 `;

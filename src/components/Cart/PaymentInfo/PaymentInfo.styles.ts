@@ -4,7 +4,8 @@ export const PaymentInfoWrapper = styled.div`
   border-radius: 16px;
   box-shadow: 0 8px 25px 0 rgb(0 0 0 / 10%);
   position: sticky;
-  top: 0px;
+  top: 200px;
+  max-height: 200px;
 `;
 
 export const PaymentInfoContents = styled.div`

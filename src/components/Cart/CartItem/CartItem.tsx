@@ -5,10 +5,11 @@ import {
   MenuImg,
   CartItemText,
   CartItemTextBox,
+  PlusIcon,
   DeleteIcon,
 } from "./CartItem.styles";
 import { CartItemType } from "types/cart";
-import { removeItem } from "redux/cart/cart";
+import { addItem, removeItem, toggleCartHidden } from "redux/cart/cart";
 
 interface CartItemPropsType {
   cartItem: RemoveCartItem;
@@ -31,7 +32,10 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
       <MenuImg src={img_url} alt={name}></MenuImg>
       <CartItemTextBox>
         <CartItemText>{name}</CartItemText>
-        <CartItemText>수량: {quantity}</CartItemText>
+        <CartItemText>
+          수량: {quantity}
+          <PlusIcon onClick={() => dispatch(toggleCartHidden)} />
+        </CartItemText>
         <CartItemText>{price * quantity}원</CartItemText>
         <DeleteIcon onClick={handleDelete} />
       </CartItemTextBox>

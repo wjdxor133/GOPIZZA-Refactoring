@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FiPlusSquare } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 export const CartItemWrapper = styled.div`
@@ -34,6 +35,10 @@ export const CartItemText = styled.p`
     font-size: 20px;
     font-weight: 500;
   }
+`;
+
+export const PlusIcon = styled(FiPlusSquare)`
+  cursor: pointer;
 `;
 
 export const DeleteIcon = styled(RiDeleteBin6Line)`

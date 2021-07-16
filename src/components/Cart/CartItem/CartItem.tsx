@@ -11,7 +11,7 @@ import {
   DeleteIcon,
 } from "./CartItem.styles";
 import { CartItemType } from "types/cart";
-import { removeItem, addItem } from "redux/cart/cart";
+import { removeItem, addItem, clearItemFromCart } from "store/cart/cart";
 
 interface CartItemPropsType {
   cartItem: RemoveCartItem;
@@ -46,10 +46,12 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
           <PlusIcon onClick={handleAddItem} />
         </CartItemInfo>
         <CartItemInfo width="20">
-          <CartItemText>{price * quantity}원</CartItemText>
+          <CartItemText>
+            {(price * quantity).toLocaleString("ko-KR")}원
+          </CartItemText>
         </CartItemInfo>
         <CartItemInfo width="20">
-          <DeleteIcon onClick={handleRemoveItem} />
+          <DeleteIcon onClick={() => dispatch(clearItemFromCart(cartItem))} />
         </CartItemInfo>
       </CartItemInfoBox>
     </CartItemWrapper>

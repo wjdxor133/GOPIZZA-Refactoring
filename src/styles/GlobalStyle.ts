@@ -31,6 +31,11 @@ const GlobalStyle = createGlobalStyle`
   img {
     display: block;
   }
+
+  .Toastify__toast--default {
+    background: #ff932b;
+    color: #ffffff;
+ }
 `;
 
 export default GlobalStyle;

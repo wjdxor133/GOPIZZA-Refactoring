@@ -8,7 +8,7 @@ import {
 import { Payment } from "components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectCartItems, selectCartTotal } from "redux/cart/cartSelectors";
+import { selectCartItems, selectCartTotal } from "store/cart/cartSelectors";
 
 const CartInfo = ({ total }: any) => {
   return (

@@ -47,9 +47,9 @@ const Payment = ({ total, userName, userEmail }: any) => {
   };
   return (
     <>
-      <PaymentButton
-        onClick={onClickPayment}
-      >{`${total}원 결제`}</PaymentButton>
+      <PaymentButton onClick={onClickPayment}>{`${total.toLocaleString(
+        "ko-KR"
+      )}원 결제`}</PaymentButton>
     </>
   );
 };

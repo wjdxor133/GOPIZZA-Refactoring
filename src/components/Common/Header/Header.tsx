@@ -14,44 +14,36 @@ import {
   SidebarRoute,
 } from "./Header.styles";
 import { animateScroll as scroll } from "react-scroll";
-import { auth } from "core/utils/firebase/firebase";
 import { ToastContainer, toast } from "react-toastify";
-
-import { connect } from "react-redux";
-import { createStructuredSelector } from "reselect";
-
-// import { auth } from "core/utils/firebase/firebase";
+import { auth } from "core/utils/firebase/firebase";
 import { createUserProfileDocument } from "core/utils/firebase/firebase";
-import { setCurrentUser, selectCurrentUser } from "redux/user/user";
-// import CartIcon from "containers/Cart/CartIcon/CartIcon";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "store/user/user";
 
-type HeaderPropsTypes = {
-  setCurrentUser?: any;
-};
-
-const Header = ({ setCurrentUser }: HeaderPropsTypes) => {
-  // const [curUserState, setCurUserState] = useState<firebase.User | null>(null);
+const Header = () => {
   const [user, setUser] = useState<firebase.User | null>();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       setUser(userAuth);
+
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth, undefined);
-        // console.log("userRef", userRef);
         userRef?.onSnapshot((snapShot) => {
-          console.log("snapShot", snapShot);
           const userInfo = { ...snapShot.data() };
-          setCurrentUser({
-            id: snapShot.id,
-            email: userInfo.email,
-          });
+          dispatch(
+            setCurrentUser({
+              id: snapShot.id,
+              email: userInfo.email,
+            })
+          );
         });
       }
     });
 
     return () => unsubscribeFromAuth();
-  }, [setCurrentUser]);
+  }, [dispatch]);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrollNav, setScrollNav] = useState<boolean>(false);
@@ -71,12 +63,6 @@ const Header = ({ setCurrentUser }: HeaderPropsTypes) => {
   useEffect(() => {
     window.addEventListener("scroll", handleChangeNav);
   }, []);
-
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((user) => {
-  //     setUser(user);
-  //   });
-  // }, []);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -125,12 +111,4 @@ const Header = ({ setCurrentUser }: HeaderPropsTypes) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-});
-
-const mapDispatchToProps = (dispatch: any) => ({
-  setCurrentUser: (user: any) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

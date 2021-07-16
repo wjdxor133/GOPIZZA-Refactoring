@@ -5,9 +5,9 @@ import { createStructuredSelector } from "reselect";
 
 import CartDropDown from "../CartDropDown/CartDropDown";
 
-import { toggleCartHidden } from "redux/cart/cart";
-import { selectCartHidden } from "redux/cart/cartSelectors";
-import { selectCartItemsCount } from "redux/cart/cartSelectors";
+import { toggleCartHidden } from "store/cart/cart";
+import { selectCartHidden } from "store/cart/cartSelectors";
+import { selectCartItemsCount } from "store/cart/cartSelectors";
 
 const CartIcon = ({ toggleCartHidden, hidden, itemCount, history }: any) => {
   const dispatch = useDispatch();

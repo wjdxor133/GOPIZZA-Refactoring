@@ -21,7 +21,6 @@ export const MenuNav = styled.div`
 
 export const MenuText = styled.p<StyledMenubarProps>`
   font-size: 1.2rem;
-  color: ${({ theme }) => theme.colors.dark_gray};
   position: relative;
   cursor: pointer;
   padding-bottom: 4px;

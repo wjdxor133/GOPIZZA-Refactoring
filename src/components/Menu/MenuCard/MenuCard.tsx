@@ -18,7 +18,7 @@ import { toast } from "react-toastify";
 import { useHover } from "hooks";
 
 import { connect, useDispatch } from "react-redux";
-import { addItem } from "redux/cart/cart";
+import { addItem } from "store/cart/cart";
 
 interface MenuCardProps {
   menu: Menu;

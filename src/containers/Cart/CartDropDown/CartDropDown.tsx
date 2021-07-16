@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 
 import CartItem from "../CartItem/CartItem";
-import { selectCartItems } from "redux/cart/cartSelectors";
+import { selectCartItems } from "store/cart/cartSelectors";
 
 const CartDropDown = ({ cartItems, history }: any) => {
   const goToCheckoutPage = () => {

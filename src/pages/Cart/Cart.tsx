@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
 import ImgBg from "assets/images/featured.jpg";
 
-import { RootState } from "redux/type";
+import { RootState } from "store/type";
 
 const Checkout = () => {
   const cartItems = useSelector<RootState>((state) => state.cart.cartItems);

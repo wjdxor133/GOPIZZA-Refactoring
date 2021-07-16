@@ -8,15 +8,14 @@
 
 ## 목표
 
-- 리팩토링
+- 고피자 인턴 때 했던 프로젝트를 좀 더 가독성 있고 간결한 코드로 바꿔보기 
+- 이전보다 더 인터렉티브하고 향상된 UI/UX로 스스로 개선해보기
 
 ## 사용한 기술
 
-- Front-End: Typescript, React, Styled-components, Redux, Firebase
+- Typescript, React, Styled-components, Redux, Firebase
 
 ## 기능
-
-- react-slick 라이브러리를 사용하여 슬라이드 구현
 - Kakao API를 통해 카카오 지도에 고피자 매장 위치 마크 띄우기 구현
 - 고객의 현재 위치 찾기 버튼을 클릭 시, 현재 위치를 지도에 띄우고, 반경 5km 이내 가까운 매장 표시
 - 가까운 매장 찾기 버튼 클릭 시, 가장 가까운 매장 마크로 이동하고 매장 정보 표시
@@ -24,13 +23,11 @@
 - Firebase 구글 로그인 연동
 - react-redux를 통해 장바구니 품목 추가, 수량 증가 및 감소, 삭제 기능 구현
 - Import를 연동하여 장바구니에 담긴 항목 결제 하기 기능 구현
-- redux의 성능 향상을 위해 reselect, redux-persist, redux-logger 라이브러리 적용하여 구현
 
 <br/>
 
 ## 📹 Demo (click!)
-
-[![Video Label](https://dcamp.kr/api/sites/default/files/_1539233623.png)](https://youtu.be/ehIKADIH6eE)
+- 배포 후 링크 넣을 예정 
 
 
 ## 📝 회고록

@@ -3,7 +3,8 @@ import {
   PaymentInfoWrapper,
   PaymentInfoContents,
   PaymentInfoTitle,
-  // PaymentBtn,
+  TextWrapper,
+  PaymentInfoText,
 } from "./PaymentInfo.styles";
 import { Payment } from "components";
 import { connect } from "react-redux";
@@ -11,14 +12,26 @@ import { createStructuredSelector } from "reselect";
 import { selectCartItems, selectCartTotal } from "store/cart/cartSelectors";
 
 const CartInfo = ({ total }: any) => {
+  const discountAmount = (total * 20) / 100;
+  const totalAmount = (total - discountAmount).toLocaleString("ko-KR");
   return (
     <PaymentInfoWrapper>
       <PaymentInfoContents>
         <PaymentInfoTitle>결제금액</PaymentInfoTitle>
-        <p>결제 금액</p>
-        <p>총 할인 금액</p>
+        <TextWrapper>
+          <PaymentInfoText>결제 금액</PaymentInfoText>
+          <PaymentInfoText>{`${total.toLocaleString(
+            "ko-KR"
+          )} 원`}</PaymentInfoText>
+        </TextWrapper>
+        <TextWrapper>
+          <PaymentInfoText>총 할인 금액</PaymentInfoText>
+          <PaymentInfoText>{`- ${discountAmount.toLocaleString(
+            "ko-KR"
+          )} 원`}</PaymentInfoText>
+        </TextWrapper>
       </PaymentInfoContents>
-      <Payment total={total} />
+      <Payment total={totalAmount} />
     </PaymentInfoWrapper>
   );
 };

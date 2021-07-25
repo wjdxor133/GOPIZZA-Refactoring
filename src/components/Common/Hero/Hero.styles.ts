@@ -4,7 +4,7 @@ interface StyledHeroProps {
   imgBg: string;
 }
 export const HeroContainer = styled.div<StyledHeroProps>`
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     ${({ imgBg }) => `url(${imgBg})`};
   height: 100vh;
   max-height: 500px;

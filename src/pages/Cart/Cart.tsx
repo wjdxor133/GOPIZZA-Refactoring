@@ -2,19 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
-import ImgBg from "assets/images/featured.jpg";
 
 import { RootState } from "store/type";
 
-const Checkout = () => {
+const Cart = () => {
   const cartItems = useSelector<RootState>((state) => state.cart.cartItems);
 
   return (
     <>
       <Header />
-      <Hero title="장바구니" subTitle="1인 피자로 GO! GO!" imgBg={ImgBg} />
+      <Hero
+        title="장바구니"
+        subTitle="고피자의 다양한 피자를 주문해 보세요."
+        imgBg="https://gopizza.kr/wp-content/uploads/2021/05/pizza.png"
+      />
       <Main>
-        <CheckoutTitle>주문 메뉴 정보</CheckoutTitle>
         <Section>
           <CartList cartItems={cartItems} />
           <PaymentInfo />
@@ -25,7 +27,7 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default Cart;
 
 const Main = styled.main`
   width: 80%;
@@ -36,11 +38,5 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: 60% auto;
   grid-gap: 60px;
-`;
-
-const CheckoutTitle = styled.p`
-  font-size: 28px;
-  font-weight: bold;
-  /* text-align: center; */
-  margin: 1em auto;
+  margin: 48px auto;
 `;

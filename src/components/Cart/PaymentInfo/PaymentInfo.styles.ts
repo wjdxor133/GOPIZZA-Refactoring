@@ -16,3 +16,13 @@ export const PaymentInfoTitle = styled.h3`
   font-size: 24px;
   font-weight: bold;
 `;
+
+export const TextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const PaymentInfoText = styled.p`
+  font-size: 18px;
+  margin: 12px 0;
+`;

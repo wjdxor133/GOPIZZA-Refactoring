@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const CartListWrapper = styled.ul``;
+export const CartListWrapper = styled.ul`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -16,7 +19,6 @@ export const CartListTitle = styled.p`
 
 export const CartListBtn = styled.button`
   font-size: 16px;
-  
   /* color: ${({ theme }) => theme.colors.dark_gray}; */
   /* border: 1px solid ${({ theme }) => theme.colors.dark_gray}; */
   padding: 4px 8px;

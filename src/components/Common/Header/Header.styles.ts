@@ -144,10 +144,23 @@ export const SidebarRoute = styled(Link)`
   outline: none;
   border: none;
   cursor: pointer;
+  position: relative;
 
   &:hover {
     transition: 0.2s ease-in-out;
     background: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.primary_light};
   }
+`;
+
+export const ItemCnt = styled.span`
+  width: 24px;
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: -31px;
+  z-index: 2;
 `;

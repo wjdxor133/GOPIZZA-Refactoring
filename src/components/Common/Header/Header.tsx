@@ -12,17 +12,24 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
+  ItemCnt,
 } from "./Header.styles";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
 import { auth } from "core/utils/firebase/firebase";
 import { createUserProfileDocument } from "core/utils/firebase/firebase";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCurrentUser } from "store/user/user";
+import { RootState } from "store/type";
+import { selectCartItemsCount } from "store/cart/cartSelectors";
 
 const Header = () => {
   const [user, setUser] = useState<firebase.User | null>();
+  const state = useSelector<RootState>((state) => state);
   const dispatch = useDispatch();
+  const cartItemCnt = selectCartItemsCount(state);
+  const Jump = require("react-reveal/Jump");
+  const Swing = require("react-reveal/Swing");
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
@@ -83,6 +90,11 @@ const Header = () => {
           GOPIZZA
         </NavLink>
         <NavIcon onClick={toggle}>
+          {cartItemCnt !== 0 && (
+            <Jump forever={true}>
+              <ItemCnt>{cartItemCnt}</ItemCnt>
+            </Jump>
+          )}
           <p>Menu</p>
           <Bars />
         </NavIcon>
@@ -103,7 +115,13 @@ const Header = () => {
           <SidebarLink to="/menu">메뉴 소개</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/cart">주문 하기</SidebarRoute>
+          {cartItemCnt !== 0 ? (
+            <Swing forever={true} duration={1200}>
+              <SidebarRoute to="/cart">주문 하기</SidebarRoute>
+            </Swing>
+          ) : (
+            <SidebarRoute to="/cart">주문 하기</SidebarRoute>
+          )}
         </SideBtnWrap>
       </SidebarContainer>
       <ToastContainer />

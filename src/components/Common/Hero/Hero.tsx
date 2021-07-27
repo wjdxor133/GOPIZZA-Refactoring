@@ -5,7 +5,6 @@ import {
   HeroItems,
   HeroH1,
   HeroP,
-  // HeroBtn,
 } from "./Hero.styles";
 
 export interface HeroProps {
@@ -23,7 +22,6 @@ function Hero({ title, subTitle, imgBg }: HeroProps) {
           <HeroItems>
             <HeroH1>{title}</HeroH1>
             <HeroP>{subTitle}</HeroP>
-            {/* <HeroBtn>메뉴보기</HeroBtn> */}
           </HeroItems>
         </Fade>
       </HeroContent>

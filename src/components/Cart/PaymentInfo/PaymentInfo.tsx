@@ -26,9 +26,11 @@ const CartInfo = ({ total }: any) => {
         </TextWrapper>
         <TextWrapper>
           <PaymentInfoText>총 할인 금액</PaymentInfoText>
-          <PaymentInfoText>{`- ${discountAmount.toLocaleString(
-            "ko-KR"
-          )} 원`}</PaymentInfoText>
+          <PaymentInfoText>
+            {total > 40000
+              ? `- ${discountAmount.toLocaleString("ko-KR")} 원`
+              : "0 원"}
+          </PaymentInfoText>
         </TextWrapper>
       </PaymentInfoContents>
       <Payment total={totalAmount} />

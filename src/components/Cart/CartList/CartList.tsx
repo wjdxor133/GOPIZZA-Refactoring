@@ -15,9 +15,7 @@ const CartList = ({ cartItems }: any) => {
     <CartListWrapper>
       <TitleWrapper>
         <CartListTitle>주문 메뉴 정보</CartListTitle>
-        <CartListBtn onClick={() => dispatch(clearItem())}>
-          전체 삭제
-        </CartListBtn>
+        <CartListBtn onClick={() => dispatch(clearItem())}>비우기</CartListBtn>
       </TitleWrapper>
       {cartItems.map((cartItem: any) => {
         return <CartItem key={cartItem.id} cartItem={cartItem} />;

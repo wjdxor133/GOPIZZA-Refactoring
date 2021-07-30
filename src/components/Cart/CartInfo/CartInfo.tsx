@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  PaymentInfoWrapper,
-  PaymentInfoContents,
-  PaymentInfoTitle,
+  CartInfoWrapper,
+  CartInfoContents,
+  CartInfoTitle,
   TextWrapper,
-  PaymentInfoText,
-} from "./PaymentInfo.styles";
+  CartInfoText,
+} from "./CartInfo.styles";
 import { Payment } from "components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -15,26 +15,24 @@ const CartInfo = ({ total }: any) => {
   const discountAmount = (total * 20) / 100;
   const totalAmount = (total - discountAmount).toLocaleString("ko-KR");
   return (
-    <PaymentInfoWrapper>
-      <PaymentInfoContents>
-        <PaymentInfoTitle>결제금액</PaymentInfoTitle>
+    <CartInfoWrapper>
+      <CartInfoContents>
+        <CartInfoTitle>결제금액</CartInfoTitle>
         <TextWrapper>
-          <PaymentInfoText>결제 금액</PaymentInfoText>
-          <PaymentInfoText>{`${total.toLocaleString(
-            "ko-KR"
-          )} 원`}</PaymentInfoText>
+          <CartInfoText>결제 금액</CartInfoText>
+          <CartInfoText>{`${total.toLocaleString("ko-KR")} 원`}</CartInfoText>
         </TextWrapper>
         <TextWrapper>
-          <PaymentInfoText>총 할인 금액</PaymentInfoText>
-          <PaymentInfoText>
+          <CartInfoText>총 할인 금액</CartInfoText>
+          <CartInfoText>
             {total > 40000
               ? `- ${discountAmount.toLocaleString("ko-KR")} 원`
               : "0 원"}
-          </PaymentInfoText>
+          </CartInfoText>
         </TextWrapper>
-      </PaymentInfoContents>
+      </CartInfoContents>
       <Payment total={totalAmount} />
-    </PaymentInfoWrapper>
+    </CartInfoWrapper>
   );
 };
 

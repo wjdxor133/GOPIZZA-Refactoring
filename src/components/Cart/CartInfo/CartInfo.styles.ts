@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PaymentInfoWrapper = styled.div`
+export const CartInfoWrapper = styled.div`
   border-radius: 16px;
   box-shadow: 0 8px 25px 0 rgb(0 0 0 / 10%);
   position: sticky;
@@ -8,11 +8,11 @@ export const PaymentInfoWrapper = styled.div`
   max-height: 200px;
 `;
 
-export const PaymentInfoContents = styled.div`
+export const CartInfoContents = styled.div`
   padding: 24px;
 `;
 
-export const PaymentInfoTitle = styled.h3`
+export const CartInfoTitle = styled.h3`
   font-size: 24px;
   font-weight: bold;
 `;
@@ -22,7 +22,7 @@ export const TextWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const PaymentInfoText = styled.p`
+export const CartInfoText = styled.p`
   font-size: 18px;
   margin: 12px 0;
 `;

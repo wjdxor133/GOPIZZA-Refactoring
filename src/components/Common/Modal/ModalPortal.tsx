@@ -1,8 +1,8 @@
-import { useMemo } from "react";
+import { ReactNode, useMemo } from "react";
 import ReactDOM from "react-dom";
 
 interface ModalPortalProps {
-  children: any;
+  children: ReactNode;
   elementId: any;
 }
 

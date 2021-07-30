@@ -14,13 +14,14 @@ import MenuList from "./Menu/MenuList/MenuList";
 
 // Cart
 import CartItem from "./Cart/CartItem/CartItem";
-import PaymentInfo from "./Cart/PaymentInfo/PaymentInfo";
+import PaymentInfo from "./Cart/CartInfo/CartInfo";
 import CartList from "./Cart/CartList/CartList";
 import Payment from "./Cart/Payment/Payment";
 
 //Common
 import Header from "./Common/Header/Header";
 import Hero from "./Common/Hero/Hero";
+import Modal from "./Common/Modal/Modal";
 import Footer from "./Common/Footer/Footer";
 import SlideShow from "./Main/SlideShow/SlideShow";
 import Products from "./Main/Products/Products";
@@ -29,6 +30,7 @@ import Feature from "./Main/Feature/Feature";
 export {
   Header,
   Hero,
+  Modal,
   Footer,
   LoginForm,
   SignUpForm,

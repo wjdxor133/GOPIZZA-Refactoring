@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   MenuCardWrapper,
   CardContents,
@@ -14,15 +14,16 @@ import {
   CartIcon,
   CartBtn,
 } from "./MenuCard.styles";
+import { Modal } from "components";
 import { toast } from "react-toastify";
-import { useHover } from "hooks";
+import { useHover, useModal } from "hooks";
 
-import { connect, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/type";
 import { addItem } from "store/cart/cart";
 
 interface MenuCardProps {
   menu: Menu;
-  currentUser: firebase.User | null;
 }
 
 interface Menu {
@@ -35,17 +36,26 @@ interface Menu {
   price: number;
 }
 
-function MenuCard({ menu, currentUser }: MenuCardProps) {
+function MenuCard({ menu }: MenuCardProps) {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
+  const { isShown, toggle } = useModal();
   const Bounce = require("react-reveal/Bounce");
-  const [loginModal, setLoginModal] = useState<boolean>(false);
+
+  const currentUser = useSelector<RootState>((state) => state.user.currentUser);
   const dispatch = useDispatch();
+
+  console.log("currentUser", currentUser);
 
   const showLoginModal = () => {
     if (currentUser === null) {
-      alert("로그인 해주세요!");
-      setLoginModal(true);
+      toggle();
+    } else {
+      dispatch(addItem(menu));
+      toast(`${menu.name} 추가!`, {
+        position: "bottom-center",
+        autoClose: 1500,
+      });
     }
   };
 
@@ -63,19 +73,7 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
             </Bounce>
 
             <Bounce bottom>
-              <CartBtn
-                onClick={() => {
-                  showLoginModal();
-                  dispatch(addItem(menu));
-                  if (currentUser !== null) {
-                    console.log("확인");
-                    toast(`${menu.name} 추가!`, {
-                      position: "bottom-center",
-                      autoClose: 1500,
-                    });
-                  }
-                }}
-              >
+              <CartBtn onClick={showLoginModal}>
                 <CartIcon />
                 장바구니 추가
               </CartBtn>
@@ -90,16 +88,14 @@ function MenuCard({ menu, currentUser }: MenuCardProps) {
           <KcalText>{`${menu.kcal} kcal`}</KcalText>
         </CardContents>
       )}
+      <Modal
+        isShown={isShown}
+        hide={toggle}
+        headerText="확인!"
+        contentText="로그인 해주세요!"
+      />
     </MenuCardWrapper>
   );
 }
 
-const mapStateToProps = (state: any) => ({
-  currentUser: state.user.currentUser,
-});
-
-const mapDispatchToProps = (dispatch: any) => ({
-  addItem: (item: any) => dispatch(addItem(item)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(MenuCard);
+export default MenuCard;

@@ -12,6 +12,14 @@ export const MenuListBox = styled.ul`
   justify-content: center;
   grid-gap: 30px;
   padding: 30px 0 50px;
+
+  @media screen and (max-width: 780px) {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const LoadingBox = styled.div`

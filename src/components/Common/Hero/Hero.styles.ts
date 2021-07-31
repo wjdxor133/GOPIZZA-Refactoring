@@ -15,7 +15,6 @@ export const HeroContainer = styled.div<StyledHeroProps>`
 export const HeroContent = styled.div`
   height: calc(100vh -80px);
   max-height: 100%;
-  /* width: 100vw; */
   padding: 0rem calc((100vw - 1300px) / 2);
 `;
 
@@ -41,7 +40,6 @@ export const HeroItems = styled.div`
 export const HeroH1 = styled.h1`
   font-size: clamp(2.5rem, 10vw, 5rem);
   margin-bottom: 1rem;
-  /* box-shadow: 3px 5px ${({ theme }) => theme.colors.primary_lighter}; */
   letter-spacing: 3px;
 `;
 

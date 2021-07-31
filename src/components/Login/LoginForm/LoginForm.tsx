@@ -19,10 +19,9 @@ import {
   SignUpRouteText,
   SignUpRouteLink,
 } from "./LoginForm.styles";
+import { toast } from "react-toastify";
 import { useInput } from "hooks";
 import { auth } from "core/utils/firebase/firebase";
-
-// import { ToastContainer, toast } from "react-toastify";
 
 function LoginForm() {
   const [emailId, setEmailId, onChangeEmailId] = useInput<string>("");
@@ -37,10 +36,12 @@ function LoginForm() {
       await auth.signInWithEmailAndPassword(emailId, password);
       setEmailId("");
       setPassword("");
-      // toast.error("로그인 되었습니다.", {
-      //   position: "bottom-center",
-      //   autoClose: 1500,
-      // });
+      setTimeout(() => {
+        toast("로그인 되었습니다.", {
+          position: "bottom-center",
+          autoClose: 1500,
+        });
+      }, 1000);
 
       history.push("/");
     } catch (error) {
@@ -91,7 +92,6 @@ function LoginForm() {
           <SignUpRouteLink to="/signUp">회원가입</SignUpRouteLink>
         </SignUpRouteWrapper>
       </LoginFormWrapper>
-      {/* <ToastContainer /> */}
     </LoginFormContainer>
   );
 }

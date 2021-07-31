@@ -12,15 +12,22 @@ export const MenuNavWrapper = styled.div`
 
 export const MenuNav = styled.div`
   width: 70%;
+  max-width: 1000px;
   background-color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
   padding: 24px 48px;
+
+  @media screen and (max-width: 780px) {
+    width: 100%;
+    padding: 4px 12px;
+    column-gap: 12px;
+  }
 `;
 
 export const MenuText = styled.p<StyledMenubarProps>`
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
   position: relative;
   cursor: pointer;
   padding-bottom: 4px;

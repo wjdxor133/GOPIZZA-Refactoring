@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
 import {
   MenuCardWrapper,
   CardContents,
@@ -41,13 +42,12 @@ function MenuCard({ menu }: MenuCardProps) {
   const isHover = useHover(hoverRef);
   const { isShown, toggle } = useModal();
   const Bounce = require("react-reveal/Bounce");
+  const history = useHistory();
 
   const currentUser = useSelector<RootState>((state) => state.user.currentUser);
   const dispatch = useDispatch();
 
-  console.log("currentUser", currentUser);
-
-  const showLoginModal = () => {
+  const handleShowLoginModal = () => {
     if (currentUser === null) {
       toggle();
     } else {
@@ -57,6 +57,13 @@ function MenuCard({ menu }: MenuCardProps) {
         autoClose: 1500,
       });
     }
+  };
+
+  const handleMoveLoginPage = async () => {
+    toggle();
+    setTimeout(() => {
+      history.push("/login");
+    }, 100);
   };
 
   return (
@@ -73,9 +80,9 @@ function MenuCard({ menu }: MenuCardProps) {
             </Bounce>
 
             <Bounce bottom>
-              <CartBtn onClick={showLoginModal}>
+              <CartBtn onClick={handleShowLoginModal}>
                 <CartIcon />
-                장바구니 추가
+                장바구니
               </CartBtn>
             </Bounce>
           </HoverWrapper>
@@ -91,8 +98,9 @@ function MenuCard({ menu }: MenuCardProps) {
       <Modal
         isShown={isShown}
         hide={toggle}
-        headerText="확인!"
         contentText="로그인 해주세요!"
+        buttonText="로그인"
+        onClick={handleMoveLoginPage}
       />
     </MenuCardWrapper>
   );

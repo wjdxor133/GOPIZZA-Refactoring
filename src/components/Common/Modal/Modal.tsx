@@ -7,17 +7,28 @@ import {
   HeaderText,
   CloseButton,
   Content,
+  ContentText,
   Backdrop,
+  OkButton,
 } from "./Modal.styles";
 
 export interface ModalProps {
   isShown: boolean;
   hide: () => void;
   contentText: string;
-  headerText: string;
+  buttonText: string;
+  onClick: () => void;
 }
 
-function Modal({ isShown, hide, contentText, headerText }: ModalProps) {
+function Modal({
+  isShown,
+  hide,
+  contentText,
+  buttonText,
+  onClick,
+}: ModalProps) {
+  const Fade = require("react-reveal/Fade");
+
   useEffect(() => {
     isShown
       ? (document.body.style.overflow = "hidden")
@@ -28,13 +39,18 @@ function Modal({ isShown, hide, contentText, headerText }: ModalProps) {
     <>
       <Backdrop />
       <Wrapper>
-        <StyledModal>
-          <Header>
-            <HeaderText>{headerText}</HeaderText>
-            <CloseButton onClick={hide}>X</CloseButton>
-          </Header>
-          <Content>{contentText}</Content>
-        </StyledModal>
+        <Fade bottom>
+          <StyledModal>
+            <Header>
+              <HeaderText>알림</HeaderText>
+              <CloseButton onClick={hide}></CloseButton>
+            </Header>
+            <Content>
+              <ContentText>{contentText}</ContentText>
+            </Content>
+            <OkButton onClick={onClick}>{buttonText}</OkButton>
+          </StyledModal>
+        </Fade>
       </Wrapper>
     </>
   );

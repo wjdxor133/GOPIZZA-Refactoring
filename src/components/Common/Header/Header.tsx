@@ -24,12 +24,14 @@ import { RootState } from "store/type";
 import { selectCartItemsCount } from "store/cart/cartSelectors";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrollNav, setScrollNav] = useState<boolean>(false);
   const [user, setUser] = useState<firebase.User | null>();
   const state = useSelector<RootState>((state) => state);
   const dispatch = useDispatch();
   const cartItemCnt = selectCartItemsCount(state);
   const Jump = require("react-reveal/Jump");
-  const Swing = require("react-reveal/Swing");
+  const Pulse = require("react-reveal/Pulse");
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
@@ -52,9 +54,6 @@ const Header = () => {
     return () => unsubscribeFromAuth();
   }, [dispatch]);
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [scrollNav, setScrollNav] = useState<boolean>(false);
-
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -68,7 +67,12 @@ const Header = () => {
   };
 
   useEffect(() => {
+    // console.log("클린업 전에?");
     window.addEventListener("scroll", handleChangeNav);
+    return () => {
+      window.removeEventListener("scroll", handleChangeNav);
+      // console.log("클린업이 먼저?");
+    };
   }, []);
 
   const toggleHome = () => {
@@ -77,10 +81,13 @@ const Header = () => {
 
   const handleLogOut = () => {
     auth.signOut();
-    toast.success("로그아웃 되었습니다.", {
-      position: "bottom-center",
-      autoClose: 2000,
-    });
+    dispatch(setCurrentUser(null));
+    setTimeout(() => {
+      toast("로그아웃 되었습니다.", {
+        position: "bottom-center",
+        autoClose: 2000,
+      });
+    }, 1000);
   };
 
   return (
@@ -116,9 +123,9 @@ const Header = () => {
         </SidebarMenu>
         <SideBtnWrap>
           {cartItemCnt !== 0 ? (
-            <Swing forever={true} duration={1200}>
+            <Pulse forever={true} duration={1200}>
               <SidebarRoute to="/cart">주문 하기</SidebarRoute>
-            </Swing>
+            </Pulse>
           ) : (
             <SidebarRoute to="/cart">주문 하기</SidebarRoute>
           )}

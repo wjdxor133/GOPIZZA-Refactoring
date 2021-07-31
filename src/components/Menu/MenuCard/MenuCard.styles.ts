@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { FaPlus } from "react-icons/fa";
+import { RiShoppingCartFill } from "react-icons/ri";
 
 export const MenuCardWrapper = styled.div``;
 
 export const CardContents = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
+  min-width: 250px;
   min-height: 330px;
   padding: 18px;
   display: flex;
@@ -44,16 +45,7 @@ export const HoverWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  /* opacity: 0;
-  transform: scale(0.5); */
   color: ${({ theme }) => theme.colors.white};
-
-  /* &:hover {
-    opacity: 1;
-    transform: scale(1);
-    transition-duration: 0.3s;
-    transition-delay: 0.3s;
-  } */
 `;
 
 export const HoverName = styled(MenuName)`
@@ -91,6 +83,6 @@ export const CartBtn = styled.button`
   }
 `;
 
-export const CartIcon = styled(FaPlus)`
+export const CartIcon = styled(RiShoppingCartFill)`
   margin-right: 8px;
 `;

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
-export const SlideWrapper = styled.div``;
+export const SlideWrapper = styled.div`
+  width: 300px;
+`;
 
 export const CenterDiv = styled.div`
   display: flex;
@@ -15,13 +17,12 @@ export const CenterDiv = styled.div`
   &:hover {
     transform: translateY(-10px);
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
   }
 `;
 
 export const HoverDiv = styled(CenterDiv)`
-  width: 300px;
-  height: 200px;
+  height: 230px;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.navy};
   padding: 24px;
@@ -75,6 +76,6 @@ export const MenuName = styled.p`
 export const SubMenuName = styled.p`
   text-align: center;
   color: ${({ theme }) => theme.colors.primary_light};
-  font-size: 14px;
-  margin-top: 4px;
+  font-size: 0.9rem;
+  margin-top: 8px;
 `;

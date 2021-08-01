@@ -24,6 +24,7 @@ import Hero from "./Common/Hero/Hero";
 import Modal from "./Common/Modal/Modal";
 import Footer from "./Common/Footer/Footer";
 import SlideShow from "./Main/SlideShow/SlideShow";
+import Slide from "./Main/Slide/Slide";
 import Products from "./Main/Products/Products";
 import Feature from "./Main/Feature/Feature";
 
@@ -41,6 +42,7 @@ export {
   MenuCard,
   MenuList,
   SlideShow,
+  Slide,
   Products,
   Feature,
   CartItem,

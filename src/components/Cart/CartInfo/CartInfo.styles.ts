@@ -5,6 +5,7 @@ export const CartInfoWrapper = styled.div`
   box-shadow: 0 8px 25px 0 rgb(0 0 0 / 10%);
   position: sticky;
   top: 200px;
+  min-width: 300px;
   max-height: 200px;
 `;
 
@@ -15,6 +16,7 @@ export const CartInfoContents = styled.div`
 export const CartInfoTitle = styled.h3`
   font-size: 24px;
   font-weight: bold;
+  margin-bottom: 8px;
 `;
 
 export const TextWrapper = styled.div`

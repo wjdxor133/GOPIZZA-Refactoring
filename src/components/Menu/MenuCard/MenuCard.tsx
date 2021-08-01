@@ -59,11 +59,9 @@ function MenuCard({ menu }: MenuCardProps) {
     }
   };
 
-  const handleMoveLoginPage = async () => {
+  const handleMoveLoginPage = () => {
     toggle();
-    setTimeout(() => {
-      history.push("/login");
-    }, 100);
+    history.push("/login");
   };
 
   return (

@@ -48,11 +48,17 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: 60% auto;
   grid-gap: 60px;
-  margin: 48px auto;
+  margin: 60px auto;
+
+  @media screen and (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
 `;
 
 const NoticeText = styled.h1`
-  font-size: 36px;
+  font-size: 32px;
   /* font-weight: bold; */
   text-align: center;
   /* color: ${({ theme }) => theme.colors.dark_gray}; */

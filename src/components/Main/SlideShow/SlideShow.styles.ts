@@ -43,11 +43,3 @@ export const TitleH3 = styled.h3`
     padding-left: 10px;
   }
 `;
-
-// export const Title = styled.h1`
-//   font-size: clamp(2rem, 2.5vw, 3rem);
-//   font-weight: bold;
-//   text-align: center;
-//   margin-bottom: 5rem;
-//   color: ${({ theme }) => theme.colors.brown};
-// `;

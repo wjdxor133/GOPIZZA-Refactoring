@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StoreListContainer = styled.div`
+interface StyledStoreListProps {
+  width: number;
+}
+
+export const StoreListContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,47 +31,60 @@ export const StoreListSubTitle = styled.h5`
   }
 `;
 
-export const StoreListTable = styled.table`
+export const StoreListTable = styled.div`
+  /* min-width: 580px; */
   border-top: 4px solid ${({ theme }) => theme.colors.primary_regular};
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary_regular};
 `;
 
-export const StoreListThead = styled.thead`
-  display: table-header-group;
-  vertical-align: middle;
+export const StoreListHeader = styled.header`
+  height: 69px;
+  display: flex;
+  align-items: center;
   border-color: inherit;
   color: ${({ theme }) => theme.colors.black};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primary_regular};
+
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
-export const StoreListTr = styled.tr`
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-`;
-
-export const StoreListTh = styled.th`
-  font-size: 16px;
-  height: 69px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primary_regular};
+export const HeaderItem = styled.p<StyledStoreListProps>`
+  width: ${({ width }) => `${width}%`};
   text-align: center;
-  vertical-align: middle;
 `;
 
-export const StoreListTbody = styled.tbody`
-  display: table-row-group;
-  vertical-align: middle;
+export const StoreListBody = styled.ul`
   border-color: inherit;
 `;
 
-export const StoreListTd = styled.td`
-  height: 69px;
+export const BodyItem = styled.li`
+  display: flex;
+  align-items: center;
   border-bottom: 2px solid ${({ theme }) => theme.colors.light_gray};
-  text-align: center;
-  vertical-align: middle;
-  color: #292929;
-  font-size: 16px;
+  padding: 20px 0;
 
-  /* :nth-child(1) {
-    color: ${({ theme }) => theme.colors.primary_regular};
-  } */
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+`;
+
+export const BodyItemInfo = styled(HeaderItem)`
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    text-align: left;
+    padding: 4px 0;
+
+    :nth-child(1) {
+      display: none;
+    }
+    :nth-child(2) {
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+  }
 `;

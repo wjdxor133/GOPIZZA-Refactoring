@@ -19,8 +19,6 @@ export const CartListTitle = styled.p`
 
 export const CartListBtn = styled.button`
   font-size: 16px;
-  /* color: ${({ theme }) => theme.colors.dark_gray}; */
-  /* border: 1px solid ${({ theme }) => theme.colors.dark_gray}; */
   padding: 4px 8px;
   border-radius: 12px;
   cursor: pointer;

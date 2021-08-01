@@ -17,6 +17,10 @@ export const CartItemWrapper = styled.div`
 
 export const MenuImg = styled.img`
   width: 25%;
+
+  @media screen and (max-width: 720px) {
+    width: 50%;
+  }
 `;
 
 export const CartItemBox = styled.div`
@@ -28,6 +32,10 @@ export const CartItemInfoBox = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 export const CartItemInfo = styled.div<CartItemProps>`
@@ -35,7 +43,15 @@ export const CartItemInfo = styled.div<CartItemProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+
+    :nth-child(1) {
+      font-weight: bold;
+    }
+  }
 `;
 
 export const CartItemText = styled.p`
@@ -54,6 +70,12 @@ export const MinusIcon = styled(FiMinusSquare)`
 export const DeleteIcon = styled(RiDeleteBin6Line)`
   width: 25%;
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: bold;
   cursor: pointer;
+
+  @media screen and (max-width: 720px) {
+    font-size: 1.25rem;
+    margin-top: 8px;
+  }
 `;

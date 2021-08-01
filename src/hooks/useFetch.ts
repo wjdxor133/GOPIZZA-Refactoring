@@ -2,7 +2,6 @@ import { useEffect, useReducer, useRef } from "react";
 
 import axios, { AxiosRequestConfig } from "axios";
 
-// State & hook output
 interface State<T> {
   status: "init" | "fetching" | "error" | "fetched";
   data?: T;
@@ -13,13 +12,12 @@ interface Cache<T> {
   [url: string]: T;
 }
 
-// discriminated union type
 type Action<T> =
   | { type: "request" }
   | { type: "success"; payload: T }
   | { type: "failure"; payload: string };
 
-function useFetch<T = unknown>(
+export function useFetch<T = unknown>(
   url?: string,
   options?: AxiosRequestConfig
 ): State<T> {
@@ -79,8 +77,7 @@ function useFetch<T = unknown>(
     return () => {
       cancelRequest.current = true;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url]);
+  }, [options, url]);
 
   return state;
 }

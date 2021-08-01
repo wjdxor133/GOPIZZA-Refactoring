@@ -32,7 +32,11 @@ function Modal({
   useEffect(() => {
     isShown
       ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "unset");
+      : (document.body.style.overflow = "scroll");
+
+    return () => {
+      document.body.style.overflow = "scroll";
+    };
   }, [isShown]);
 
   const modal = (

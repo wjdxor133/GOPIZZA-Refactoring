@@ -62,6 +62,10 @@ export const Content = styled.div`
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
+
+  @media screen and (max-width: 480px) {
+    width: 400px;
+  }
 `;
 
 export const ContentText = styled.p`

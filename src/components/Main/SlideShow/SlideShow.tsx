@@ -8,13 +8,13 @@ import {
   TitleH1,
   TitleH3,
 } from "./SlideShow.styles";
-import Slide from "./Slide/Slide";
+import { Slide } from "components";
 import { menuData } from "./data";
 
 const SlideShow = () => {
   const Fade = require("react-reveal/Fade");
+
   const settings = {
-    // dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -28,7 +28,6 @@ const SlideShow = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          // dots: true,
         },
       },
       {

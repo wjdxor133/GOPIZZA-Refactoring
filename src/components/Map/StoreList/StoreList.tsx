@@ -5,11 +5,11 @@ import {
   StoreListTitle,
   StoreListSubTitle,
   StoreListTable,
-  StoreListThead,
-  StoreListTr,
-  StoreListTh,
-  StoreListTbody,
-  StoreListTd,
+  StoreListHeader,
+  HeaderItem,
+  StoreListBody,
+  BodyItem,
+  BodyItemInfo,
 } from "./StoreList.styles";
 
 interface MapListProps {
@@ -35,28 +35,26 @@ const StoreList = ({ totalPosts, currentPosts }: MapListProps) => {
           총 <span>{totalPosts}</span>개 매장이 있습니다.
         </StoreListSubTitle>
         <StoreListTable>
-          <StoreListThead>
-            <StoreListTr>
-              <StoreListTh scope="col">NO</StoreListTh>
-              <StoreListTh scope="col">매장명</StoreListTh>
-              <StoreListTh scope="col">매장주소</StoreListTh>
-              <StoreListTh scope="col">주요 서비스</StoreListTh>
-              <StoreListTh scope="col">연락처</StoreListTh>
-            </StoreListTr>
-          </StoreListThead>
-          <StoreListTbody>
+          <StoreListHeader>
+            <HeaderItem width={10}>NO</HeaderItem>
+            <HeaderItem width={20}>매장명</HeaderItem>
+            <HeaderItem width={30}>매장주소</HeaderItem>
+            <HeaderItem width={20}>주요 서비스</HeaderItem>
+            <HeaderItem width={20}>연락처</HeaderItem>
+          </StoreListHeader>
+          <StoreListBody>
             {currentPosts?.map((store: StoreList, idx: number) => {
               return (
-                <StoreListTr key={idx}>
-                  <StoreListTd>{store.id}</StoreListTd>
-                  <StoreListTd>{store.name}</StoreListTd>
-                  <StoreListTd>{store.address}</StoreListTd>
-                  <StoreListTd>{store.tel}</StoreListTd>
-                  <StoreListTd>{store.hours}</StoreListTd>
-                </StoreListTr>
+                <BodyItem key={idx}>
+                  <BodyItemInfo width={10}>{store.id}</BodyItemInfo>
+                  <BodyItemInfo width={20}>{store.name}</BodyItemInfo>
+                  <BodyItemInfo width={30}>{store.address}</BodyItemInfo>
+                  <BodyItemInfo width={20}>{store.tel}</BodyItemInfo>
+                  <BodyItemInfo width={20}>{store.hours}</BodyItemInfo>
+                </BodyItem>
               );
             })}
-          </StoreListTbody>
+          </StoreListBody>
         </StoreListTable>
       </StoreListWrapper>
     </StoreListContainer>

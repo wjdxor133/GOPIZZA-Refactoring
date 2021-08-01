@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { PaymentButton } from "./Payment.styles";
-import { connect } from "react-redux";
+import { PaymentBtn } from "./PaymentButton.styles";
 
 declare global {
   interface Window {
@@ -9,7 +8,7 @@ declare global {
   }
 }
 
-const Payment = ({ total, userName, userEmail }: any) => {
+const PaymentButton = ({ total }: any) => {
   const onClickPayment = () => {
     /* 1. 가맹점 식별하기 */
     const { IMP } = window;
@@ -48,16 +47,9 @@ const Payment = ({ total, userName, userEmail }: any) => {
   };
   return (
     <>
-      <PaymentButton
-        onClick={onClickPayment}
-      >{`${total}원 결제`}</PaymentButton>
+      <PaymentBtn onClick={onClickPayment}>{`${total}원 결제`}</PaymentBtn>
     </>
   );
 };
 
-const mapStateToProps = ({ user: { currentUser } }: any) => ({
-  // userName: currentUser.displayName,
-  // userEmail: currentUser.email,
-});
-
-export default connect(mapStateToProps)(Payment);
+export default PaymentButton;

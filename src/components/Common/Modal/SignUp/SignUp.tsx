@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { auth, createUserProfileDocument } from "core/utils/firebase/firebase";
-import { signInWithGoogle } from "core/utils/firebase/firebase";
+// import { signInWithGoogle } from "core/utils/firebase/firebase";
 
 type SignUpInputType = {
   displayName: string;
@@ -32,6 +32,7 @@ const SignUp = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
     const { displayName, email, password, confirmPassword } = inputValue;
     if (password !== confirmPassword) {
       alert("비밀번호를 확인해주세요.");
@@ -106,7 +107,7 @@ const SignUp = () => {
         회원가입
       </SignUpBtn>
 
-      <SignUpBtn onClick={signInWithGoogle}> Sign in with Google </SignUpBtn>
+      <SignUpBtn> Sign in with Google </SignUpBtn>
       <ToastContainer />
     </SignUpComponent>
   );

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import logo from "assets/images/gopizza_logo.jpg";
 import {
-  LoginFormContainer,
   LoginFormWrapper,
   LogoWrapper,
   LogoTitle,
@@ -51,48 +50,46 @@ function LoginForm() {
   };
 
   return (
-    <LoginFormContainer>
-      <LoginFormWrapper>
-        <LogoWrapper>
-          <LogoTitle to="/">
-            <LogoImg src={`${logo}`} alt="고피자 로고 이미지" />
-            <LoginFormH3>GOPIZZA</LoginFormH3>
-          </LogoTitle>
-        </LogoWrapper>
-        <LoginFormH5>
-          고피자 회원으로 로그인하시면 제공하는 다양한 서비스를 이용할 수
-          있습니다.
-        </LoginFormH5>
-        <FormWrapper onSubmit={handleSubmit}>
-          <InputWrapper>
-            <Label>이메일 아이디</Label>
-            <Input
-              type="email"
-              placeholder="이메일 아이디 입력"
-              value={emailId}
-              onChange={onChangeEmailId}
-              required
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <Label>비밀번호</Label>
-            <Input
-              type="password"
-              placeholder="비밀번호 입력"
-              value={password}
-              onChange={onChangePassword}
-              required
-            />
-          </InputWrapper>
-          <ErrorMessage>{error}</ErrorMessage>
-          <LoginBtn type="submit" value="로그인" />
-        </FormWrapper>
-        <SignUpRouteWrapper>
-          <SignUpRouteText>계정이 없으신가요?</SignUpRouteText>
-          <SignUpRouteLink to="/signUp">회원가입</SignUpRouteLink>
-        </SignUpRouteWrapper>
-      </LoginFormWrapper>
-    </LoginFormContainer>
+    <LoginFormWrapper>
+      <LogoWrapper>
+        <LogoTitle to="/">
+          <LogoImg src={`${logo}`} alt="고피자 로고 이미지" />
+          <LoginFormH3>GOPIZZA</LoginFormH3>
+        </LogoTitle>
+      </LogoWrapper>
+      <LoginFormH5>
+        고피자 회원으로 로그인하시면 제공하는 다양한 서비스를 이용할 수
+        있습니다.
+      </LoginFormH5>
+      <FormWrapper onSubmit={handleSubmit}>
+        <InputWrapper>
+          <Label>이메일 아이디</Label>
+          <Input
+            type="email"
+            placeholder="이메일 아이디 입력"
+            value={emailId}
+            onChange={onChangeEmailId}
+            required
+          />
+        </InputWrapper>
+        <InputWrapper>
+          <Label>비밀번호</Label>
+          <Input
+            type="password"
+            placeholder="비밀번호 입력"
+            value={password}
+            onChange={onChangePassword}
+            required
+          />
+        </InputWrapper>
+        <ErrorMessage>{error}</ErrorMessage>
+        <LoginBtn type="submit" value="로그인" />
+      </FormWrapper>
+      <SignUpRouteWrapper>
+        <SignUpRouteText>계정이 없으신가요?</SignUpRouteText>
+        <SignUpRouteLink to="/signUp">회원가입</SignUpRouteLink>
+      </SignUpRouteWrapper>
+    </LoginFormWrapper>
   );
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PaymentButton = styled.button`
+export const PaymentBtn = styled.button`
   background-color: ${({ theme }) => theme.colors.primary_regular};
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;

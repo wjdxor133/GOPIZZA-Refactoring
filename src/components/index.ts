@@ -1,5 +1,6 @@
 // Login
 import LoginForm from "./Login/LoginForm/LoginForm";
+import LoginButton from "./Login/LoginButton/LoginButton";
 import SignUpForm from "./SignUp/SignupForm/SignUpForm";
 
 // Map
@@ -16,7 +17,7 @@ import MenuList from "./Menu/MenuList/MenuList";
 import CartItem from "./Cart/CartItem/CartItem";
 import PaymentInfo from "./Cart/CartInfo/CartInfo";
 import CartList from "./Cart/CartList/CartList";
-import Payment from "./Cart/Payment/Payment";
+import PaymentButton from "./Cart/PaymentButton/PaymentButton";
 
 //Common
 import Header from "./Common/Header/Header";
@@ -33,6 +34,7 @@ export {
   Hero,
   Modal,
   Footer,
+  LoginButton,
   LoginForm,
   SignUpForm,
   StoreMap,
@@ -47,6 +49,6 @@ export {
   Feature,
   CartItem,
   PaymentInfo,
-  Payment,
+  PaymentButton,
   CartList,
 };

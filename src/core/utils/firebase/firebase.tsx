@@ -5,6 +5,8 @@ import "firebase/auth";
 
 firebase.initializeApp(firebaseConfig);
 
+type SocialType = "google" | "github";
+
 export const createUserProfileDocument = async (
   userAuth: any,
   additionalData: any
@@ -36,8 +38,14 @@ export const createUserProfileDocument = async (
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithSocial = (type: SocialType) => {
+  const provider =
+    type === "google"
+      ? new firebase.auth.GoogleAuthProvider()
+      : new firebase.auth.GithubAuthProvider();
+
+  provider.setCustomParameters({ prompt: "select_account" });
+  return () => auth.signInWithPopup(provider);
+};
 
 export default firebase;

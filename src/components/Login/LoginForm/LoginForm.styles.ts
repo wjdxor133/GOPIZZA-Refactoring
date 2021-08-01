@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
-export const LoginFormContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-`;
-
 export const LoginFormWrapper = styled.div`
   max-width: 650px;
   height: 550px;
@@ -59,7 +52,7 @@ export const FormWrapper = styled.form``;
 export const InputWrapper = styled.div`
   display: flex;
   padding: 24px 36px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid ${({ theme }) => theme.colors.gray};
 
   :nth-child(2) {
     border-top-style: none;

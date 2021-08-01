@@ -6,7 +6,7 @@ import {
   TextWrapper,
   CartInfoText,
 } from "./CartInfo.styles";
-import { Payment } from "components";
+import { PaymentButton } from "components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectCartItems, selectCartTotal } from "store/cart/cartSelectors";
@@ -31,7 +31,7 @@ const CartInfo = ({ total }: any) => {
           </CartInfoText>
         </TextWrapper>
       </CartInfoContents>
-      <Payment total={totalAmount} />
+      <PaymentButton total={totalAmount} />
     </CartInfoWrapper>
   );
 };

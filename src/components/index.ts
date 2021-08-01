@@ -1,6 +1,6 @@
 // Login
 import LoginForm from "./Login/LoginForm/LoginForm";
-import LoginButton from "./Login/LoginButton/LoginButton";
+import SocialButton from "./Login/SocialButton/SocialButton";
 import SignUpForm from "./SignUp/SignupForm/SignUpForm";
 
 // Map
@@ -34,7 +34,7 @@ export {
   Hero,
   Modal,
   Footer,
-  LoginButton,
+  SocialButton,
   LoginForm,
   SignUpForm,
   StoreMap,

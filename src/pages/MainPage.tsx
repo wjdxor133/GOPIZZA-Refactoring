@@ -3,7 +3,7 @@ import ImgBg from "assets/images/video_1.gif";
 import { Header, Hero, SlideShow, Products, Feature, Footer } from "components";
 import { productData } from "components/Main/Products/data";
 
-const Main = () => {
+const MainPage = () => {
   return (
     <>
       <Header />
@@ -20,4 +20,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainPage;

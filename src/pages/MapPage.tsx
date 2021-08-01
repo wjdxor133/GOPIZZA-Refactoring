@@ -17,7 +17,7 @@ declare global {
   }
 }
 
-const Map = () => {
+const MapPage = () => {
   // const [showModal, setShowModal] = useState<boolean>(false);
   const { data: storeList } = useFetch<StoreListTypes[]>(
     "/data/locationData.json"
@@ -60,4 +60,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default MapPage;

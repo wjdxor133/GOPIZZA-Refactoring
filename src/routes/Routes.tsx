@@ -1,22 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Main from "pages/Main/Main";
-import Map from "pages/Map/Map";
-import Menu from "pages/Menu/Menu";
-import Cart from "pages/Cart/Cart";
-import Login from "pages/Login/Login";
-import SignUp from "pages/SignUp/SignUp";
+import MainPage from "pages/MainPage";
+import LoginPage from "pages/LoginPage";
+import SignUpPage from "pages/SignUpPage";
+import MapPage from "pages/MapPage";
+import MenuPage from "pages/MenuPage";
+import CartPage from "pages/CartPage";
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/login" component={Login} />
-        <Route path="/signUp" component={SignUp} />
-        <Route path="/map" component={Map} />
-        <Route path="/menu" component={Menu} />
-        <Route path="/cart" component={Cart} />
+        <Route exact path="/" component={MainPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/signUp" component={SignUpPage} />
+        <Route path="/map" component={MapPage} />
+        <Route path="/menu" component={MenuPage} />
+        <Route path="/cart" component={CartPage} />
       </Switch>
     </Router>
   );

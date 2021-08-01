@@ -1,16 +1,20 @@
 import React from "react";
-import { LoginButtonWrapper, GoogleBtn, GithubBtn } from "./LoginButton.styles";
+import {
+  SocialButtonWrapper,
+  GoogleBtn,
+  GithubBtn,
+} from "./SocialButton.styles";
 import { signInWithSocial } from "core/utils/firebase/firebase";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 
 type ButtonType = "google" | "github";
 
-interface LoginButtonProps {
+interface SocialButtonProps {
   type: ButtonType;
 }
 
-const LoginButton = ({ type }: LoginButtonProps) => {
+const SocialButton = ({ type }: SocialButtonProps) => {
   const history = useHistory();
   const LoginFnc = signInWithSocial(type);
 
@@ -34,15 +38,15 @@ const LoginButton = ({ type }: LoginButtonProps) => {
   };
 
   return (
-    <LoginButtonWrapper>
+    <SocialButtonWrapper>
       {
         {
           google: <GoogleBtn onClick={handleSocialLogin} />,
           github: <GithubBtn onClick={handleSocialLogin} />,
         }[type]
       }
-    </LoginButtonWrapper>
+    </SocialButtonWrapper>
   );
 };
 
-export default LoginButton;
+export default SocialButton;

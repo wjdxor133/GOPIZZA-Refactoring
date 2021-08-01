@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Header, Hero, Menubar, MenuList, Footer } from "components";
 import { useFetch } from "hooks";
 
-const Menu = () => {
+const MenuPage = () => {
   const [menuType, setMenuType] = useState<string>("all");
   const [menuData, setMenuData] = useState([]);
   const { data } = useFetch<any>("/data/menuData.json");
@@ -30,4 +30,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuPage;

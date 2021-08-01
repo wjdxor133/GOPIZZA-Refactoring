@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
 import { RootState } from "store/type";
 
-const Cart = () => {
+const CartPage = () => {
   const cartItems = useSelector<RootState>((state) => state.cart.cartItems);
   const cartLength = useSelector<RootState>(
     (state) => state.cart.cartItems.length
@@ -37,7 +37,7 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartPage;
 
 const Main = styled.main`
   width: 80%;
@@ -59,8 +59,6 @@ const Section = styled.section`
 
 const NoticeText = styled.h1`
   font-size: 32px;
-  /* font-weight: bold; */
   text-align: center;
-  /* color: ${({ theme }) => theme.colors.dark_gray}; */
   margin: 20vh 0;
 `;

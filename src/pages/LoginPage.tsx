@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { LoginForm, LoginButton } from "components";
+import { LoginForm, SocialButton } from "components";
 
-function Login() {
+function LoginPage() {
   return (
     <>
       <Main>
         <LoginForm />
         <ButtonWrapper>
-          <LoginButton type="google" />
-          <LoginButton type="github" />
+          <SocialButton type="google" />
+          <SocialButton type="github" />
         </ButtonWrapper>
       </Main>
     </>
   );
 }
 
-export default Login;
+export default LoginPage;
 
 const Main = styled.main`
   display: flex;

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Routes from "routes/Routes";
 import GlobalStyle from "styles/GlobalStyle";
 import { theme } from "styles/theme";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <Routes />
+          <ToastContainer />
         </PersistGate>
       </Provider>
     </ThemeProvider>

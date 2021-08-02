@@ -9,8 +9,13 @@ import { CartItem, Modal } from "components";
 import { clearItem } from "store/cart/cart";
 import { useDispatch } from "react-redux";
 import { useModal } from "hooks";
+import { CartItemType } from "types/cart.types";
 
-const CartList = ({ cartItems }: any) => {
+interface CartItemsProps {
+  cartItems: CartItemType[];
+}
+
+const CartList = ({ cartItems }: CartItemsProps) => {
   const { isShown, toggle } = useModal();
   const dispatch = useDispatch();
 
@@ -28,8 +33,13 @@ const CartList = ({ cartItems }: any) => {
         <CartListTitle>주문 메뉴 정보</CartListTitle>
         <CartListBtn onClick={handleShowModal}>비우기</CartListBtn>
       </TitleWrapper>
-      {cartItems.map((cartItem: any) => {
-        return <CartItem key={cartItem.id} cartItem={cartItem} />;
+      {cartItems.map((cartItem) => {
+        return (
+          <CartItem
+            key={`${cartItem.id} ${cartItem.name}`}
+            cartItem={cartItem}
+          />
+        );
       })}
       <Modal
         isShown={isShown}

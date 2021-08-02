@@ -5,6 +5,7 @@ export interface CartItemType {
   tag_text: string;
   img_url: string;
   price: number;
+  quantity: number;
 }
 
 export interface CartTypes {

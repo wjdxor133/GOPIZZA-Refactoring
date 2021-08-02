@@ -19,37 +19,39 @@ import {
 } from "./SignUpForm.styles";
 import { useForm } from "react-hook-form";
 import { auth } from "core/utils/firebase/firebase";
-import { ToastContainer, toast } from "react-toastify";
+import { useToast } from "hooks";
+import { useHistory } from "react-router-dom";
 
-interface Inputs {
+interface InputTypes {
   email: string;
   password: string;
   password_confirm: string;
 }
 
-function SignUpForm() {
+const SignUpForm = () => {
   const {
     register,
     watch,
     formState: { errors },
     handleSubmit,
-  } = useForm<Inputs>();
+  } = useForm<InputTypes>();
+
   const password = useRef<string | number>();
   password.current = watch("password");
+  const { toast } = useToast();
+  const history = useHistory();
 
-  const onSubmit = async (data: Inputs) => {
+  const onSubmit = async (data: InputTypes) => {
     const { email, password } = data;
+
     try {
-      await auth.createUserWithEmailAndPassword(email, password);
-      toast.success("회원가입이 완료되었습니다.", {
-        position: "bottom-center",
-        autoClose: 1500,
-      });
+      const res = await auth.createUserWithEmailAndPassword(email, password);
+      if (res) {
+        toast("회원가입이 완료되었습니다.", "bottom-center", 1200, 1000);
+        history.push("/login");
+      }
     } catch (error) {
-      toast.error("이미 가입된 계정입니다.", {
-        position: "bottom-center",
-        autoClose: 1500,
-      });
+      toast(`이미 가입된 계정입니다.`, "bottom-center", 1500, 0);
     }
   };
 
@@ -84,7 +86,7 @@ function SignUpForm() {
               placeholder="비밀번호를 입력해주세요."
               {...register("password", {
                 required: true,
-                pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+                pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/,
               })}
             />
             {errors.password && errors.password.type === "required" && (
@@ -122,9 +124,8 @@ function SignUpForm() {
         <LoginRouteText>이미 아이디가 있으신가요?</LoginRouteText>
         <LoginRouteLink to="/login">로그인</LoginRouteLink>
       </LoginRouteWrapper>
-      <ToastContainer />
     </SignUpFormContainer>
   );
-}
+};
 
 export default SignUpForm;

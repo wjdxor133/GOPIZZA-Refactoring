@@ -10,20 +10,18 @@ import {
   PlusIcon,
   DeleteIcon,
 } from "./CartItem.styles";
-import { CartItemType } from "types/cart";
+import { CartItemType } from "types/cart.types";
 import { removeItem, addItem, clearItemFromCart } from "store/cart/cart";
+import { useToast } from "hooks";
 
 interface CartItemPropsType {
-  cartItem: RemoveCartItem;
-}
-
-interface RemoveCartItem extends CartItemType {
-  quantity: number;
+  cartItem: CartItemType;
 }
 
 const CartItem = ({ cartItem }: CartItemPropsType) => {
-  const { img_url, name, quantity, price } = cartItem;
+  const { img_url, name, quantity = 1, price } = cartItem;
   const dispatch = useDispatch();
+  const { toast } = useToast();
 
   const handleAddItem = () => {
     dispatch(addItem(cartItem));
@@ -31,6 +29,12 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
 
   const handleRemoveItem = () => {
     dispatch(removeItem(cartItem));
+    toast(`${name} 삭제!`, "bottom-center", 1200, 0);
+  };
+
+  const handleClearItemFromCart = () => {
+    dispatch(clearItemFromCart(cartItem));
+    toast(`${name} 삭제!`, "bottom-center", 1200, 0);
   };
 
   return (
@@ -51,7 +55,7 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
           </CartItemText>
         </CartItemInfo>
         <CartItemInfo width="20">
-          <DeleteIcon onClick={() => dispatch(clearItemFromCart(cartItem))} />
+          <DeleteIcon onClick={handleClearItemFromCart} />
         </CartItemInfo>
       </CartItemInfoBox>
     </CartItemWrapper>

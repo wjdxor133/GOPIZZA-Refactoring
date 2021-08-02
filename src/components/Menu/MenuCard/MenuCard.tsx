@@ -16,9 +16,7 @@ import {
   CartBtn,
 } from "./MenuCard.styles";
 import { Modal } from "components";
-import { toast } from "react-toastify";
-import { useHover, useModal } from "hooks";
-
+import { useHover, useModal, useToast } from "hooks";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/type";
 import { addItem } from "store/cart/cart";
@@ -41,9 +39,9 @@ function MenuCard({ menu }: MenuCardProps) {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
   const { isShown, toggle } = useModal();
-  const Bounce = require("react-reveal/Bounce");
   const history = useHistory();
-
+  const { toast } = useToast();
+  const Bounce = require("react-reveal/Bounce");
   const currentUser = useSelector<RootState>((state) => state.user.currentUser);
   const dispatch = useDispatch();
 
@@ -52,10 +50,7 @@ function MenuCard({ menu }: MenuCardProps) {
       toggle();
     } else {
       dispatch(addItem(menu));
-      toast(`${menu.name} 추가!`, {
-        position: "bottom-center",
-        autoClose: 1500,
-      });
+      toast(`${menu.name} 추가!`, "bottom-center", 1500, 0);
     }
   };
 

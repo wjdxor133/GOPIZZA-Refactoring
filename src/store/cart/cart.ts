@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CartTypes } from "types/cart";
+import { CartTypes } from "types/cart.types";
 import { addItemToCart, removeItemFromCart } from "./cartUtils";
 
 const INITIAL_STATE: CartTypes = {

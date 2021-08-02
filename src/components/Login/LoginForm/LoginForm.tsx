@@ -18,8 +18,7 @@ import {
   SignUpRouteText,
   SignUpRouteLink,
 } from "./LoginForm.styles";
-import { toast } from "react-toastify";
-import { useInput } from "hooks";
+import { useInput, useToast } from "hooks";
 import { auth } from "core/utils/firebase/firebase";
 
 function LoginForm() {
@@ -27,6 +26,7 @@ function LoginForm() {
   const [password, setPassword, onChangePassword] = useInput<string>("");
   const [error, setError] = useState<string>("");
   const history = useHistory();
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,13 +35,7 @@ function LoginForm() {
       await auth.signInWithEmailAndPassword(emailId, password);
       setEmailId("");
       setPassword("");
-      setTimeout(() => {
-        toast("로그인 되었습니다.", {
-          position: "bottom-center",
-          autoClose: 1500,
-        });
-      }, 1000);
-
+      toast("로그인 되었습니다.", "bottom-center", 1200, 500);
       history.push("/");
     } catch (error) {
       console.log("error", error);

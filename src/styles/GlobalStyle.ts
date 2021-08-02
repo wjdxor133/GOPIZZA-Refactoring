@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #ffffff;
     font-family: 'Kanit', sans-serif;
+    word-break: break-all;
     /* font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */
   }
   a {

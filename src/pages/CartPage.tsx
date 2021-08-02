@@ -6,10 +6,12 @@ import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
 import { RootState } from "store/type";
 
 const CartPage = () => {
-  const cartItems = useSelector<RootState>((state) => state.cart.cartItems);
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const cartLength = useSelector<RootState>(
     (state) => state.cart.cartItems.length
   );
+
+  console.log("cartItems", typeof cartItems);
 
   return (
     <>
@@ -40,7 +42,7 @@ const CartPage = () => {
 export default CartPage;
 
 const Main = styled.main`
-  width: 80%;
+  width: 90%;
   margin: 1em auto;
 `;
 

@@ -15,7 +15,7 @@ import {
   ItemCnt,
 } from "./Header.styles";
 import { animateScroll as scroll } from "react-scroll";
-import { ToastContainer, toast } from "react-toastify";
+import { useToast } from "hooks";
 import { auth } from "core/utils/firebase/firebase";
 import { createUserProfileDocument } from "core/utils/firebase/firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +27,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrollNav, setScrollNav] = useState<boolean>(false);
   const [user, setUser] = useState<firebase.User | null>();
+  const { toast } = useToast();
   const state = useSelector<RootState>((state) => state);
   const dispatch = useDispatch();
   const cartItemCnt = selectCartItemsCount(state);
@@ -67,11 +68,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // console.log("클린업 전에?");
     window.addEventListener("scroll", handleChangeNav);
     return () => {
       window.removeEventListener("scroll", handleChangeNav);
-      // console.log("클린업이 먼저?");
     };
   }, []);
 
@@ -82,12 +81,7 @@ const Header = () => {
   const handleLogOut = () => {
     auth.signOut();
     dispatch(setCurrentUser(null));
-    setTimeout(() => {
-      toast("로그아웃 되었습니다.", {
-        position: "bottom-center",
-        autoClose: 2000,
-      });
-    }, 1000);
+    toast("로그아웃 되었습니다.", "bottom-center", 1200, 500);
   };
 
   return (
@@ -131,7 +125,6 @@ const Header = () => {
           )}
         </SideBtnWrap>
       </SidebarContainer>
-      <ToastContainer />
     </HeaderContainer>
   );
 };

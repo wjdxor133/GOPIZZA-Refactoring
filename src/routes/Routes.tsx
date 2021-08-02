@@ -9,34 +9,14 @@ import CartPage from "pages/CartPage";
 
 const Routes = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path={`${process.env.PUBLIC_URL}/`} component={MainPage} />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/login`}
-          component={LoginPage}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/signUp`}
-          component={SignUpPage}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/map`}
-          component={MapPage}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/menu`}
-          component={MenuPage}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL}/cart`}
-          component={CartPage}
-        />
+        <Route exact path="/" component={MainPage} />
+        <Route path="/login`" component={LoginPage} />
+        <Route path="/signUp" component={SignUpPage} />
+        <Route path="/map" component={MapPage} />
+        <Route path="/menu" component={MenuPage} />
+        <Route path="/cart" component={CartPage} />
       </Switch>
     </Router>
   );

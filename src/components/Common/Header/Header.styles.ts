@@ -40,7 +40,7 @@ export const NavLink = styled(Link)`
     transition: 0.2s ease-in-out;
   }
 
-  @media screen and (max-width: 480px) {
+  @media ${({ theme }) => theme.screenSizes.mobile} {
     position: absolute;
     top: 10px;
     left: 25px;
@@ -82,7 +82,7 @@ export const SidebarContainer = styled.aside<StyledHeaderProps>`
   transition: 0.3s ease-in-out;
   right: ${({ isOpen }) => (isOpen ? "0" : "-1000px")};
 
-  @media screen and (max-width: 400px) {
+  @media ${({ theme }) => theme.screenSizes.mobile} {
     color: ${({ theme }) => theme.colors.white};
   }
 `;
@@ -108,7 +108,7 @@ export const SidebarMenu = styled.div`
   grid-template-rows: repeat(3, 80px);
   text-align: center;
 
-  @media screen and (max-width: 480px) {
+  @media ${({ theme }) => theme.screenSizes.mobile} {
     grid-template-rows: repeat(3, 60px);
   }
 `;

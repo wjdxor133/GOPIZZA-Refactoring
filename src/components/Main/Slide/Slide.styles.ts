@@ -17,7 +17,6 @@ export const CenterDiv = styled.div`
   &:hover {
     transform: translateY(-10px);
     cursor: pointer;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
   }
 `;
 

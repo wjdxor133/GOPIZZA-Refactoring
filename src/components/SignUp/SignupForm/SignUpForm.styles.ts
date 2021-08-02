@@ -10,7 +10,8 @@ export const SignUpFormContainer = styled.div`
 `;
 
 export const SignUpFormWrapper = styled.div`
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
 `;
 
 export const LogoWrapper = styled.div`
@@ -23,6 +24,7 @@ export const LogoWrapper = styled.div`
 export const LogoTitle = styled(Link)`
   width: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
   transition: transform 0.2s ease-out;
   cursor: pointer;
@@ -34,13 +36,13 @@ export const LogoTitle = styled(Link)`
 `;
 
 export const LogoImg = styled.img`
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
   margin-right: 8px;
 `;
 
 export const SignUpFormH3 = styled.h3`
-  font-size: 36px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary_regular};
   text-align: center;
@@ -64,7 +66,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   padding: 24px 12px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid ${({ theme }) => theme.colors.gray};
 `;
 
 export const SignUpBtn = styled.input`

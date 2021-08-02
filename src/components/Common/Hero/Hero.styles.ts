@@ -32,7 +32,7 @@ export const HeroItems = styled.div`
   line-height: 1;
   font-weight: bold;
 
-  @media screen and (max-width: 650px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     width: 100%;
   }
 `;

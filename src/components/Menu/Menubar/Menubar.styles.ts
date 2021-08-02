@@ -19,7 +19,7 @@ export const MenuNav = styled.div`
   margin-top: 30px;
   padding: 24px 48px;
 
-  @media screen and (max-width: 780px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     width: 100%;
     padding: 4px 12px;
     column-gap: 12px;

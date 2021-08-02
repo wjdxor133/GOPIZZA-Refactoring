@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CartInfoWrapper = styled.div`
   border-radius: 16px;
-  box-shadow: 0 8px 25px 0 rgb(0 0 0 / 10%);
+  box-shadow: ${({ theme }) => theme.elevations.elevation_regular};
   position: sticky;
   top: 200px;
   min-width: 300px;

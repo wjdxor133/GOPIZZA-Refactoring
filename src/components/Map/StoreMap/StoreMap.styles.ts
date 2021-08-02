@@ -52,7 +52,6 @@ export const StoreMapContainer = styled.div`
     top: 4px;
     width: 24px;
     height: 24px;
-    /* opacity: 0.3; */
   }
   .info .close:hover {
     opacity: 1;
@@ -113,9 +112,6 @@ export const StoreMapContainer = styled.div`
     height: 12px;
     background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
   }
-  /* .info .link {
-    color: #5085bb;
-  } */
 `;
 
 export const MapWrapper = styled.div`

@@ -1,7 +1,17 @@
 import { DefaultTheme } from "styled-components";
 
+const sizes = {
+  desktop: "1024",
+  tablet: "768",
+  mobile: "480",
+};
+
 const theme: DefaultTheme = {
-  basicWidth: "320px",
+  screenSizes: {
+    desktop: `(max-width: ${sizes.desktop}px)`,
+    tablet: `(max-width: ${sizes.tablet}px)`,
+    mobile: `(max-width: ${sizes.mobile}px)`,
+  },
 
   colors: {
     white: "#ffffff",
@@ -20,6 +30,7 @@ const theme: DefaultTheme = {
   elevations: {
     elevation_light: "0px 2px 2px rgba(0, 0, 0, 0.28)",
     elevation_heavy: "0px 4px 10px rgba(0, 0, 0, 0.30)",
+    elevation_regular: "0 8px 25px 0 rgb(0 0 0 / 10%)",
   },
 };
 

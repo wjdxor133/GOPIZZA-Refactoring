@@ -14,7 +14,6 @@ export const LogoWrapper = styled.div`
 `;
 
 export const LogoTitle = styled(Link)`
-  width: 50%;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease-out;
@@ -27,20 +26,20 @@ export const LogoTitle = styled(Link)`
 `;
 
 export const LogoImg = styled.img`
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
   margin-right: 8px;
 `;
 
 export const LoginFormH3 = styled.h3`
-  width: 40%;
-  font-size: 36px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary_regular};
   text-align: center;
 `;
 
 export const LoginFormH5 = styled.h5`
+  font-size: clamp(0.9rem, 3vw, 1rem);
   text-align: center;
   color: ${({ theme }) => theme.colors.dark_gray};
   padding: 24px;
@@ -61,6 +60,7 @@ export const InputWrapper = styled.div`
 
 export const Label = styled.label`
   width: 30%;
+  min-width: 100px;
 `;
 
 export const Input = styled.input`

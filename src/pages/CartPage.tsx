@@ -52,7 +52,7 @@ const Section = styled.section`
   grid-gap: 60px;
   margin: 60px auto;
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     display: flex;
     flex-direction: column;
     row-gap: 30px;

@@ -63,7 +63,7 @@ export const Content = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
 
-  @media screen and (max-width: 480px) {
+  @media ${({ theme }) => theme.screenSizes.mobile} {
     width: 400px;
   }
 `;

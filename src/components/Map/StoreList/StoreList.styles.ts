@@ -45,7 +45,7 @@ export const StoreListHeader = styled.header`
   color: ${({ theme }) => theme.colors.black};
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary_regular};
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     display: none;
   }
 `;
@@ -65,7 +65,7 @@ export const BodyItem = styled.li`
   border-bottom: 2px solid ${({ theme }) => theme.colors.light_gray};
   padding: 20px 0;
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     flex-direction: column;
     padding: 20px 0;
   }
@@ -74,7 +74,7 @@ export const BodyItem = styled.li`
 export const BodyItemInfo = styled(HeaderItem)`
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     width: 100%;
     text-align: left;
     padding: 4px 0;

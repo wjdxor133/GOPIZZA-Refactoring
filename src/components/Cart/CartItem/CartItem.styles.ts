@@ -12,13 +12,13 @@ export const CartItemWrapper = styled.div`
   height: 150px;
   margin-bottom: 15px;
   border-radius: 16px;
-  box-shadow: 0 8px 25px 0 rgb(0 0 0 / 10%);
+  box-shadow: ${({ theme }) => theme.elevations.elevation_regular};
 `;
 
 export const MenuImg = styled.img`
   width: 25%;
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     width: 50%;
   }
 `;
@@ -33,7 +33,7 @@ export const CartItemInfoBox = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     flex-direction: column;
   }
 `;
@@ -45,9 +45,8 @@ export const CartItemInfo = styled.div<CartItemProps>`
   align-items: center;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     width: 100%;
-
     :nth-child(1) {
       font-weight: bold;
     }
@@ -74,7 +73,7 @@ export const DeleteIcon = styled(RiDeleteBin6Line)`
   font-weight: bold;
   cursor: pointer;
 
-  @media screen and (max-width: 720px) {
+  @media ${({ theme }) => theme.screenSizes.tablet} {
     font-size: 1.25rem;
     margin-top: 8px;
   }

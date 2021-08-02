@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/GOPIZZA-Refactoring/precache-manifest.a149e226d4352f14fef7b964abb0cf6d.js"
+  "/GOPIZZA-Refactoring/precache-manifest.2f1eafbfd89a31c172be5e41988918ac.js"
 );
 
 self.addEventListener('message', (event) => {

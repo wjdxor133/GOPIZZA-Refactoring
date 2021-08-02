@@ -18,6 +18,7 @@
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",
     "firebase": "^7.17.2",
+    "gh-pages": "^3.2.3",
     "lodash": "^4.17.19",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -44,7 +45,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,5 +68,6 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5"
-  }
+  },
+  "homepage": "https://wjdxor133.github.io/GOPIZZA-Refactoring"
 }

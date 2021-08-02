@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/GOPIZZA-Refactoring/static/js/main.d7199474.chunk.js",
-    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.d7199474.chunk.js.map",
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.77db4267.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.77db4267.chunk.js.map",
     "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
     "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
     "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
     "static/js/2.c1a9de6d.chunk.js": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js",
     "static/js/2.c1a9de6d.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.map",
     "index.html": "/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.2f1eafbfd89a31c172be5e41988918ac.js": "/GOPIZZA-Refactoring/precache-manifest.2f1eafbfd89a31c172be5e41988918ac.js",
+    "precache-manifest.0528af3cfe840ee18920b28e792eba66.js": "/GOPIZZA-Refactoring/precache-manifest.0528af3cfe840ee18920b28e792eba66.js",
     "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
     "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
     "static/js/2.c1a9de6d.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.a5145d3d.js",
     "static/css/2.8f21f461.chunk.css",
     "static/js/2.c1a9de6d.chunk.js",
-    "static/js/main.d7199474.chunk.js"
+    "static/js/main.77db4267.chunk.js"
   ]
 }

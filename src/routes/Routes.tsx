@@ -11,15 +11,32 @@ const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={MainPage} />
-        <Route path={process.env.PUBLIC_URL + "/login"} component={LoginPage} />
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={MainPage} />
         <Route
-          path={process.env.PUBLIC_URL + "/signUp"}
+          exact
+          path={`${process.env.PUBLIC_URL}/login`}
+          component={LoginPage}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/signUp`}
           component={SignUpPage}
         />
-        <Route path={process.env.PUBLIC_URL + "/map"} component={MapPage} />
-        <Route path={process.env.PUBLIC_URL + "/menu"} component={MenuPage} />
-        <Route path={process.env.PUBLIC_URL + "/cart"} component={CartPage} />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/map`}
+          component={MapPage}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/menu`}
+          component={MenuPage}
+        />
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/cart`}
+          component={CartPage}
+        />
       </Switch>
     </Router>
   );

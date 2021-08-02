@@ -5,7 +5,9 @@ import { useFetch } from "hooks";
 const MenuPage = () => {
   const [menuType, setMenuType] = useState<string>("all");
   const [menuData, setMenuData] = useState([]);
-  const { data } = useFetch<any>("/data/menuData.json");
+  const { data } = useFetch<any>(
+    `${process.env.PUBLIC_URL}/data/menuData.json`
+  );
 
   useEffect(() => {
     menuType === "all" ? setMenuData(data) : setMenuData(data[menuType]);

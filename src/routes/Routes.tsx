@@ -12,7 +12,7 @@ const Routes = () => {
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route path="/login`" component={LoginPage} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/signUp" component={SignUpPage} />
         <Route path="/map" component={MapPage} />
         <Route path="/menu" component={MenuPage} />

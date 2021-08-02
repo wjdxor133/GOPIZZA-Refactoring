@@ -18,9 +18,8 @@ declare global {
 }
 
 const MapPage = () => {
-  // const [showModal, setShowModal] = useState<boolean>(false);
   const { data: storeList } = useFetch<StoreListTypes[]>(
-    "/data/locationData.json"
+    `${process.env.PUBLIC_URL}/data/locationData.json`
   );
 
   // 페이지네이션

@@ -1,12 +1,10 @@
-// import { firebaseApiKey } from "../api/api";
-
 export const firebaseConfig = {
-  apiKey: "AIzaSyCgpK2cNUE7XpgeHT_kbb8tnpCrWuLvNzk",
-  authDomain: "gopizzadb.firebaseapp.com",
-  databaseURL: "https://gopizzadb.firebaseio.com",
-  projectId: "gopizzadb",
-  storageBucket: "gopizzadb.appspot.com",
-  messagingSenderId: "884674764535",
-  appId: "1:884674764535:web:b767e64c33542b292e3df2",
-  measurementId: "G-3SWBX5K25V",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGIN_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };

@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.js": "/wjdxor133/GOPIZZA-Refactoring/static/js/main.1edfc535.chunk.js",
-    "main.js.map": "/wjdxor133/GOPIZZA-Refactoring/static/js/main.1edfc535.chunk.js.map",
-    "runtime-main.js": "/wjdxor133/GOPIZZA-Refactoring/static/js/runtime-main.f57d76ff.js",
-    "runtime-main.js.map": "/wjdxor133/GOPIZZA-Refactoring/static/js/runtime-main.f57d76ff.js.map",
-    "static/css/2.31e5bf2e.chunk.css": "/wjdxor133/GOPIZZA-Refactoring/static/css/2.31e5bf2e.chunk.css",
-    "static/js/2.fdbcb20e.chunk.js": "/wjdxor133/GOPIZZA-Refactoring/static/js/2.fdbcb20e.chunk.js",
-    "static/js/2.fdbcb20e.chunk.js.map": "/wjdxor133/GOPIZZA-Refactoring/static/js/2.fdbcb20e.chunk.js.map",
-    "index.html": "/wjdxor133/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.fa9970552d194a7955c090e91373e6e4.js": "/wjdxor133/GOPIZZA-Refactoring/precache-manifest.fa9970552d194a7955c090e91373e6e4.js",
-    "service-worker.js": "/wjdxor133/GOPIZZA-Refactoring/service-worker.js",
-    "static/css/2.31e5bf2e.chunk.css.map": "/wjdxor133/GOPIZZA-Refactoring/static/css/2.31e5bf2e.chunk.css.map",
-    "static/js/2.fdbcb20e.chunk.js.LICENSE.txt": "/wjdxor133/GOPIZZA-Refactoring/static/js/2.fdbcb20e.chunk.js.LICENSE.txt",
-    "static/media/gopizza_logo.jpg": "/wjdxor133/GOPIZZA-Refactoring/static/media/gopizza_logo.21f53ac9.jpg",
-    "static/media/logo.png": "/wjdxor133/GOPIZZA-Refactoring/static/media/logo.69e24c88.png",
-    "static/media/slick-theme.css": "/wjdxor133/GOPIZZA-Refactoring/static/media/slick.f97e3bbf.svg",
-    "static/media/video_1.gif": "/wjdxor133/GOPIZZA-Refactoring/static/media/video_1.3c263476.gif"
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.1edfc535.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.1edfc535.chunk.js.map",
+    "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
+    "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
+    "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
+    "static/js/2.c1a9de6d.chunk.js": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js",
+    "static/js/2.c1a9de6d.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.map",
+    "index.html": "/GOPIZZA-Refactoring/index.html",
+    "precache-manifest.a149e226d4352f14fef7b964abb0cf6d.js": "/GOPIZZA-Refactoring/precache-manifest.a149e226d4352f14fef7b964abb0cf6d.js",
+    "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
+    "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
+    "static/js/2.c1a9de6d.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.LICENSE.txt",
+    "static/media/gopizza_logo.jpg": "/GOPIZZA-Refactoring/static/media/gopizza_logo.21f53ac9.jpg",
+    "static/media/logo.png": "/GOPIZZA-Refactoring/static/media/logo.69e24c88.png",
+    "static/media/slick-theme.css": "/GOPIZZA-Refactoring/static/media/slick.f97e3bbf.svg",
+    "static/media/video_1.gif": "/GOPIZZA-Refactoring/static/media/video_1.3c263476.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.f57d76ff.js",
-    "static/css/2.31e5bf2e.chunk.css",
-    "static/js/2.fdbcb20e.chunk.js",
+    "static/js/runtime-main.a5145d3d.js",
+    "static/css/2.8f21f461.chunk.css",
+    "static/js/2.c1a9de6d.chunk.js",
     "static/js/main.1edfc535.chunk.js"
   ]
 }

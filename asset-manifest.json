@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/GOPIZZA-Refactoring/static/js/main.ef0b7b09.chunk.js",
-    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.ef0b7b09.chunk.js.map",
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.65fc4abc.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.65fc4abc.chunk.js.map",
     "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
     "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
     "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
-    "static/js/2.c1a9de6d.chunk.js": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js",
-    "static/js/2.c1a9de6d.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.map",
+    "static/js/2.eeea2f51.chunk.js": "/GOPIZZA-Refactoring/static/js/2.eeea2f51.chunk.js",
+    "static/js/2.eeea2f51.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.eeea2f51.chunk.js.map",
     "index.html": "/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.b8d3008d4fec14930d4e2195d42db47b.js": "/GOPIZZA-Refactoring/precache-manifest.b8d3008d4fec14930d4e2195d42db47b.js",
+    "precache-manifest.e4d228d74f0c20aa694df2304b408704.js": "/GOPIZZA-Refactoring/precache-manifest.e4d228d74f0c20aa694df2304b408704.js",
     "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
     "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
-    "static/js/2.c1a9de6d.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.c1a9de6d.chunk.js.LICENSE.txt",
+    "static/js/2.eeea2f51.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.eeea2f51.chunk.js.LICENSE.txt",
     "static/media/gopizza_logo.jpg": "/GOPIZZA-Refactoring/static/media/gopizza_logo.21f53ac9.jpg",
     "static/media/logo.png": "/GOPIZZA-Refactoring/static/media/logo.69e24c88.png",
     "static/media/slick-theme.css": "/GOPIZZA-Refactoring/static/media/slick.f97e3bbf.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.a5145d3d.js",
     "static/css/2.8f21f461.chunk.css",
-    "static/js/2.c1a9de6d.chunk.js",
-    "static/js/main.ef0b7b09.chunk.js"
+    "static/js/2.eeea2f51.chunk.js",
+    "static/js/main.65fc4abc.chunk.js"
   ]
 }

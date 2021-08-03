@@ -52,9 +52,9 @@ export const SocialLogo = styled(Link)`
 
 export const SocialIcons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 240px;
+  width: 120px;
 `;
 
 export const SocialIconLink = styled.a`

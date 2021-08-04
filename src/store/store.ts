@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import logger, { createLogger } from "redux-logger";
+import { createLogger } from "redux-logger";
 import { persistStore } from "redux-persist";
 
 import rootReducer from "./rootReducer";
@@ -10,7 +10,7 @@ const logMiddleware = createLogger({
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: [logger, logMiddleware],
+  middleware: [logMiddleware],
   devTools: process.env.NODE_ENV !== "production",
 });
 

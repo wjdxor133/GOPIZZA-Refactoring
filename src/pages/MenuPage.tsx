@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Header, Hero, Menubar, MenuList, Footer } from "components";
 import { useFetch } from "hooks";
+import { MenuTypes } from "types/menu.types";
 
 const MenuPage = () => {
   const [menuType, setMenuType] = useState<string>("all");
-  const [menuData, setMenuData] = useState([]);
   const { data } = useFetch<any>(
     `${process.env.PUBLIC_URL}/data/menuData.json`
   );
+  const [menuData, setMenuData] = useState<MenuTypes[]>(data);
 
   useEffect(() => {
     menuType === "all" ? setMenuData(data) : setMenuData(data[menuType]);
@@ -16,6 +17,10 @@ const MenuPage = () => {
   const handleChangeMenuList = (type: string) => {
     type === "all" ? setMenuType("all") : setMenuType(type);
   };
+
+  if (data === undefined) {
+    return <div>loading...</div>;
+  }
 
   return (
     <>

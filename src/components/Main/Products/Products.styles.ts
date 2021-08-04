@@ -13,6 +13,18 @@ export const ProductWrapper = styled.div`
   margin: 0 auto;
 `;
 
+export const VideoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: clamp(3rem, 50vw, 4.5rem);
+`;
+
+export const ProductVideo = styled.video`
+  width: clamp(400px, 50vw, 500px);
+  height: clamp(300px, 50vw, auto);
+`;
+
 export const ProductCard = styled.div`
   margin: 0 2rem;
   line-height: 2;
@@ -42,7 +54,6 @@ export const ProductsH3 = styled.h3`
   display: flex;
   justify-content: center;
   color: ${({ theme }) => theme.colors.primary_regular};
-  margin-bottom: 5rem;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: bold;
   padding-top: 10px;
@@ -66,23 +77,3 @@ export const ProductInfo = styled.div`
 export const ProductDesc = styled.p`
   margin-bottom: 1rem;
 `;
-
-// export const ProductPrice = styled.p`
-//   margin-bottom: 1rem;
-//   font-size: 2rem;
-// `;
-
-// export const ProductButton = styled.button`
-//   font-size: 1rem;
-//   padding: 1rem 4rem;
-//   border: none;
-//   background: #e31837;
-//   color: #fff;
-//   transition: 0.2 ease-out;
-//   &:hover {
-//     background: #ffc500;
-//     transition: 0.2s ease-out;
-//     cursor: pointer;
-//     color: #000;
-//   }
-// `;

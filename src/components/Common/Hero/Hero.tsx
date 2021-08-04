@@ -15,6 +15,7 @@ export interface HeroProps {
 
 function Hero({ title, subTitle, imgBg }: HeroProps) {
   const Fade = require("react-reveal/Fade");
+
   return (
     <HeroContainer imgBg={imgBg}>
       <HeroContent>

@@ -5,12 +5,15 @@ import {
   ProductsH2,
   ProductsH3,
   ProductWrapper,
+  VideoWrapper,
+  ProductVideo,
   ProductCard,
   ProductImg,
   ProductInfo,
   ProductTitle,
   ProductDesc,
 } from "./Products.styles";
+import Banner from "assets/videos/banner.mp4";
 
 interface ProductsProps {
   heading: string;
@@ -26,7 +29,9 @@ function Products({ heading, data }: ProductsProps) {
         <ProductsH1>{heading}</ProductsH1>
         <ProductsH3>SO FAST, SO HOT, SO FRESH!</ProductsH3>
       </Fade>
-
+      <VideoWrapper>
+        <ProductVideo autoPlay loop muted src={Banner} /*type="video/mp4" */ />
+      </VideoWrapper>
       <ProductWrapper>
         {data.map((product: any, idx: number) => {
           return (

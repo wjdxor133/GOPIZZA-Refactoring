@@ -13,7 +13,8 @@ import { selectCartItems, selectCartTotal } from "store/cart/cartSelectors";
 
 const CartInfo = ({ total }: any) => {
   const discountAmount = (total * 20) / 100;
-  const totalAmount = (total - discountAmount).toLocaleString("ko-KR");
+  const totalAmount = total - discountAmount;
+
   return (
     <CartInfoWrapper>
       <CartInfoContents>

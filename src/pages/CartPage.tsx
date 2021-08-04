@@ -11,8 +11,6 @@ const CartPage = () => {
     (state) => state.cart.cartItems.length
   );
 
-  console.log("cartItems", typeof cartItems);
-
   return (
     <>
       <Header />

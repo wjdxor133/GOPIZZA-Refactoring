@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import logo from "assets/images/gopizza_logo.jpg";
+import logo from "assets/images/logo.png";
 import {
   SignUpFormContainer,
   LogoWrapper,

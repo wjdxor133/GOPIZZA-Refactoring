@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollLock } from "../ScrollLock";
+// import { ScrollLock } from "../ScrollLock";
 import styled from "styled-components";
 // import Fade from "react-reveal/Fade";
 
@@ -14,9 +14,8 @@ const StoreModal = ({ setShowModal, showModal, order }: StoreModalProps) => {
     setShowModal(!showModal);
   };
 
-  ScrollLock();
+  // ScrollLock();
 
-  console.log("order", order);
   return (
     <StoreModalComponent>
       {order ? (

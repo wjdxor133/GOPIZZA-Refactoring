@@ -11,14 +11,14 @@ import Logo from "assets/images/logo.png";
 import { StoreListTypes } from "types/map.types";
 
 interface StoreMapProps {
-  storeList: StoreListTypes[];
+  storeList?: StoreListTypes[];
 }
 
 let clickedOverlay: any = null;
 let infowindow: any = null;
 let circle: any = null;
 
-function StoreMap({ storeList }: StoreMapProps) {
+function StoreMap({ storeList = [] }: StoreMapProps) {
   const [map, setMap] = useState<any>();
   const [storeMarks, setStoreMarks] = useState<any>();
   const [markVisible, setMarkVisible] = useState<boolean>(false);
@@ -210,8 +210,6 @@ function StoreMap({ storeList }: StoreMapProps) {
       });
 
       NearestStoreMarks(nearMarkers[0]);
-    } else {
-      // setShowModal(true);
     }
   };
 
@@ -220,7 +218,7 @@ function StoreMap({ storeList }: StoreMapProps) {
 
     map.panTo(moveLatLon);
 
-    const iwContent = `<div class="infowindow" style="padding:7px; height:70px;">가장 가까운 매장은 ${nearMarkers.getTitle()} 입니다.<br/> 주문하기!</div>`,
+    const iwContent = `<div class="infowindow" style="padding:7px; height:70px;">가장 가까운 매장은 ${nearMarkers.getTitle()} 입니다.</div>`,
       iwRemoveable = true;
 
     if (infowindow) {
@@ -233,11 +231,6 @@ function StoreMap({ storeList }: StoreMapProps) {
     });
 
     infowindow.open(map, nearMarkers);
-
-    // 가장 가까운 매장 마커 클릭시 모달창 띄우기
-    // window.kakao.maps.event.addListener(nearMarkers[0], "click", () => {
-    //   setShowModal(true);
-    // });
   };
 
   const handleResetMarks = () => {

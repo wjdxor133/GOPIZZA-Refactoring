@@ -28,12 +28,18 @@ import SlideShow from "./Main/SlideShow/SlideShow";
 import Slide from "./Main/Slide/Slide";
 import Products from "./Main/Products/Products";
 import Feature from "./Main/Feature/Feature";
+import Loading from "./Common/Loading/Loading";
 
 export {
   Header,
   Hero,
   Modal,
   Footer,
+  SlideShow,
+  Slide,
+  Products,
+  Feature,
+  Loading,
   SocialButton,
   LoginForm,
   SignUpForm,
@@ -43,10 +49,6 @@ export {
   Menubar,
   MenuCard,
   MenuList,
-  SlideShow,
-  Slide,
-  Products,
-  Feature,
   CartItem,
   PaymentInfo,
   PaymentButton,

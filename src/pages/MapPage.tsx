@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Loading,
   Header,
   Hero,
   StoreMap,
@@ -7,9 +8,9 @@ import {
   Pagination,
   Footer,
 } from "components";
-
 import { useFetch } from "hooks";
 import { StoreListTypes } from "types/map.types";
+
 declare global {
   interface Window {
     kakao: any;
@@ -34,27 +35,25 @@ const MapPage = () => {
     setCurrentPage(pageNumber);
   };
 
-  if (!storeList) {
-    return null;
-  }
-
   return (
     <>
-      <Header />
-      <Hero
-        title="Store"
-        subTitle="가까운 고피자 매장을 확인해보세요!"
-        imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
-      />
-      <StoreMap storeList={storeList} />
-      <StoreList totalPosts={totalPosts} currentPosts={currentPosts} />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={totalPosts}
-        onPaginate={handlePaginate}
-        currentPage={currentPage}
-      />
-      <Footer />
+      <Loading>
+        <Header />
+        <Hero
+          title="Store"
+          subTitle="가까운 고피자 매장을 확인해보세요!"
+          imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
+        />
+        <StoreMap storeList={storeList} />
+        <StoreList totalPosts={totalPosts} currentPosts={currentPosts} />
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={totalPosts}
+          onPaginate={handlePaginate}
+          currentPage={currentPage}
+        />
+        <Footer />
+      </Loading>
     </>
   );
 };

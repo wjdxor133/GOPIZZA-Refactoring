@@ -2,7 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { IoPizzaOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
-import { Header, Hero, PaymentInfo, CartList, Footer } from "components";
+import {
+  Loading,
+  Header,
+  Hero,
+  PaymentInfo,
+  CartList,
+  Footer,
+} from "components";
 import { RootState } from "store/type";
 
 const CartPage = () => {
@@ -13,26 +20,28 @@ const CartPage = () => {
 
   return (
     <>
-      <Header />
-      <Hero
-        title="장바구니"
-        subTitle="고피자의 다양한 피자를 주문해 보세요."
-        imgBg="https://gopizza.kr/wp-content/uploads/2021/05/pizza.png"
-      />
-      <Main>
-        {cartLength !== 0 ? (
-          <Section>
-            <CartList cartItems={cartItems} />
-            <PaymentInfo />
-          </Section>
-        ) : (
-          <NoticeText>
-            <IoPizzaOutline />
-            {""} 장바구니가 비어있습니다.
-          </NoticeText>
-        )}
-      </Main>
-      <Footer />
+      <Loading>
+        <Header />
+        <Hero
+          title="장바구니"
+          subTitle="고피자의 다양한 피자를 주문해 보세요."
+          imgBg="https://gopizza.kr/wp-content/uploads/2021/05/pizza.png"
+        />
+        <Main>
+          {cartLength !== 0 ? (
+            <Section>
+              <CartList cartItems={cartItems} />
+              <PaymentInfo />
+            </Section>
+          ) : (
+            <NoticeText>
+              <IoPizzaOutline />
+              {""} 장바구니가 비어있습니다.
+            </NoticeText>
+          )}
+        </Main>
+        <Footer />
+      </Loading>
     </>
   );
 };

@@ -42,6 +42,31 @@ https://user-images.githubusercontent.com/47416686/128328711-9dc5fec8-88d9-4b7e-
 <br />
 <br />
 
+## Login / SignUp
+<div>
+
+https://user-images.githubusercontent.com/47416686/128341446-d6f00f35-eac4-4f64-842d-a1957eaf5b1e.mov
+
+https://user-images.githubusercontent.com/47416686/128341461-3a556395-dfcd-4eb9-a503-f0e0fe5977fc.mov
+
+</div>
+
+<br />
+<br />
+<br />
+
+## CartPage
+<div>
+  
+https://user-images.githubusercontent.com/47416686/128345541-b0e5cb2f-4f86-474f-a6cf-074ec27a5445.mov
+
+https://user-images.githubusercontent.com/47416686/128346787-23ae3d4c-c5c7-4f4f-8b8b-2864a1864d2d.mov
+
+</div>
+
+## MapPage
+
+
 ## 기능
 - Firebase를 통해 로그인, 회원가입 가능
 - 소셜 로그인 google, github 연동

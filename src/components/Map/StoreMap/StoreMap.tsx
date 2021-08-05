@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useContext, useCallback } from "react";
 import { ThemeContext } from "styled-components";
 import {
@@ -9,6 +10,9 @@ import {
 } from "./StoreMap.styles";
 import Logo from "assets/images/logo.png";
 import { StoreListTypes } from "types/map.types";
+import { useModal } from "hooks";
+import { Modal } from "components";
+import { useHistory } from "react-router-dom";
 
 interface StoreMapProps {
   storeList?: StoreListTypes[];
@@ -22,6 +26,8 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
   const [map, setMap] = useState<any>();
   const [storeMarks, setStoreMarks] = useState<any>();
   const [markVisible, setMarkVisible] = useState<boolean>(false);
+  const { isShown, toggle } = useModal();
+  const history = useHistory();
 
   const kakao = (window as any).kakao;
   const document = (window as any).document;
@@ -78,6 +84,8 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
                           store.addrInfo[0]
                         } (지번) ${store.addrInfo[1]}</div>
                         <div>${store.tel}</div>
+                        <div class="moveCart" onclick="${() =>
+                          showModal()}">주문하기!</div>
                     </div> 
                 </div> 
             </div> 
@@ -103,6 +111,14 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
         document
           .querySelector(".close")
           .addEventListener("click", closeOverlay);
+
+        document
+          .querySelector(".moveCart")
+          .addEventListener("click", showModal);
+      }
+
+      function showModal() {
+        toggle();
       }
 
       function closeOverlay() {
@@ -239,9 +255,14 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
     storeMarks.map((mark: any) => {
       return mark.setMap(null);
     });
+
     const marks = getStoreMarkers();
     setStoreMarks(marks);
     map.setLevel(10);
+  };
+
+  const handleMovePage = () => {
+    history.push("/cart");
   };
 
   return (
@@ -264,6 +285,13 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
           </MenuBtnWrapper>
         </MapWrapper>
       </StoreMapContainer>
+      <Modal
+        isShown={isShown}
+        hide={toggle}
+        contentText="주문하시겠습니까?"
+        buttonText="주문하기"
+        onClick={handleMovePage}
+      />
     </>
   );
 }

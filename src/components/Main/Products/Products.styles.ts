@@ -21,7 +21,7 @@ export const VideoWrapper = styled.div`
 `;
 
 export const ProductVideo = styled.video`
-  width: clamp(400px, 50vw, 500px);
+  width: clamp(400px, 50vw, 600px);
   height: clamp(300px, 50vw, auto);
 `;
 

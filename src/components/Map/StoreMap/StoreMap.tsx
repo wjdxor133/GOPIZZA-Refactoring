@@ -16,13 +16,15 @@ import { useHistory } from "react-router-dom";
 
 interface StoreMapProps {
   storeList?: StoreListTypes[];
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 let clickedOverlay: any = null;
 let infowindow: any = null;
 let circle: any = null;
 
-function StoreMap({ storeList = [] }: StoreMapProps) {
+function StoreMap({ storeList = [], setIsLoading }: StoreMapProps) {
   const [map, setMap] = useState<any>();
   const [storeMarks, setStoreMarks] = useState<any>();
   const [markVisible, setMarkVisible] = useState<boolean>(false);
@@ -148,6 +150,7 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
   }, [getStoreMarkers]);
 
   const handleCurrentLocationMark = () => {
+    setIsLoading(true);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const lat = position.coords.latitude,
@@ -181,6 +184,7 @@ function StoreMap({ storeList = [] }: StoreMapProps) {
 
     infowindow.open(map, marker);
     map.setCenter(locPosition);
+    setIsLoading(false);
   }
 
   const handleNearStoreFind = async () => {

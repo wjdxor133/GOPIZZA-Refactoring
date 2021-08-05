@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Loading, Header, Hero, Menubar, MenuList, Footer } from "components";
-import { useFetch } from "hooks";
+import { useFetch, useLoading } from "hooks";
 import { MenuTypes } from "types/menu.types";
 
 const MenuPage = () => {
@@ -9,6 +9,7 @@ const MenuPage = () => {
     `${process.env.PUBLIC_URL}/data/menuData.json`
   );
   const [menuData, setMenuData] = useState<MenuTypes[]>(data);
+  const { isLoading, onLoading } = useLoading();
 
   useEffect(() => {
     const menuChange = () => {
@@ -23,7 +24,7 @@ const MenuPage = () => {
 
   return (
     <>
-      <Loading>
+      <Loading isLoading={isLoading} onLoading={onLoading}>
         <Header />
         <Hero
           title="MENU"

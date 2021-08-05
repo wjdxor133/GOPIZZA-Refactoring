@@ -11,16 +11,18 @@ import {
   Footer,
 } from "components";
 import { RootState } from "store/type";
+import { useLoading } from "hooks";
 
 const CartPage = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const cartLength = useSelector<RootState>(
     (state) => state.cart.cartItems.length
   );
+  const { isLoading, onLoading } = useLoading();
 
   return (
     <>
-      <Loading>
+      <Loading isLoading={isLoading} onLoading={onLoading}>
         <Header />
         <Hero
           title="장바구니"

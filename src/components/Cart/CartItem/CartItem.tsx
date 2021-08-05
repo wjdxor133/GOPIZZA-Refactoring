@@ -29,7 +29,7 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
 
   const handleRemoveItem = () => {
     dispatch(removeItem(cartItem));
-    toast(`${name} 삭제!`, "bottom-center", 1200, 0);
+    quantity <= 1 && toast(`${name} 삭제!`, "bottom-center", 1200, 0);
   };
 
   const handleClearItemFromCart = () => {

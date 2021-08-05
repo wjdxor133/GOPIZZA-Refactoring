@@ -8,7 +8,7 @@ import {
   Pagination,
   Footer,
 } from "components";
-import { useFetch } from "hooks";
+import { useFetch, useLoading } from "hooks";
 import { StoreListTypes } from "types/map.types";
 
 declare global {
@@ -22,6 +22,7 @@ const MapPage = () => {
   const { data: storeList } = useFetch<StoreListTypes[]>(
     `${process.env.PUBLIC_URL}/data/locationData.json`
   );
+  const { isLoading, setIsLoading, onLoading } = useLoading();
 
   // 페이지네이션
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -37,14 +38,18 @@ const MapPage = () => {
 
   return (
     <>
-      <Loading>
+      <Loading isLoading={isLoading} onLoading={onLoading}>
         <Header />
         <Hero
           title="Store"
           subTitle="가까운 고피자 매장을 확인해보세요!"
           imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
         />
-        <StoreMap storeList={storeList} />
+        <StoreMap
+          storeList={storeList}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+        />
         <StoreList totalPosts={totalPosts} currentPosts={currentPosts} />
         <Pagination
           postsPerPage={postsPerPage}

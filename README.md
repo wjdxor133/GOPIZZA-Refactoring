@@ -15,6 +15,33 @@
 
 - Typescript, React, Styled-components, Redux, Firebase
 
+## UI / UX 개선
+
+### MainPage
+<div>
+  
+  https://user-images.githubusercontent.com/47416686/128325703-361a2e46-f061-41b4-8436-aa1298b7f180.mp4
+    
+  https://user-images.githubusercontent.com/47416686/128326118-ac3e6b59-d1ef-46f9-9264-31d61a5a95c2.mov  
+</div>
+
+<br />
+<br />
+<br />
+
+## MenuPage
+<div>
+
+https://user-images.githubusercontent.com/47416686/128327044-9ca885bc-64e0-438e-87c0-2835b88bcac0.mov
+
+https://user-images.githubusercontent.com/47416686/128327475-21c6cbf1-699a-4018-8df3-3cc900ca4b96.mov
+
+</div>
+
+<br />
+<br />
+<br />
+
 ## 기능
 - Firebase를 통해 로그인, 회원가입 가능
 - 소셜 로그인 google, github 연동

@@ -6,15 +6,19 @@
 
 - 인원 : 프론트 1명
 
-## 목표
+## 🔥 목표
 
 - 더 가독성 있고 간결한 코드로 바꿔보기 
 - 향상된 UI/UX로 스스로 개선해보기
 
-## 사용한 기술
+## 📚 사용한 기술
 
 - Typescript, React, Styled-components, Redux, Firebase
 
+## 🎯 참고
+- 최신 Chrome Browser의 사용을 권장합니다.
+
+## 🚀 프로젝트 내용
 
 ### MainPage
 <div>

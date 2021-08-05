@@ -45,8 +45,8 @@
 <br />
 
 ## Login / SignUp
-- Firebase를 사용하여 로그인, 회원가입이 가능합니다.
-- google, github 계정으로 소셜 로그인이 가능합니다.
+- Firebase를 사용하여 로그인, 회원가입 가능
+- google, github 계정으로 소셜 로그인 가능
 <div>
   
   ### Before
@@ -61,10 +61,10 @@
 <br />
 
 ## CartPage
-- 기존 react-redux를 redux-toolkit을 사용하여 리팩토링을 진행했습니다.
-- connect, mapstatetoprops, mapDispatchToProps를 사용한 부분을 redux hooks로 리팩토링을 진행했습니다.
-- 장바구니에 메뉴 추가, 수량 증가 및 감소, 삭제가 가능합니다.
-- Import를 연동하여 장바구니에 담긴 메뉴들을 결제할 수 있습니다.
+- 기존 react-redux를 redux-toolkit을 사용하여 리팩토링을 진행
+- connect, mapstatetoprops, mapDispatchToProps를 사용한 부분을 redux hooks로 리팩토링을 진행
+- 장바구니에 메뉴 추가, 수량 증가 및 감소, 삭제 기능 구현
+- Import를 연동하여 장바구니에 담긴 메뉴들을 결제하기 구현
 <div>
   
   ### Before

@@ -63,7 +63,7 @@
 
 ### createSlice 사용
 - 기존 react-redux를 `redux-toolkit`을 사용하여 `리팩토링`을 진행
-- `createSlice`를 사용하여 `보일러플레이트 코드 감소`
+- `createSlice`를 사용하여 `보일러플레이트 코드 제거`
 <div>
   <img width="622" alt="스크린샷 2021-08-06 오후 4 31 20" src="https://user-images.githubusercontent.com/47416686/128473813-1edb21d0-5b75-4244-a3ec-34c2a89ef504.png">
 </div>
@@ -94,7 +94,8 @@
   https://user-images.githubusercontent.com/47416686/128325703-361a2e46-f061-41b4-8436-aa1298b7f180.mp4
     
   ### After
-  https://user-images.githubusercontent.com/47416686/128326118-ac3e6b59-d1ef-46f9-9264-31d61a5a95c2.mov  
+
+  https://user-images.githubusercontent.com/47416686/128506587-bbe1cffc-d886-4b47-a39d-3584b415e14c.mov
 </div>
 
 <br />

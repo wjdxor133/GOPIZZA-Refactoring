@@ -26,6 +26,7 @@ export const FeatureContainer = styled.div<StyledFeatureProps>`
     font-size: clamp(1rem, 3vw, 2rem);
   }
 `;
+
 export const FeatureButton = styled.button`
   font-size: 1.4rem;
   font-weight: 500;

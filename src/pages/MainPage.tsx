@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Hero, SlideShow, Products, Feature, Footer } from "components";
 import { productData } from "components/Main/Products/data";
-import Main from "assets/images/mainBanner.webp.gif";
+import Main from "assets/images/mainBanner.gif";
 
 const MainPage = () => {
   return (

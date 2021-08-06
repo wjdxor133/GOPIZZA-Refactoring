@@ -42,6 +42,8 @@ function StoreMap({
   const imageSrc = `${Logo}`;
   const theme = useContext(ThemeContext);
 
+  console.log("???");
+
   useEffect(() => {
     const mapContainer = document.getElementById("map"),
       mapOption = {
@@ -64,6 +66,7 @@ function StoreMap({
   ]);
 
   const getStoreMarkers = useCallback(() => {
+    console.log("여기?");
     const storeMarkers = storeList.map((store) => {
       const imageSize = new kakao.maps.Size(40, 40);
       const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
@@ -148,12 +151,13 @@ function StoreMap({
     kakao.maps.event,
     map,
     storeList,
+    toggle,
   ]);
 
   useEffect(() => {
     const marks = getStoreMarkers();
     setStoreMarks(marks);
-  }, [getStoreMarkers]);
+  }, [isLoading]);
 
   const handleCurrentLocationMark = () => {
     setIsLoading(true);

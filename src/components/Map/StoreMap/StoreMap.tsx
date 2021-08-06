@@ -125,13 +125,13 @@ function StoreMap({
           .addEventListener("click", showModal);
       }
 
-      function showModal() {
+      const showModal = () => {
         toggle();
-      }
+      };
 
-      function closeOverlay() {
+      const closeOverlay = () => {
         overlay.setMap(null);
-      }
+      };
 
       return marker;
     });

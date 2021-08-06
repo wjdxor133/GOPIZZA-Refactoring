@@ -22,6 +22,7 @@ export const productData = [
     alt: "step3",
     step: "STEP 03",
     name: "고피자 완성",
-    desc: "고객을 위한 최고의 제품을 혁신에 기반하여 편리하고 가성비있게 제공!",
+    desc:
+      "고객을 위한 최고의 제품을 혁신에\n기반하여 편리하고 가성비있게 제공!",
   },
 ];

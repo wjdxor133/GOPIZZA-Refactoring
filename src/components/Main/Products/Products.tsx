@@ -41,7 +41,7 @@ function Products({ heading, data }: ProductsProps) {
       </Fade>
 
       <ProductWrapper>
-        <Bounce left cascade>
+        <Fade bottom cascade>
           {data.map((product: ProductTypes, idx: number) => {
             return (
               <ProductCard key={idx}>
@@ -54,7 +54,7 @@ function Products({ heading, data }: ProductsProps) {
               </ProductCard>
             );
           })}
-        </Bounce>
+        </Fade>
       </ProductWrapper>
     </ProductsContainer>
   );

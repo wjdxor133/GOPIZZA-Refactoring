@@ -157,7 +157,7 @@ function StoreMap({
 
   const handleCurrentLocationMark = () => {
     setIsLoading(true);
-    setTime(2500);
+    setTime(3000);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const lat = position.coords.latitude,

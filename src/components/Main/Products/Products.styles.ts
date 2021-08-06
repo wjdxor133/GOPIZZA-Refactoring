@@ -76,4 +76,5 @@ export const ProductInfo = styled.div`
 
 export const ProductDesc = styled.p`
   margin-bottom: 1rem;
+  white-space: pre-line;
 `;

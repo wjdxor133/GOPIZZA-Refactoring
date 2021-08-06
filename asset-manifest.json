@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.js": "/GOPIZZA-Refactoring/static/js/main.78d9348a.chunk.js",
-    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.78d9348a.chunk.js.map",
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.6a8c3d73.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.6a8c3d73.chunk.js.map",
     "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
     "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
     "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
-    "static/js/2.c5293c54.chunk.js": "/GOPIZZA-Refactoring/static/js/2.c5293c54.chunk.js",
-    "static/js/2.c5293c54.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.c5293c54.chunk.js.map",
+    "static/js/2.93ec4f13.chunk.js": "/GOPIZZA-Refactoring/static/js/2.93ec4f13.chunk.js",
+    "static/js/2.93ec4f13.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.93ec4f13.chunk.js.map",
     "index.html": "/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.2cdaad60d7516384041e525aa41ee1ce.js": "/GOPIZZA-Refactoring/precache-manifest.2cdaad60d7516384041e525aa41ee1ce.js",
+    "precache-manifest.484a51aff42a40ecde552168a8bfc60b.js": "/GOPIZZA-Refactoring/precache-manifest.484a51aff42a40ecde552168a8bfc60b.js",
     "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
     "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
-    "static/js/2.c5293c54.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.c5293c54.chunk.js.LICENSE.txt",
-    "static/media/banner.mp4": "/GOPIZZA-Refactoring/static/media/banner.69ffaa41.mp4",
-    "static/media/banner.gif": "/GOPIZZA-Refactoring/static/media/banner.98ed45f5.gif",
+    "static/js/2.93ec4f13.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.93ec4f13.chunk.js.LICENSE.txt",
+    "static/media/footerBanner.jpg": "/GOPIZZA-Refactoring/static/media/footerBanner.e012369e.jpg",
     "static/media/logo.png": "/GOPIZZA-Refactoring/static/media/logo.69e24c88.png",
+    "static/media/mainBanner.webp.gif": "/GOPIZZA-Refactoring/static/media/mainBanner.webp.8a5e8bdc.gif",
+    "static/media/products.mp4": "/GOPIZZA-Refactoring/static/media/products.dda07416.mp4",
     "static/media/slick-theme.css": "/GOPIZZA-Refactoring/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a5145d3d.js",
     "static/css/2.8f21f461.chunk.css",
-    "static/js/2.c5293c54.chunk.js",
-    "static/js/main.78d9348a.chunk.js"
+    "static/js/2.93ec4f13.chunk.js",
+    "static/js/main.6a8c3d73.chunk.js"
   ]
 }

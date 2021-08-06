@@ -94,8 +94,8 @@
   https://user-images.githubusercontent.com/47416686/128325703-361a2e46-f061-41b4-8436-aa1298b7f180.mp4
     
   ### After
-  https://user-images.githubusercontent.com/47416686/128506012-d4827c61-9326-453a-b637-c58be530ab9d.mov
 
+  https://user-images.githubusercontent.com/47416686/128506587-bbe1cffc-d886-4b47-a39d-3584b415e14c.mov
 </div>
 
 <br />

@@ -14,7 +14,7 @@ import {
   ProductDesc,
 } from "./Products.styles";
 import { ProductTypes } from "types/main.types";
-import Banner from "assets/videos/banner.mp4";
+import products from "assets/videos/products.mp4";
 
 interface ProductsProps {
   heading: string;
@@ -23,7 +23,6 @@ interface ProductsProps {
 
 function Products({ heading, data }: ProductsProps) {
   const Fade = require("react-reveal/Fade");
-  const Bounce = require("react-reveal/Flip");
 
   return (
     <ProductsContainer>
@@ -35,7 +34,7 @@ function Products({ heading, data }: ProductsProps) {
             autoPlay
             loop
             muted
-            src={Banner} /*type="video/mp4" */
+            src={products} /*type="video/mp4" */
           />
         </VideoWrapper>
       </Fade>

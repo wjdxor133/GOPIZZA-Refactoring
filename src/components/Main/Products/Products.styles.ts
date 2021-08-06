@@ -17,7 +17,7 @@ export const VideoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: clamp(3rem, 50vw, 4.5rem);
+  margin: clamp(3rem, 50vw, 5rem);
 `;
 
 export const ProductVideo = styled.video`

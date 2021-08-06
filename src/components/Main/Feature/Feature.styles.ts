@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const FeatureContainer = styled.div`
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
-    url("http://gopizza.kr/wp-content/uploads/2021/05/pizza.png");
+interface StyledFeatureProps {
+  imgBg: string;
+}
+
+export const FeatureContainer = styled.div<StyledFeatureProps>`
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url(${({ imgBg }) => imgBg});
   height: 100vh;
   max-height: 500px;
   background-position: center;
@@ -11,7 +15,7 @@ export const FeatureContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   text-align: center;
   padding: 0 1rem;
   h1 {

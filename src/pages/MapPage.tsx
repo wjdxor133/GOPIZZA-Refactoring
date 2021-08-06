@@ -23,7 +23,7 @@ const MapPage = () => {
     `${process.env.PUBLIC_URL}/data/locationData.json`
   );
   const { isLoading, setIsLoading, onLoading } = useLoading();
-
+  const [time, setTime] = useState<number>(1000);
   // 페이지네이션
   const [currentPage, setCurrentPage] = useState<number>(1);
   const postsPerPage: number = 10;
@@ -38,7 +38,7 @@ const MapPage = () => {
 
   return (
     <>
-      <Loading isLoading={isLoading} onLoading={onLoading}>
+      <Loading isLoading={isLoading} onLoading={() => onLoading(time)}>
         <Header />
         <Hero
           title="Store"
@@ -49,6 +49,7 @@ const MapPage = () => {
           storeList={storeList}
           isLoading={isLoading}
           setIsLoading={setIsLoading}
+          setTime={setTime}
         />
         <StoreList totalPosts={totalPosts} currentPosts={currentPosts} />
         <Pagination

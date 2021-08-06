@@ -24,7 +24,7 @@ const MenuPage = () => {
 
   return (
     <>
-      <Loading isLoading={isLoading} onLoading={onLoading}>
+      <Loading isLoading={isLoading} onLoading={() => onLoading(1000)}>
         <Header />
         <Hero
           title="MENU"

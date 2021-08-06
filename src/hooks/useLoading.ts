@@ -2,10 +2,10 @@ import { useState } from "react";
 
 function useLoading() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const onLoading = () => {
+  const onLoading = (time: number) => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, time);
   };
   return {
     isLoading,

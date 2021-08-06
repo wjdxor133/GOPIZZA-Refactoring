@@ -18,13 +18,19 @@ interface StoreMapProps {
   storeList?: StoreListTypes[];
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  setTime: React.Dispatch<React.SetStateAction<number>>;
 }
 
 let clickedOverlay: any = null;
 let infowindow: any = null;
 let circle: any = null;
 
-function StoreMap({ storeList = [], setIsLoading }: StoreMapProps) {
+function StoreMap({
+  storeList = [],
+  isLoading,
+  setIsLoading,
+  setTime,
+}: StoreMapProps) {
   const [map, setMap] = useState<any>();
   const [storeMarks, setStoreMarks] = useState<any>();
   const [markVisible, setMarkVisible] = useState<boolean>(false);
@@ -151,6 +157,7 @@ function StoreMap({ storeList = [], setIsLoading }: StoreMapProps) {
 
   const handleCurrentLocationMark = () => {
     setIsLoading(true);
+    setTime(2500);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const lat = position.coords.latitude,

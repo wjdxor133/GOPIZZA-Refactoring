@@ -22,7 +22,7 @@ const CartPage = () => {
 
   return (
     <>
-      <Loading isLoading={isLoading} onLoading={onLoading}>
+      <Loading isLoading={isLoading} onLoading={() => onLoading(1000)}>
         <Header />
         <Hero
           title="장바구니"

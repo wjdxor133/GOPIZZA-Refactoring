@@ -150,7 +150,18 @@
   https://user-images.githubusercontent.com/47416686/128463482-1ab6a208-9623-4b35-a081-19158cf2cde9.mov
 
  </div>
+
+ <br/>
+ <br/>
+ 
+ ## 📲  반응형 웹으로 개선
+ <div>    
+
+  https://user-images.githubusercontent.com/47416686/128597074-77c9f98e-ea45-4774-9d83-826bc378dc6a.mov
+
  </div>
+ 
+ <br/>
  
  ## 🕹 기능
 - Firebase를 사용하여 로그인, 회원가입 가능

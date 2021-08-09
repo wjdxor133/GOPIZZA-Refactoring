@@ -12,6 +12,7 @@ import {
 } from "components";
 import { RootState } from "store/type";
 import { useLoading } from "hooks";
+import CartBanner from "assets/images/cartBanner.webp";
 
 const CartPage = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
@@ -27,7 +28,7 @@ const CartPage = () => {
         <Hero
           title="장바구니"
           subTitle="고피자의 다양한 피자를 주문해 보세요."
-          imgBg="https://gopizza.kr/wp-content/uploads/2021/05/pizza.png"
+          imgBg={CartBanner}
         />
         <Main>
           {cartLength !== 0 ? (

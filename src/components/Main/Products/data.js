@@ -1,28 +1,27 @@
+import Products1 from "assets/images/products1.webp";
+import Products2 from "assets/images/products2.webp";
+import Products3 from "assets/images/products3.webp";
+
 export const productData = [
   {
-    img:
-      "https://gopizza.kr/wp-content/uploads/2020/08/par-baked-dough-goven-1024x764.jpg",
+    img: `${Products1}`,
     alt: "step1",
     step: "STEP 01",
-    name: "특허받은 화덕 GOVEN",
-    desc: "섭씨 500도가 넘는 직화로 구워내서 더 건강한 맛!",
+    name: "100% 수타 도우",
+    desc: "고피자의 자체 HACCP 공장에서\n모든 도우가 수타로 생산!",
   },
   {
-    img:
-      "https://gopizza.kr/wp-content/uploads/2020/08/par-baked-dough-탄게아니라효모스팟_포스터-1024x764.jpg",
+    img: `${Products2}`,
     alt: "step2",
     step: "STEP 02",
-
-    name: "저온숙성 수제도우",
-    desc: "24시간 저온 발효 후 손으로 직접 펴낸 숨쉬는 겉바속촉 도우!",
+    name: "최상급의 재료",
+    desc: "보증된 최고급 이태리 밀가루와\n100% 자연치즈만 사용!",
   },
   {
-    img:
-      "https://gopizza.kr/wp-content/uploads/2021/05/%EC%88%98%EC%A0%95%EB%90%A8_mission.jpg",
+    img: `${Products3}`,
     alt: "step3",
     step: "STEP 03",
-    name: "고피자 완성",
-    desc:
-      "고객을 위한 최고의 제품을 혁신에\n기반하여 편리하고 가성비있게 제공!",
+    name: "특허 화덕 GOVEN",
+    desc: "특허받은 화덕 GOVEN으로 화덕 피자 최초로 프랜차이즈화에 성공!",
   },
 ];

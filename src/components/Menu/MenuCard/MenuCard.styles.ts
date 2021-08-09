@@ -5,9 +5,9 @@ export const MenuCardWrapper = styled.div``;
 
 export const CardContents = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  min-width: 250px;
-  min-height: 330px;
-  padding: 18px;
+  min-width: 200px;
+  min-height: clamp(300px, 1.5vw, 330px);
+  padding: clamp(0.8rem, 1.5vw, 1.2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@ export const MenuName = styled.h3`
 `;
 
 export const MenuSubName = styled.p`
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 `;
 
 export const KcalText = styled.p`
@@ -49,7 +49,7 @@ export const HoverWrapper = styled.div`
 `;
 
 export const HoverName = styled(MenuName)`
-  font-size: clamp(2rem, 1.5vw, 4rem);
+  font-size: clamp(1.5rem, 1.5vw, 4rem);
   text-align: center;
 `;
 

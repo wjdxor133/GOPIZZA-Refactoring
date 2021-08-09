@@ -29,7 +29,7 @@ const MenuPage = () => {
         <Hero
           title="MENU"
           subTitle="가성비 최고의 고피자 메뉴를 만나보세요."
-          imgBg="https://gopizza.kr/wp-content/uploads/2021/05/menu-1.png"
+          imgBg="https://hello.gopizza.kr/wp-content/uploads/2021/05/menu-1.png"
         />
         <Menubar onChangeMenuList={handleChangeMenuList} menuType={menuType} />
         <MenuList menuData={menuData} />

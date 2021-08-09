@@ -43,7 +43,7 @@ const MapPage = () => {
         <Hero
           title="Store"
           subTitle="가까운 고피자 매장을 확인해보세요!"
-          imgBg="https://gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
+          imgBg="https://hello.gopizza.kr/wp-content/uploads/2021/01/website-lanidng-1024x678.jpg"
         />
         <StoreMap
           storeList={storeList}

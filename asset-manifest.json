@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/GOPIZZA-Refactoring/static/js/main.b16fbf96.chunk.js",
-    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.b16fbf96.chunk.js.map",
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.9850b81e.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.9850b81e.chunk.js.map",
     "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
     "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
     "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
     "static/js/2.1c1be496.chunk.js": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js",
     "static/js/2.1c1be496.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js.map",
     "index.html": "/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.3d6f29a8c0916d4f2a2e9d5f75d02a22.js": "/GOPIZZA-Refactoring/precache-manifest.3d6f29a8c0916d4f2a2e9d5f75d02a22.js",
+    "precache-manifest.866408b52ffb16ce5e75ad38ba0b3d00.js": "/GOPIZZA-Refactoring/precache-manifest.866408b52ffb16ce5e75ad38ba0b3d00.js",
     "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
     "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
     "static/js/2.1c1be496.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js.LICENSE.txt",
     "static/media/cartBanner.webp": "/GOPIZZA-Refactoring/static/media/cartBanner.f0b1a43b.webp",
     "static/media/footerBanner.webp": "/GOPIZZA-Refactoring/static/media/footerBanner.d120ede5.webp",
     "static/media/logo.webp": "/GOPIZZA-Refactoring/static/media/logo.bb9b5664.webp",
-    "static/media/mainBanner.webp": "/GOPIZZA-Refactoring/static/media/mainBanner.0db459e0.webp",
+    "static/media/mainBanner.gif": "/GOPIZZA-Refactoring/static/media/mainBanner.32782220.gif",
     "static/media/products.mp4": "/GOPIZZA-Refactoring/static/media/products.dda07416.mp4",
     "static/media/products1.webp": "/GOPIZZA-Refactoring/static/media/products1.65306f5e.webp",
     "static/media/products2.webp": "/GOPIZZA-Refactoring/static/media/products2.0e991c3b.webp",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.a5145d3d.js",
     "static/css/2.8f21f461.chunk.css",
     "static/js/2.1c1be496.chunk.js",
-    "static/js/main.b16fbf96.chunk.js"
+    "static/js/main.9850b81e.chunk.js"
   ]
 }

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/GOPIZZA-Refactoring/static/js/main.910c0936.chunk.js",
-    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.910c0936.chunk.js.map",
+    "main.js": "/GOPIZZA-Refactoring/static/js/main.46c6e2e5.chunk.js",
+    "main.js.map": "/GOPIZZA-Refactoring/static/js/main.46c6e2e5.chunk.js.map",
     "runtime-main.js": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js",
     "runtime-main.js.map": "/GOPIZZA-Refactoring/static/js/runtime-main.a5145d3d.js.map",
     "static/css/2.8f21f461.chunk.css": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css",
-    "static/js/2.1c1be496.chunk.js": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js",
-    "static/js/2.1c1be496.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js.map",
+    "static/js/2.151f396d.chunk.js": "/GOPIZZA-Refactoring/static/js/2.151f396d.chunk.js",
+    "static/js/2.151f396d.chunk.js.map": "/GOPIZZA-Refactoring/static/js/2.151f396d.chunk.js.map",
     "index.html": "/GOPIZZA-Refactoring/index.html",
-    "precache-manifest.e10f2c421c83f743ccb85f8b6d9a1925.js": "/GOPIZZA-Refactoring/precache-manifest.e10f2c421c83f743ccb85f8b6d9a1925.js",
+    "precache-manifest.b715a044ac6cd17acbddd050f6a05022.js": "/GOPIZZA-Refactoring/precache-manifest.b715a044ac6cd17acbddd050f6a05022.js",
     "service-worker.js": "/GOPIZZA-Refactoring/service-worker.js",
     "static/css/2.8f21f461.chunk.css.map": "/GOPIZZA-Refactoring/static/css/2.8f21f461.chunk.css.map",
-    "static/js/2.1c1be496.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js.LICENSE.txt",
+    "static/js/2.151f396d.chunk.js.LICENSE.txt": "/GOPIZZA-Refactoring/static/js/2.151f396d.chunk.js.LICENSE.txt",
     "static/media/cartBanner.webp": "/GOPIZZA-Refactoring/static/media/cartBanner.f0b1a43b.webp",
     "static/media/footerBanner.webp": "/GOPIZZA-Refactoring/static/media/footerBanner.d120ede5.webp",
     "static/media/logo.webp": "/GOPIZZA-Refactoring/static/media/logo.bb9b5664.webp",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.a5145d3d.js",
     "static/css/2.8f21f461.chunk.css",
-    "static/js/2.1c1be496.chunk.js",
-    "static/js/main.910c0936.chunk.js"
+    "static/js/2.151f396d.chunk.js",
+    "static/js/main.46c6e2e5.chunk.js"
   ]
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { FaGithub, FaBlogger } from "react-icons/fa";
 import {
   FooterContainer,
@@ -16,7 +17,9 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">GOPIZZA</SocialLogo>
+            <SocialLogo to="/" onClick={() => scroll.scrollToTop()}>
+              GOPIZZA
+            </SocialLogo>
             <SocialIcons>
               <SocialIconLink
                 href="https://github.com/wjdxor133/GOPIZZA-Refactoring"

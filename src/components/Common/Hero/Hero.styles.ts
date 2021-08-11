@@ -8,7 +8,7 @@ export const HeroContainer = styled.div<StyledHeroProps>`
     ${({ imgBg }) => `url(${imgBg})`};
   height: 100vh;
   max-height: 500px;
-  background-position: center;
+  background-position: right;
   background-size: cover;
 `;
 

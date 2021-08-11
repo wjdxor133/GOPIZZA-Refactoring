@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import logo from "assets/images/logo.png";
+import logo from "assets/images/logo.webp";
 import {
   SignUpFormContainer,
   LogoWrapper,

@@ -8,7 +8,7 @@ import {
   MenuBtn,
   CurrentLocationIcon,
 } from "./StoreMap.styles";
-import Logo from "assets/images/logo.png";
+import Logo from "assets/images/logo.webp";
 import { StoreListTypes } from "types/map.types";
 import { useModal } from "hooks";
 import { Modal } from "components";

@@ -1,6 +1,6 @@
 import React from "react";
 import { FeatureContainer, FeatureButton } from "./Feature.styles";
-import FooterBanner from "assets/images/footerBanner.jpg";
+import FooterBanner from "assets/images/footerBanner.webp";
 import { useHistory } from "react-router-dom";
 
 const Feature = () => {

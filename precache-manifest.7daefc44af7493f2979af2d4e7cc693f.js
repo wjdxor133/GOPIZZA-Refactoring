@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "99c8b94b324f5eac1a0c0f8a17744bdc",
+    "revision": "9a903bfcc30a1d83c0dc7eb86640d91c",
     "url": "/GOPIZZA-Refactoring/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GOPIZZA-Refactoring/static/js/2.1c1be496.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bdb8417890bc06e43ce2",
-    "url": "/GOPIZZA-Refactoring/static/js/main.7cb61479.chunk.js"
+    "revision": "2653e6535e4e105707fd",
+    "url": "/GOPIZZA-Refactoring/static/js/main.816858a5.chunk.js"
   },
   {
     "revision": "d3e06c3544934037bd09",
@@ -28,12 +28,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GOPIZZA-Refactoring/static/media/cartBanner.f0b1a43b.webp"
   },
   {
-    "revision": "e012369e5a4e94e993a84a76b7505b1d",
-    "url": "/GOPIZZA-Refactoring/static/media/footerBanner.e012369e.jpg"
+    "revision": "d120ede5116d34ce840a2ccdcc60948d",
+    "url": "/GOPIZZA-Refactoring/static/media/footerBanner.d120ede5.webp"
   },
   {
-    "revision": "69e24c88965d792dc153fe584cb8964d",
-    "url": "/GOPIZZA-Refactoring/static/media/logo.69e24c88.png"
+    "revision": "bb9b5664f7023efc944f3e56c2c9fba7",
+    "url": "/GOPIZZA-Refactoring/static/media/logo.bb9b5664.webp"
   },
   {
     "revision": "0db459e0fb087946b61b07d0c659e1b7",

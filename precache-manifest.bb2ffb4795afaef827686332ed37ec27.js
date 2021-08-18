@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "feac41f79a9a3a450f0a7ed2c3a262ed",
+    "revision": "e7f3ad154fa48406a65ef85714ccccac",
     "url": "/GOPIZZA-Refactoring/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GOPIZZA-Refactoring/static/js/2.7c58232c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92fe8e6cedd485e852ec",
-    "url": "/GOPIZZA-Refactoring/static/js/main.208d838c.chunk.js"
+    "revision": "ce9dc7d10063b213bf50",
+    "url": "/GOPIZZA-Refactoring/static/js/main.f33e9930.chunk.js"
   },
   {
     "revision": "d3e06c3544934037bd09",

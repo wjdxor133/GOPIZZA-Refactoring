@@ -1,17 +1,19 @@
 import React from "react";
-import { Header, Hero, SlideShow, Products, Feature, Footer } from "components";
+import {
+  Header,
+  SlideShow,
+  Products,
+  Feature,
+  Footer,
+  Banner,
+} from "components";
 import { productData } from "components/Main/Products/data";
-import Main from "assets/images/mainBanner.gif";
 
 const MainPage = () => {
   return (
     <>
       <Header />
-      <Hero
-        title="Greatest Pizza Ever"
-        subTitle="1인 피자로 GO! GO!"
-        imgBg={Main}
-      />
+      <Banner />
       <SlideShow />
       <Feature />
       <Products heading="고피자의 맛있는 비법!" data={productData} />

@@ -59,7 +59,7 @@ export const BannerContent = styled.div`
 export const BannerH1 = styled.h1`
   width: 100%;
   color: ${({ theme }) => theme.colors.white};
-  font-size: clamp(4rem, 10vw, 6rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   font-weight: bold;
   margin-bottom: 0.5rem;
   letter-spacing: 3px;
@@ -69,7 +69,7 @@ export const BannerP = styled.p`
   width: 100%;
   margin-top: 24px;
   color: ${({ theme }) => theme.colors.white};
-  font-size: clamp(2rem, 2.5vw, 4rem);
+  font-size: clamp(1.75rem, 2.5vw, 4rem);
   font-weight: bold;
   max-width: 600px;
   padding-left: 20px;

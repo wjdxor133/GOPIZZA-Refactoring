@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { FiPlusSquare, FiMinusSquare } from "react-icons/fi";
-import { RiDeleteBin6Line } from "react-icons/ri";
+import styled from 'styled-components';
+import { FiPlusSquare, FiMinusSquare } from 'react-icons/fi';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
 interface CartItemProps {
   width: string;

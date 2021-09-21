@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { MdMyLocation } from "react-icons/md";
-import { FaPizzaSlice } from "react-icons/fa";
+import styled from 'styled-components';
+import { MdMyLocation } from 'react-icons/md';
+import { FaPizzaSlice } from 'react-icons/fa';
 
 export const StoreMapContainer = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ export const StoreMapContainer = styled.div`
   .close:after {
     position: absolute;
     left: 15px;
-    content: " ";
+    content: ' ';
     height: 24px;
     width: 3px;
     background-color: ${({ theme }) => theme.colors.white};
@@ -103,14 +103,14 @@ export const StoreMapContainer = styled.div`
     overflow: hidden;
   }
   .info:after {
-    content: "";
+    content: '';
     position: absolute;
     margin-left: -12px;
     left: 50%;
     bottom: 0;
     width: 22px;
     height: 12px;
-    background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+    background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
   }
 `;
 

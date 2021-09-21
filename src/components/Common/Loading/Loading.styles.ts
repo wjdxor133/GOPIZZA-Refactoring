@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import LoadingOverlay from "react-loading-overlay-ts";
+import styled from 'styled-components';
+import LoadingOverlay from 'react-loading-overlay-ts';
 
 export const LoadingWrapper = styled(LoadingOverlay)`
   width: 100%;

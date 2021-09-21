@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { FcGoogle } from "react-icons/fc";
-import { FaGithubAlt } from "react-icons/fa";
+import styled from 'styled-components';
+import { FcGoogle } from 'react-icons/fc';
+import { FaGithubAlt } from 'react-icons/fa';
 
 export const SocialButtonWrapper = styled.div`
   display: inline-block;

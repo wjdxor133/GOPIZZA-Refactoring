@@ -1,7 +1,8 @@
-import React, { memo } from "react";
-import { MenuListWrapper, MenuListBox } from "./MenuList.styles";
-import { MenuCard } from "components";
-import { MenuTypes } from "types/menu.types";
+/* eslint-disable react/no-array-index-key */
+import React, { memo } from 'react';
+import { MenuCard } from 'components';
+import { MenuTypes } from 'types/menu.types';
+import { MenuListWrapper, MenuListBox } from './MenuList.styles';
 
 interface MenuListProps {
   menuData: MenuTypes[];

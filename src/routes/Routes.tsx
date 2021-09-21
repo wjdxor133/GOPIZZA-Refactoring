@@ -1,11 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainPage from "pages/MainPage";
-import LoginPage from "pages/LoginPage";
-import SignUpPage from "pages/SignUpPage";
-import MapPage from "pages/MapPage";
-import MenuPage from "pages/MenuPage";
-import CartPage from "pages/CartPage";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MainPage from 'pages/MainPage';
+import LoginPage from 'pages/LoginPage';
+import SignUpPage from 'pages/SignUpPage';
+import MapPage from 'pages/MapPage';
+import MenuPage from 'pages/MenuPage';
+import CartPage from 'pages/CartPage';
 
 const Routes = () => {
   return (

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BannerWrapper = styled.section`
   background: #0c0c0c;
@@ -10,17 +10,13 @@ export const BannerWrapper = styled.section`
   position: relative;
   z-index: 1;
   :before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.5) 100%
-      ),
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%),
       linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
     z-index: 2;
   }

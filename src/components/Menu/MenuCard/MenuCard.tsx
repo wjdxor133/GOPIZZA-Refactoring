@@ -1,5 +1,12 @@
-import React, { useRef } from "react";
-import { useHistory } from "react-router-dom";
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Modal } from 'components';
+import { useHover, useModal, useToast } from 'hooks';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/type';
+import { addItem } from 'store/cart/cart';
 import {
   MenuCardWrapper,
   CardContents,
@@ -14,12 +21,7 @@ import {
   PriceText,
   CartIcon,
   CartBtn,
-} from "./MenuCard.styles";
-import { Modal } from "components";
-import { useHover, useModal, useToast } from "hooks";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "store/type";
-import { addItem } from "store/cart/cart";
+} from './MenuCard.styles';
 
 interface MenuCardProps {
   menu: Menu;
@@ -41,7 +43,7 @@ function MenuCard({ menu }: MenuCardProps) {
   const { isShown, toggle } = useModal();
   const history = useHistory();
   const { toast } = useToast();
-  const Bounce = require("react-reveal/Bounce");
+  const Bounce = require('react-reveal/Bounce');
   const currentUser = useSelector<RootState>((state) => state.user.currentUser);
   const dispatch = useDispatch();
 
@@ -50,13 +52,13 @@ function MenuCard({ menu }: MenuCardProps) {
       toggle();
     } else {
       dispatch(addItem(menu));
-      toast(`${menu.name} 추가!`, "bottom-center", 1500, 0);
+      toast(`${menu.name} 추가!`, 'bottom-center', 1500, 0);
     }
   };
 
   const handleMoveLoginPage = () => {
     toggle();
-    history.push("/login");
+    history.push('/login');
   };
 
   return (

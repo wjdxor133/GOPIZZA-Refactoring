@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import bannerSrc from 'assets/videos/banner.mp4';
 import {
   BannerBg,
   BannerWrapper,
@@ -6,14 +7,13 @@ import {
   BannerH1,
   BannerP,
   VideoBg,
-} from "./Banner.styles";
-import bannerSrc from "assets/videos/banner.mp4";
+} from './Banner.styles';
 
 const Banner = () => {
   return (
     <BannerWrapper>
       <BannerBg>
-        <VideoBg autoPlay loop muted src={bannerSrc} /*type="video/mp4" */ />
+        <VideoBg autoPlay loop muted src={bannerSrc} />
       </BannerBg>
       <BannerContent>
         <BannerH1>THE NEW</BannerH1>

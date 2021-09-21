@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { TiTimes } from "react-icons/ti";
+import styled from 'styled-components';
+import { TiTimes } from 'react-icons/ti';
 
 export const Wrapper = styled.div`
   position: fixed;

@@ -1,9 +1,10 @@
-import { useEffect, useReducer, useRef } from "react";
+/* eslint-disable consistent-return */
+import { useEffect, useReducer, useRef } from 'react';
 
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig } from 'axios';
 
 interface State<T> {
-  status: "init" | "fetching" | "error" | "fetched";
+  status: 'init' | 'fetching' | 'error' | 'fetched';
   data?: T;
   error?: string;
 }
@@ -13,31 +14,28 @@ interface Cache<T> {
 }
 
 type Action<T> =
-  | { type: "request" }
-  | { type: "success"; payload: T }
-  | { type: "failure"; payload: string };
+  | { type: 'request' }
+  | { type: 'success'; payload: T }
+  | { type: 'failure'; payload: string };
 
-export function useFetch<T = unknown>(
-  url?: string,
-  options?: AxiosRequestConfig
-): State<T> {
+export function useFetch<T = unknown>(url?: string, options?: AxiosRequestConfig): State<T> {
   const cache = useRef<Cache<T>>({});
   const cancelRequest = useRef<boolean>(false);
 
   const initialState: State<T> = {
-    status: "init",
+    status: 'init',
     error: undefined,
     data: undefined,
   };
 
   const fetchReducer = (state: State<T>, action: Action<T>): State<T> => {
     switch (action.type) {
-      case "request":
-        return { ...initialState, status: "fetching" };
-      case "success":
-        return { ...initialState, status: "fetched", data: action.payload };
-      case "failure":
-        return { ...initialState, status: "error", error: action.payload };
+      case 'request':
+        return { ...initialState, status: 'fetching' };
+      case 'success':
+        return { ...initialState, status: 'fetched', data: action.payload };
+      case 'failure':
+        return { ...initialState, status: 'error', error: action.payload };
       default:
         return state;
     }
@@ -51,10 +49,10 @@ export function useFetch<T = unknown>(
     }
 
     const fetchData = async () => {
-      dispatch({ type: "request" });
+      dispatch({ type: 'request' });
 
       if (cache.current[url]) {
-        dispatch({ type: "success", payload: cache.current[url] });
+        dispatch({ type: 'success', payload: cache.current[url] });
       } else {
         try {
           const response = await axios(url, options);
@@ -62,11 +60,11 @@ export function useFetch<T = unknown>(
 
           if (cancelRequest.current) return;
 
-          dispatch({ type: "success", payload: response.data });
+          dispatch({ type: 'success', payload: response.data });
         } catch (error) {
           if (cancelRequest.current) return;
 
-          dispatch({ type: "failure", payload: error.message });
+          dispatch({ type: 'failure', payload: error.message });
         }
       }
     };

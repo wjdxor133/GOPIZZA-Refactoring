@@ -1,6 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { CartTypes } from "types/cart.types";
-import { addItemToCart, removeItemFromCart } from "./cartUtils";
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
+import { CartTypes } from 'types/cart.types';
+import { addItemToCart, removeItemFromCart } from './cartUtils';
 
 const INITIAL_STATE: CartTypes = {
   hidden: true,
@@ -8,7 +9,7 @@ const INITIAL_STATE: CartTypes = {
 };
 
 const cartSlice = createSlice({
-  name: "cart",
+  name: 'cart',
   initialState: INITIAL_STATE,
   reducers: {
     toggleCartHidden: (state, action) => {
@@ -18,9 +19,7 @@ const cartSlice = createSlice({
       state.cartItems = addItemToCart(state.cartItems, action.payload);
     },
     clearItemFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter(
-        (cartItem) => cartItem.name !== action.payload.name
-      );
+      state.cartItems = state.cartItems.filter((cartItem) => cartItem.name !== action.payload.name);
     },
     removeItem: (state, action) => {
       state.cartItems = removeItemFromCart(state.cartItems, action.payload);
@@ -31,12 +30,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const {
-  toggleCartHidden,
-  addItem,
-  clearItemFromCart,
-  removeItem,
-  clearItem,
-} = cartSlice.actions;
+export const { toggleCartHidden, addItem, clearItemFromCart, removeItem, clearItem } =
+  cartSlice.actions;
 
 export const cartReducer = cartSlice.reducer;

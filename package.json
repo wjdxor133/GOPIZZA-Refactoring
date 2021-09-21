@@ -17,6 +17,7 @@
     "@types/styled-components": "^5.1.0",
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",
+    "eslint-plugin-flowtype": "^6.1.0",
     "firebase": "^7.17.2",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.19",
@@ -29,7 +30,7 @@
     "react-redux": "^7.2.1",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.2",
     "react-slick": "^0.26.1",
     "react-spinners": "^0.11.0",
@@ -67,9 +68,18 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^2.4.1"
   },
   "homepage": "https://wjdxor133.github.io/GOPIZZA-Refactoring/"
 }

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface StyledMenubarProps {
   menuType: string;
@@ -38,7 +38,7 @@ export const MenuText = styled.p<StyledMenubarProps>`
   }
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1px;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function useLoading() {
   const [isLoading, setIsLoading] = useState<boolean>(true);

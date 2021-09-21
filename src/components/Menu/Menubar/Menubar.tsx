@@ -1,5 +1,7 @@
-import React from "react";
-import { MenuNavWrapper, MenuNav, MenuText } from "./Menubar.styles";
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
+import { MenuNavWrapper, MenuNav, MenuText } from './Menubar.styles';
 
 interface MenuBarProps {
   menuType: string;
@@ -8,12 +10,12 @@ interface MenuBarProps {
 
 function MenuBar({ menuType, onChangeMenuList }: MenuBarProps) {
   const menuTextObj = {
-    all: "ALL",
-    pizza: "PIZZA",
-    pasta_pilaf: "PASTA & PILAF",
-    flexBox: "FLEX BOX",
-    side_dessert: "SIDE & DESSERT",
-    drinks: "DRINKS",
+    all: 'ALL',
+    pizza: 'PIZZA',
+    pasta_pilaf: 'PASTA & PILAF',
+    flexBox: 'FLEX BOX',
+    side_dessert: 'SIDE & DESSERT',
+    drinks: 'DRINKS',
   };
 
   return (

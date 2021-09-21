@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { RiShoppingCartFill } from "react-icons/ri";
+import styled from 'styled-components';
+import { RiShoppingCartFill } from 'react-icons/ri';
 
 export const MenuCardWrapper = styled.div``;
 

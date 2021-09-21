@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import {
-  Loading,
-  Header,
-  Hero,
-  StoreMap,
-  StoreList,
-  Pagination,
-  Footer,
-} from "components";
-import { useFetch, useLoading } from "hooks";
-import { StoreListTypes } from "types/map.types";
+import React, { useState } from 'react';
+import { Loading, Header, Hero, StoreMap, StoreList, Pagination, Footer } from 'components';
+import { useFetch, useLoading } from 'hooks';
+import { StoreListTypes } from 'types/map.types';
 
 declare global {
   interface Window {
@@ -20,13 +12,13 @@ declare global {
 
 const MapPage = () => {
   const { data: storeList } = useFetch<StoreListTypes[]>(
-    `${process.env.PUBLIC_URL}/data/locationData.json`
+    `${process.env.PUBLIC_URL}/data/locationData.json`,
   );
   const { isLoading, setIsLoading, onLoading } = useLoading();
   const [time, setTime] = useState<number>(1000);
   // 페이지네이션
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const postsPerPage: number = 10;
+  const postsPerPage = 10;
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = storeList?.slice(indexOfFirstPost, indexOfLastPost);

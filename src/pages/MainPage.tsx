@@ -1,13 +1,6 @@
-import React from "react";
-import {
-  Header,
-  SlideShow,
-  Products,
-  Feature,
-  Footer,
-  Banner,
-} from "components";
-import { productData } from "components/Main/Products/data";
+import React from 'react';
+import { Header, SlideShow, Products, Feature, Footer, Banner } from 'components';
+import { productData } from 'components/Main/Products/data';
 
 const MainPage = () => {
   return (

@@ -1,14 +1,10 @@
-import React from "react";
-import {
-  SocialButtonWrapper,
-  GoogleBtn,
-  GithubBtn,
-} from "./SocialButton.styles";
-import { signInWithSocial } from "core/utils/firebase/firebase";
-import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { signInWithSocial } from 'core/utils/firebase/firebase';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
+import { SocialButtonWrapper, GoogleBtn, GithubBtn } from './SocialButton.styles';
 
-type ButtonType = "google" | "github";
+type ButtonType = 'google' | 'github';
 
 interface SocialButtonProps {
   type: ButtonType;
@@ -23,17 +19,17 @@ const SocialButton = ({ type }: SocialButtonProps) => {
       const res = await LoginFnc();
 
       if (res) {
-        history.push("/");
+        history.push('/');
 
         setTimeout(() => {
-          toast("로그인 되었습니다.", {
-            position: "bottom-center",
+          toast('로그인 되었습니다.', {
+            position: 'bottom-center',
             autoClose: 1500,
           });
         }, 1000);
       }
     } catch (error) {
-      console.log("error", error);
+      console.log('error', error);
     }
   };
 

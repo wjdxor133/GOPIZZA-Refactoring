@@ -1,6 +1,6 @@
-import React from "react";
-import { animateScroll as scroll } from "react-scroll";
-import { FaGithub, FaBlogger } from "react-icons/fa";
+import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
+import { FaGithub, FaBlogger } from 'react-icons/fa';
 import {
   FooterContainer,
   FooterWrap,
@@ -9,7 +9,7 @@ import {
   SocialLogo,
   SocialIcons,
   SocialIconLink,
-} from "./Footer.styles";
+} from './Footer.styles';
 
 const Footer = () => {
   return (

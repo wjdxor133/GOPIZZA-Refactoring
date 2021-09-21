@@ -1,11 +1,14 @@
-import React from "react";
+/* eslint-disable no-plusplus */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
 import {
   PaginationContainer,
   PrePageArrow,
   NextPageArrow,
   PageNumberList,
   PageNumber,
-} from "./Pagination.styles";
+} from './Pagination.styles';
 
 export interface PaginationProp {
   postsPerPage: number;
@@ -14,12 +17,7 @@ export interface PaginationProp {
   currentPage: number;
 }
 
-function Pagination({
-  postsPerPage,
-  totalPosts,
-  onPaginate,
-  currentPage,
-}: PaginationProp) {
+function Pagination({ postsPerPage, totalPosts, onPaginate, currentPage }: PaginationProp) {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {

@@ -1,4 +1,14 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import React, { useState, useEffect } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
+import { useToast } from 'hooks';
+import { auth, createUserProfileDocument } from 'core/utils/firebase/firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCurrentUser } from 'store/user/user';
+import { RootState } from 'store/type';
+import { selectCartItemsCount } from 'store/cart/cartSelectors';
 import {
   HeaderContainer,
   Nav,
@@ -13,15 +23,7 @@ import {
   SideBtnWrap,
   SidebarRoute,
   ItemCnt,
-} from "./Header.styles";
-import { animateScroll as scroll } from "react-scroll";
-import { useToast } from "hooks";
-import { auth } from "core/utils/firebase/firebase";
-import { createUserProfileDocument } from "core/utils/firebase/firebase";
-import { useDispatch, useSelector } from "react-redux";
-import { setCurrentUser } from "store/user/user";
-import { RootState } from "store/type";
-import { selectCartItemsCount } from "store/cart/cartSelectors";
+} from './Header.styles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,8 +33,8 @@ const Header = () => {
   const state = useSelector<RootState>((state) => state);
   const dispatch = useDispatch();
   const cartItemCnt = selectCartItemsCount(state);
-  const Jump = require("react-reveal/Jump");
-  const Pulse = require("react-reveal/Pulse");
+  const Jump = require('react-reveal/Jump');
+  const Pulse = require('react-reveal/Pulse');
 
   useEffect(() => {
     const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
@@ -46,7 +48,7 @@ const Header = () => {
             setCurrentUser({
               id: snapShot.id,
               email: userInfo.email,
-            })
+            }),
           );
         });
       }
@@ -68,9 +70,9 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleChangeNav);
+    window.addEventListener('scroll', handleChangeNav);
     return () => {
-      window.removeEventListener("scroll", handleChangeNav);
+      window.removeEventListener('scroll', handleChangeNav);
     };
   }, []);
 
@@ -81,7 +83,7 @@ const Header = () => {
   const handleLogOut = () => {
     auth.signOut();
     dispatch(setCurrentUser(null));
-    toast("로그아웃 되었습니다.", "bottom-center", 1200, 500);
+    toast('로그아웃 되었습니다.', 'bottom-center', 1200, 500);
   };
 
   return (
@@ -92,7 +94,7 @@ const Header = () => {
         </NavLink>
         <NavIcon onClick={toggle}>
           {cartItemCnt !== 0 && (
-            <Jump forever={true}>
+            <Jump forever>
               <ItemCnt>{cartItemCnt}</ItemCnt>
             </Jump>
           )}
@@ -117,7 +119,7 @@ const Header = () => {
         </SidebarMenu>
         <SideBtnWrap>
           {cartItemCnt !== 0 ? (
-            <Pulse forever={true} duration={1200}>
+            <Pulse forever duration={1200}>
               <SidebarRoute to="/cart">주문 하기</SidebarRoute>
             </Pulse>
           ) : (

@@ -1,5 +1,9 @@
-import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import {
   Wrapper,
   Header,
@@ -10,7 +14,7 @@ import {
   ContentText,
   Backdrop,
   OkButton,
-} from "./Modal.styles";
+} from './Modal.styles';
 
 export interface ModalProps {
   isShown: boolean;
@@ -20,22 +24,14 @@ export interface ModalProps {
   onClick: () => void;
 }
 
-function Modal({
-  isShown,
-  hide,
-  contentText,
-  buttonText,
-  onClick,
-}: ModalProps) {
-  const Fade = require("react-reveal/Fade");
+function Modal({ isShown, hide, contentText, buttonText, onClick }: ModalProps) {
+  const Fade = require('react-reveal/Fade');
 
   useEffect(() => {
-    isShown
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "scroll");
+    isShown ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'scroll');
 
     return () => {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflow = 'scroll';
     };
   }, [isShown]);
 
@@ -47,7 +43,7 @@ function Modal({
           <StyledModal>
             <Header>
               <HeaderText>알림</HeaderText>
-              <CloseButton onClick={hide}></CloseButton>
+              <CloseButton onClick={hide} />
             </Header>
             <Content>
               <ContentText>{contentText}</ContentText>

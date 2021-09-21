@@ -1,8 +1,7 @@
-import { RefObject, useEffect, useState } from "react";
+/* eslint-disable consistent-return */
+import { RefObject, useEffect, useState } from 'react';
 
-export function useHover<T extends HTMLElement = HTMLElement>(
-  elementRef: RefObject<T>
-): boolean {
+export function useHover<T extends HTMLElement = HTMLElement>(elementRef: RefObject<T>): boolean {
   const [value, setValue] = useState<boolean>(false);
 
   const handleMouseEnter = () => setValue(true);
@@ -12,12 +11,12 @@ export function useHover<T extends HTMLElement = HTMLElement>(
     const node = elementRef?.current;
 
     if (node) {
-      node.addEventListener("mouseenter", handleMouseEnter);
-      node.addEventListener("mouseleave", handleMouseLeave);
+      node.addEventListener('mouseenter', handleMouseEnter);
+      node.addEventListener('mouseleave', handleMouseLeave);
 
       return () => {
-        node.removeEventListener("mouseenter", handleMouseEnter);
-        node.removeEventListener("mouseleave", handleMouseLeave);
+        node.removeEventListener('mouseenter', handleMouseEnter);
+        node.removeEventListener('mouseleave', handleMouseLeave);
       };
     }
   }, [elementRef]);

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import styled from 'styled-components';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 interface StyledPaginationProps {
   currentPage: number;

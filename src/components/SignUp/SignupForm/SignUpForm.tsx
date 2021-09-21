@@ -1,5 +1,11 @@
-import React, { useRef } from "react";
-import logo from "assets/images/logo.webp";
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable @typescript-eslint/no-shadow */
+import React, { useRef } from 'react';
+import logo from 'assets/images/logo.webp';
+import { useForm } from 'react-hook-form';
+import { auth } from 'core/utils/firebase/firebase';
+import { useToast } from 'hooks';
+import { useHistory } from 'react-router-dom';
 import {
   SignUpFormContainer,
   LogoWrapper,
@@ -16,11 +22,7 @@ import {
   LoginRouteWrapper,
   LoginRouteText,
   LoginRouteLink,
-} from "./SignUpForm.styles";
-import { useForm } from "react-hook-form";
-import { auth } from "core/utils/firebase/firebase";
-import { useToast } from "hooks";
-import { useHistory } from "react-router-dom";
+} from './SignUpForm.styles';
 
 interface InputTypes {
   email: string;
@@ -37,7 +39,7 @@ const SignUpForm = () => {
   } = useForm<InputTypes>();
 
   const password = useRef<string | number>();
-  password.current = watch("password");
+  password.current = watch('password');
   const { toast } = useToast();
   const history = useHistory();
 
@@ -47,11 +49,11 @@ const SignUpForm = () => {
     try {
       const res = await auth.createUserWithEmailAndPassword(email, password);
       if (res) {
-        toast("회원가입이 완료되었습니다.", "bottom-center", 1200, 1000);
-        history.push("/login");
+        toast('회원가입이 완료되었습니다.', 'bottom-center', 1200, 1000);
+        history.push('/login');
       }
     } catch (error) {
-      toast(`이미 가입된 계정입니다.`, "bottom-center", 1500, 0);
+      toast('이미 가입된 계정입니다.', 'bottom-center', 1500, 0);
     }
   };
 
@@ -70,12 +72,12 @@ const SignUpForm = () => {
             <Input
               type="email"
               placeholder="아이디(이메일)을 입력해주세요."
-              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+              {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
             />
-            {errors.email && errors.email.type === "required" && (
+            {errors.email && errors.email.type === 'required' && (
               <ErrorMessage>이메일은 필수 항목입니다.</ErrorMessage>
             )}
-            {errors.email && errors.email.type === "pattern" && (
+            {errors.email && errors.email.type === 'pattern' && (
               <ErrorMessage>올바른 이메일 형식이 아닙니다.</ErrorMessage>
             )}
           </InputWrapper>
@@ -84,18 +86,16 @@ const SignUpForm = () => {
             <Input
               type="password"
               placeholder="비밀번호를 입력해주세요."
-              {...register("password", {
+              {...register('password', {
                 required: true,
                 pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/,
               })}
             />
-            {errors.password && errors.password.type === "required" && (
+            {errors.password && errors.password.type === 'required' && (
               <ErrorMessage>비밀번호는 필수 항목입니다.</ErrorMessage>
             )}
-            {errors.password && errors.password.type === "pattern" && (
-              <ErrorMessage>
-                영문, 숫자, 특수문자 포함 8자리 이상으로 설정해주세요.
-              </ErrorMessage>
+            {errors.password && errors.password.type === 'pattern' && (
+              <ErrorMessage>영문, 숫자, 특수문자 포함 8자리 이상으로 설정해주세요.</ErrorMessage>
             )}
           </InputWrapper>
           <InputWrapper>
@@ -103,19 +103,17 @@ const SignUpForm = () => {
             <Input
               type="password"
               placeholder="비밀번호를 다시 입력해주세요."
-              {...register("password_confirm", {
+              {...register('password_confirm', {
                 required: true,
                 validate: (value) => value === password.current,
               })}
             />
-            {errors.password_confirm &&
-              errors.password_confirm.type === "required" && (
-                <ErrorMessage>비밀번호 확인은 필수 항목입니다.</ErrorMessage>
-              )}
-            {errors.password_confirm &&
-              errors.password_confirm.type === "validate" && (
-                <ErrorMessage>비밀번호가 일치하지 않습니다.</ErrorMessage>
-              )}
+            {errors.password_confirm && errors.password_confirm.type === 'required' && (
+              <ErrorMessage>비밀번호 확인은 필수 항목입니다.</ErrorMessage>
+            )}
+            {errors.password_confirm && errors.password_confirm.type === 'validate' && (
+              <ErrorMessage>비밀번호가 일치하지 않습니다.</ErrorMessage>
+            )}
           </InputWrapper>
           <SignUpBtn type="submit" value="회원가입" />
         </FormWrapper>

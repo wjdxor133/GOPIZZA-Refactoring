@@ -1,6 +1,10 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-import logo from "assets/images/logo.webp";
+/* eslint-disable @typescript-eslint/no-shadow */
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import logo from 'assets/images/logo.webp';
+import { useInput, useToast } from 'hooks';
+import { auth } from 'core/utils/firebase/firebase';
+
 import {
   LoginFormWrapper,
   LogoWrapper,
@@ -17,14 +21,12 @@ import {
   SignUpRouteWrapper,
   SignUpRouteText,
   SignUpRouteLink,
-} from "./LoginForm.styles";
-import { useInput, useToast } from "hooks";
-import { auth } from "core/utils/firebase/firebase";
+} from './LoginForm.styles';
 
 function LoginForm() {
-  const [emailId, setEmailId, onChangeEmailId] = useInput<string>("");
-  const [password, setPassword, onChangePassword] = useInput<string>("");
-  const [error, setError] = useState<string>("");
+  const [emailId, setEmailId, onChangeEmailId] = useInput<string>('');
+  const [password, setPassword, onChangePassword] = useInput<string>('');
+  const [error, setError] = useState<string>('');
   const history = useHistory();
   const { toast } = useToast();
 
@@ -33,13 +35,13 @@ function LoginForm() {
 
     try {
       await auth.signInWithEmailAndPassword(emailId, password);
-      setEmailId("");
-      setPassword("");
-      toast("로그인 되었습니다.", "bottom-center", 1200, 500);
-      history.push("/");
+      setEmailId('');
+      setPassword('');
+      toast('로그인 되었습니다.', 'bottom-center', 1200, 500);
+      history.push('/');
     } catch (error) {
-      console.log("error", error);
-      setError(`가입하지 않은 이메일이거나, 잘못된 비밀번호 입니다.`);
+      console.log('error', error);
+      setError('가입하지 않은 이메일이거나, 잘못된 비밀번호 입니다.');
     }
   };
 
@@ -52,8 +54,7 @@ function LoginForm() {
         </LogoTitle>
       </LogoWrapper>
       <LoginFormH5>
-        고피자 회원으로 로그인하시면 제공하는 다양한 서비스를 이용할 수
-        있습니다.
+        고피자 회원으로 로그인하시면 제공하는 다양한 서비스를 이용할 수 있습니다.
       </LoginFormH5>
       <FormWrapper onSubmit={handleSubmit}>
         <InputWrapper>

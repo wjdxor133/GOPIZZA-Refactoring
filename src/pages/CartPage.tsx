@@ -1,24 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { IoPizzaOutline } from "react-icons/io5";
-import { useSelector } from "react-redux";
-import {
-  Loading,
-  Header,
-  Hero,
-  PaymentInfo,
-  CartList,
-  Footer,
-} from "components";
-import { RootState } from "store/type";
-import { useLoading } from "hooks";
-import CartBanner from "assets/images/cartBanner.webp";
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
+import styled from 'styled-components';
+import { IoPizzaOutline } from 'react-icons/io5';
+import { useSelector } from 'react-redux';
+import { Loading, Header, Hero, PaymentInfo, CartList, Footer } from 'components';
+import { RootState } from 'store/type';
+import { useLoading } from 'hooks';
+import CartBanner from 'assets/images/cartBanner.webp';
 
 const CartPage = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
-  const cartLength = useSelector<RootState>(
-    (state) => state.cart.cartItems.length
-  );
+  const cartLength = useSelector<RootState>((state) => state.cart.cartItems.length);
   const { isLoading, onLoading } = useLoading();
 
   return (
@@ -39,7 +32,7 @@ const CartPage = () => {
           ) : (
             <NoticeText>
               <IoPizzaOutline />
-              {""} 장바구니가 비어있습니다.
+              장바구니가 비어있습니다.
             </NoticeText>
           )}
         </Main>

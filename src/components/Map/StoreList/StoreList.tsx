@@ -1,4 +1,8 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-redeclare */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable react/require-default-props */
+import React from 'react';
 import {
   StoreListContainer,
   StoreListWrapper,
@@ -10,7 +14,7 @@ import {
   StoreListBody,
   BodyItem,
   BodyItemInfo,
-} from "./StoreList.styles";
+} from './StoreList.styles';
 
 interface MapListProps {
   totalPosts: number;
@@ -26,13 +30,13 @@ interface StoreList {
   latlng: number[];
 }
 
-const StoreList = ({ totalPosts, currentPosts }: MapListProps) => {
+function StoreList({ totalPosts, currentPosts }: MapListProps) {
   return (
     <StoreListContainer>
       <StoreListWrapper>
         <StoreListTitle>전체매장</StoreListTitle>
         <StoreListSubTitle>
-          총 <span>{totalPosts}</span>개 매장이 있습니다.
+          총<span>{totalPosts}</span>개 매장이 있습니다.
         </StoreListSubTitle>
         <StoreListTable>
           <StoreListHeader>
@@ -59,6 +63,6 @@ const StoreList = ({ totalPosts, currentPosts }: MapListProps) => {
       </StoreListWrapper>
     </StoreListContainer>
   );
-};
+}
 
 export default StoreList;

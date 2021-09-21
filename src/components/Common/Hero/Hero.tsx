@@ -1,11 +1,8 @@
-import React from "react";
-import {
-  HeroContainer,
-  HeroContent,
-  HeroItems,
-  HeroH1,
-  HeroP,
-} from "./Hero.styles";
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
+import { HeroContainer, HeroContent, HeroItems, HeroH1, HeroP } from './Hero.styles';
 
 export interface HeroProps {
   title: string;
@@ -14,7 +11,7 @@ export interface HeroProps {
 }
 
 function Hero({ title, subTitle, imgBg }: HeroProps) {
-  const Fade = require("react-reveal/Fade");
+  const Fade = require('react-reveal/Fade');
 
   return (
     <HeroContainer imgBg={imgBg}>

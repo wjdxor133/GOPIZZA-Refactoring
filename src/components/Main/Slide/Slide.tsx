@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   SlideWrapper,
   CenterDiv,
@@ -11,7 +11,7 @@ import {
   SubMenuName,
   HoverMenuName,
   HoverMenuSubName,
-} from "./Slide.styles";
+} from './Slide.styles';
 
 interface ImageSlideProp {
   menu: MenuDataTypes;
@@ -32,7 +32,7 @@ function ImageSlide({ menu }: ImageSlideProp) {
   };
 
   const handleMovePage = () => {
-    history.push("/menu");
+    history.push('/menu');
   };
 
   return (

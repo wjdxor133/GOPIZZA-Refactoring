@@ -1,5 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createSelector } from "reselect";
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
+import { createSelector } from 'reselect';
 
 interface User {
   id: string;
@@ -15,7 +16,7 @@ const INITIAL_STATE: UserState = {
 };
 
 const userSlice = createSlice({
-  name: "currentUser",
+  name: 'currentUser',
   initialState: INITIAL_STATE,
   reducers: {
     setCurrentUser: (state, action) => {
@@ -30,7 +31,4 @@ export const userReducer = userSlice.reducer;
 
 const selectUser = (state: any) => state.user;
 
-export const selectCurrentUser = createSelector(
-  [selectUser],
-  (user) => user.currentUser
-);
+export const selectCurrentUser = createSelector([selectUser], (user) => user.currentUser);

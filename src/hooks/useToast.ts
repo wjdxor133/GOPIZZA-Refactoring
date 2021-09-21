@@ -1,12 +1,7 @@
-import { toast as Toast, ToastPosition } from "react-toastify";
+import { toast as Toast, ToastPosition } from 'react-toastify';
 
 function useToast() {
-  const toast = (
-    msg: string,
-    position: ToastPosition,
-    autoClose: number,
-    time: number
-  ) => {
+  const toast = (msg: string, position: ToastPosition, autoClose: number, time: number) => {
     setTimeout(() => {
       Toast(msg, {
         position,

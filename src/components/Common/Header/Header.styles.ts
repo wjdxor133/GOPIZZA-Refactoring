@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import { NavLink as Link } from "react-router-dom";
-import { FaPizzaSlice } from "react-icons/fa";
-import { FaTimes } from "react-icons/fa";
+import styled from 'styled-components';
+import { NavLink as Link } from 'react-router-dom';
+import { FaPizzaSlice, FaTimes } from 'react-icons/fa';
 
 interface StyledHeaderProps {
   scrollNav?: boolean;
@@ -11,8 +10,7 @@ interface StyledHeaderProps {
 export const HeaderContainer = styled.header<StyledHeaderProps>`
   color: ${({ scrollNav, theme }) =>
     scrollNav ? theme.colors.primary_regular : theme.colors.white};
-  background: ${({ scrollNav, theme }) =>
-    scrollNav ? theme.colors.white : "transparent"};
+  background: ${({ scrollNav, theme }) => (scrollNav ? theme.colors.white : 'transparent')};
   height: 80px;
   margin-top: -80px;
   position: sticky;
@@ -80,7 +78,7 @@ export const SidebarContainer = styled.aside<StyledHeaderProps>`
   align-items: center;
   top: 0;
   transition: 0.3s ease-in-out;
-  right: ${({ isOpen }) => (isOpen ? "0" : "-1000px")};
+  right: ${({ isOpen }) => (isOpen ? '0' : '-1000px')};
 
   @media ${({ theme }) => theme.screenSizes.mobile} {
     color: ${({ theme }) => theme.colors.white};

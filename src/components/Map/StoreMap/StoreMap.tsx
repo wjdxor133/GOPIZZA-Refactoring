@@ -1,18 +1,26 @@
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable react/require-default-props */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useContext, useCallback } from "react";
-import { ThemeContext } from "styled-components";
+import React, { useState, useEffect, useContext, useCallback } from 'react';
+import { ThemeContext } from 'styled-components';
+import Logo from 'assets/images/logo.webp';
+import { StoreListTypes } from 'types/map.types';
+import { useModal } from 'hooks';
+import { Modal } from 'components';
+import { useHistory } from 'react-router-dom';
 import {
   StoreMapContainer,
   MapWrapper,
   MenuBtnWrapper,
   MenuBtn,
   CurrentLocationIcon,
-} from "./StoreMap.styles";
-import Logo from "assets/images/logo.webp";
-import { StoreListTypes } from "types/map.types";
-import { useModal } from "hooks";
-import { Modal } from "components";
-import { useHistory } from "react-router-dom";
+} from './StoreMap.styles';
 
 interface StoreMapProps {
   storeList?: StoreListTypes[];
@@ -25,29 +33,24 @@ let clickedOverlay: any = null;
 let infowindow: any = null;
 let circle: any = null;
 
-function StoreMap({
-  storeList = [],
-  isLoading,
-  setIsLoading,
-  setTime,
-}: StoreMapProps) {
+function StoreMap({ storeList = [], isLoading, setIsLoading, setTime }: StoreMapProps) {
   const [map, setMap] = useState<any>();
   const [storeMarks, setStoreMarks] = useState<any>();
   const [markVisible, setMarkVisible] = useState<boolean>(false);
   const { isShown, toggle } = useModal();
   const history = useHistory();
 
-  const kakao = (window as any).kakao;
-  const document = (window as any).document;
+  const { kakao } = window as any;
+  const { document } = window as any;
   const imageSrc = `${Logo}`;
   const theme = useContext(ThemeContext);
 
   useEffect(() => {
-    const mapContainer = document.getElementById("map"),
-      mapOption = {
-        center: new kakao.maps.LatLng(37.548945, 126.924483),
-        level: 3,
-      };
+    const mapContainer = document.getElementById('map');
+    const mapOption = {
+      center: new kakao.maps.LatLng(37.548945, 126.924483),
+      level: 3,
+    };
 
     const map = new kakao.maps.Map(mapContainer, mapOption);
     const zoomControl = new kakao.maps.ZoomControl();
@@ -71,7 +74,7 @@ function StoreMap({
 
       const marker = new kakao.maps.Marker({
         clickable: true,
-        map: map,
+        map,
         position: latlng,
         title: store.name,
         image: markerImage,
@@ -82,29 +85,27 @@ function StoreMap({
            <div class="info">
                <div class="title">
                    ${store.name}
-                   <div class="close" onclick="${() =>
-                     closeOverlay()}" title="닫기"></div>
+                   <div class="close" onclick="${() => closeOverlay()}" title="닫기"></div>
                 </div>
                 <div class="body">
                     <div class="desc">
                         <div class="ellipsis">${store.address}</div>
-                        <div class="jibun ellipsis">(우) ${
-                          store.addrInfo[0]
-                        } (지번) ${store.addrInfo[1]}</div>
+                        <div class="jibun ellipsis">(우) ${store.addrInfo[0]} (지번) ${
+        store.addrInfo[1]
+      }</div>
                         <div>${store.tel}</div>
-                        <div class="moveCart" onclick="${() =>
-                          showModal()}">주문하기!</div>
+                        <div class="moveCart" onclick="${() => showModal()}">주문하기!</div>
                     </div> 
                 </div> 
             </div> 
         </div>`;
 
       const overlay = new kakao.maps.CustomOverlay({
-        content: content,
+        content,
         position: marker.getPosition(),
       });
 
-      kakao.maps.event.addListener(marker, "click", showOverlay);
+      kakao.maps.event.addListener(marker, 'click', showOverlay);
 
       function showOverlay() {
         if (clickedOverlay) {
@@ -116,13 +117,9 @@ function StoreMap({
         overlay.setMap(map);
         clickedOverlay = overlay;
 
-        document
-          .querySelector(".close")
-          .addEventListener("click", closeOverlay);
+        document.querySelector('.close').addEventListener('click', closeOverlay);
 
-        document
-          .querySelector(".moveCart")
-          .addEventListener("click", showModal);
+        document.querySelector('.moveCart').addEventListener('click', showModal);
       }
 
       const showModal = () => {
@@ -161,16 +158,16 @@ function StoreMap({
     setTime(3000);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
-        const lat = position.coords.latitude,
-          lon = position.coords.longitude;
-        const locPosition = new kakao.maps.LatLng(lat, lon),
-          message = '<div style="padding:5px;">여기에 계신가요?!</div>';
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const locPosition = new kakao.maps.LatLng(lat, lon);
+        const message = '<div style="padding:5px;">여기에 계신가요?!</div>';
         displayMarker(locPosition, message);
         return locPosition;
       });
     } else {
-      const locPosition = new kakao.maps.LatLng(33.450701, 126.570667),
-        message = "geolocation을 사용할수 없어요..";
+      const locPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+      const message = 'geolocation을 사용할수 없어요..';
 
       displayMarker(locPosition, message);
     }
@@ -178,12 +175,12 @@ function StoreMap({
 
   function displayMarker(locPosition: object, message: string) {
     const marker = new kakao.maps.Marker({
-      map: map,
+      map,
       position: locPosition,
     });
 
-    const iwContent = message,
-      iwRemoveable = true;
+    const iwContent = message;
+    const iwRemoveable = true;
 
     const infowindow = new kakao.maps.InfoWindow({
       content: iwContent,
@@ -221,7 +218,7 @@ function StoreMap({
         strokeWeight: 5,
         strokeColor: theme.colors.primary_regular,
         strokeOpacity: 1,
-        strokeStyle: "dashed",
+        strokeStyle: 'dashed',
         fillColor: theme.colors.primary_light,
         fillOpacity: 0.4,
       });
@@ -246,8 +243,8 @@ function StoreMap({
 
     map.panTo(moveLatLon);
 
-    const iwContent = `<div class="infowindow" style="padding:7px; height:70px;">가장 가까운 매장은 ${nearMarkers.getTitle()} 입니다.</div>`,
-      iwRemoveable = true;
+    const iwContent = `<div class="infowindow" style="padding:7px; height:70px;">가장 가까운 매장은 ${nearMarkers.getTitle()} 입니다.</div>`;
+    const iwRemoveable = true;
 
     if (infowindow) {
       infowindow.close();
@@ -274,7 +271,7 @@ function StoreMap({
   };
 
   const handleMovePage = () => {
-    history.push("/cart");
+    history.push('/cart');
   };
 
   return (
@@ -289,9 +286,7 @@ function StoreMap({
               {markVisible ? (
                 <MenuBtn onClick={handleResetMarks}>모든 매장 찾기</MenuBtn>
               ) : (
-                <MenuBtn onClick={handleNearStoreFind}>
-                  가까운 매장 찾기
-                </MenuBtn>
+                <MenuBtn onClick={handleNearStoreFind}>가까운 매장 찾기</MenuBtn>
               )}
             </div>
           </MenuBtnWrapper>

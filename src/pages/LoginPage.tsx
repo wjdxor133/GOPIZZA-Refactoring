@@ -1,6 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { LoginForm, SocialButton } from "components";
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
+import styled from 'styled-components';
+import { LoginForm, SocialButton } from 'components';
 
 function LoginPage() {
   return (

@@ -1,7 +1,9 @@
-import React, { useEffect, useContext, ReactNode } from "react";
-import { ThemeContext } from "styled-components";
-import { LoadingWrapper } from "./Loading.styles";
-import BounceLoader from "react-spinners/BounceLoader";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import React, { useEffect, useContext, ReactNode } from 'react';
+import { ThemeContext } from 'styled-components';
+import BounceLoader from 'react-spinners/BounceLoader';
+import { LoadingWrapper } from './Loading.styles';
 
 interface LoadingProps {
   children: ReactNode;
@@ -18,11 +20,11 @@ const Loading = ({ children, isLoading, onLoading }: LoadingProps) => {
 
   useEffect(() => {
     isLoading
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "scroll");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'scroll');
 
     return () => {
-      document.body.style.overflow = "scroll";
+      document.body.style.overflow = 'scroll';
     };
   }, [isLoading]);
 

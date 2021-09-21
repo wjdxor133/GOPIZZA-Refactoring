@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function useModal() {
   const [isShown, setIsShown] = useState<boolean>(false);

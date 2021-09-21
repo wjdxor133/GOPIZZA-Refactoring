@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CartInfoWrapper = styled.div`
   border-radius: 16px;

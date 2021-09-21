@@ -1,15 +1,10 @@
-import React from "react";
-import {
-  CartListBtn,
-  CartListTitle,
-  CartListWrapper,
-  TitleWrapper,
-} from "./CartList.styles";
-import { CartItem, Modal } from "components";
-import { clearItem } from "store/cart/cart";
-import { useDispatch } from "react-redux";
-import { useModal } from "hooks";
-import { CartItemType } from "types/cart.types";
+import React from 'react';
+import { CartItem, Modal } from 'components';
+import { clearItem } from 'store/cart/cart';
+import { useDispatch } from 'react-redux';
+import { useModal } from 'hooks';
+import { CartItemType } from 'types/cart.types';
+import { CartListBtn, CartListTitle, CartListWrapper, TitleWrapper } from './CartList.styles';
 
 interface CartItemsProps {
   cartItems: CartItemType[];
@@ -34,12 +29,7 @@ const CartList = ({ cartItems }: CartItemsProps) => {
         <CartListBtn onClick={handleShowModal}>비우기</CartListBtn>
       </TitleWrapper>
       {cartItems.map((cartItem) => {
-        return (
-          <CartItem
-            key={`${cartItem.id} ${cartItem.name}`}
-            cartItem={cartItem}
-          />
-        );
+        return <CartItem key={`${cartItem.id} ${cartItem.name}`} cartItem={cartItem} />;
       })}
       <Modal
         isShown={isShown}

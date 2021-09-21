@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { Loading, Header, Hero, Menubar, MenuList, Footer } from "components";
-import { useFetch, useLoading } from "hooks";
-import { MenuTypes } from "types/menu.types";
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import React, { useState, useEffect } from 'react';
+import { Loading, Header, Hero, Menubar, MenuList, Footer } from 'components';
+import { useFetch, useLoading } from 'hooks';
+import { MenuTypes } from 'types/menu.types';
 
 const MenuPage = () => {
-  const [menuType, setMenuType] = useState<string>("all");
-  const { data } = useFetch<any>(
-    `${process.env.PUBLIC_URL}/data/menuData.json`
-  );
+  const [menuType, setMenuType] = useState<string>('all');
+  const { data } = useFetch<any>(`${process.env.PUBLIC_URL}/data/menuData.json`);
   const [menuData, setMenuData] = useState<MenuTypes[]>(data);
   const { isLoading, onLoading } = useLoading();
 
   useEffect(() => {
     const menuChange = () => {
-      menuType === "all" ? setMenuData(data) : setMenuData(data[menuType]);
+      menuType === 'all' ? setMenuData(data) : setMenuData(data[menuType]);
     };
     menuChange();
   }, [data, menuType]);
 
   const handleChangeMenuList = (type: string) => {
-    type === "all" ? setMenuType("all") : setMenuType(type);
+    type === 'all' ? setMenuType('all') : setMenuType(type);
   };
 
   return (

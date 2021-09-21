@@ -1,18 +1,17 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {
-  SlideContainer,
-  TitleWrapper,
-  TitleH1,
-  TitleH3,
-} from "./SlideShow.styles";
-import { Slide } from "components";
-import { menuData } from "./data";
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { Slide } from 'components';
+import { SlideContainer, TitleWrapper, TitleH1, TitleH3 } from './SlideShow.styles';
+import { menuData } from './data';
 
 const SlideShow = () => {
-  const Fade = require("react-reveal/Fade");
+  const Fade = require('react-reveal/Fade');
 
   const settings = {
     infinite: true,

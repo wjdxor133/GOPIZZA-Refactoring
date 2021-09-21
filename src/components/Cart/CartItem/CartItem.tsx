@@ -1,5 +1,10 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { CartItemType } from 'types/cart.types';
+import { removeItem, addItem, clearItemFromCart } from 'store/cart/cart';
+import { useToast } from 'hooks';
 import {
   CartItemWrapper,
   MenuImg,
@@ -9,17 +14,14 @@ import {
   MinusIcon,
   PlusIcon,
   DeleteIcon,
-} from "./CartItem.styles";
-import { CartItemType } from "types/cart.types";
-import { removeItem, addItem, clearItemFromCart } from "store/cart/cart";
-import { useToast } from "hooks";
+} from './CartItem.styles';
 
 interface CartItemPropsType {
   cartItem: CartItemType;
 }
 
 const CartItem = ({ cartItem }: CartItemPropsType) => {
-  const { img_url, name, quantity = 1, price } = cartItem;
+  const { img_url: imgUrl, name, quantity = 1, price } = cartItem;
   const dispatch = useDispatch();
   const { toast } = useToast();
 
@@ -29,17 +31,17 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
 
   const handleRemoveItem = () => {
     dispatch(removeItem(cartItem));
-    quantity <= 1 && toast(`${name} 삭제!`, "bottom-center", 1200, 0);
+    quantity <= 1 && toast(`${name} 삭제!`, 'bottom-center', 1200, 0);
   };
 
   const handleClearItemFromCart = () => {
     dispatch(clearItemFromCart(cartItem));
-    toast(`${name} 삭제!`, "bottom-center", 1200, 0);
+    toast(`${name} 삭제!`, 'bottom-center', 1200, 0);
   };
 
   return (
     <CartItemWrapper>
-      <MenuImg src={img_url} alt={name}></MenuImg>
+      <MenuImg src={imgUrl} alt={name} />
       <CartItemInfoBox>
         <CartItemInfo width="40">
           <CartItemText>{name}</CartItemText>
@@ -50,9 +52,7 @@ const CartItem = ({ cartItem }: CartItemPropsType) => {
           <PlusIcon onClick={handleAddItem} />
         </CartItemInfo>
         <CartItemInfo width="20">
-          <CartItemText>
-            {(price * quantity).toLocaleString("ko-KR")}원
-          </CartItemText>
+          <CartItemText>{(price * quantity).toLocaleString('ko-KR')}원</CartItemText>
         </CartItemInfo>
         <CartItemInfo width="20">
           <DeleteIcon onClick={handleClearItemFromCart} />
